@@ -13,6 +13,9 @@ const QrCodeGenerator = lazy(() => import('../components/tools/QrCodeGenerator')
 const PasswordGenerator = lazy(() => import('../components/tools/PasswordGenerator'));
 const BmiCalculator = lazy(() => import('../components/tools/BmiCalculator'));
 const UrlEncoder = lazy(() => import('../components/tools/UrlEncoder'));
+const LoremIpsum = lazy(() => import('../components/tools/LoremIpsum'));
+const ColorPicker = lazy(() => import('../components/tools/ColorPicker'));
+const UnitConverter = lazy(() => import('../components/tools/UnitConverter'));
 
 export default function ToolTemplate() {
   const { slug } = useParams<{ slug: string }>();
@@ -32,6 +35,9 @@ export default function ToolTemplate() {
         case 'password-generator': return <PasswordGenerator />;
         case 'bmi-calculator': return <BmiCalculator />;
         case 'url-encoder': return <UrlEncoder />;
+        case 'lorem-ipsum': return <LoremIpsum />;
+        case 'color-picker': return <ColorPicker />;
+        case 'unit-converter': return <UnitConverter />;
         default: return <p className="text-center text-[var(--muted)]">Tool interface for {tool.name} coming soon.</p>;
     }
   };
@@ -79,7 +85,7 @@ export default function ToolTemplate() {
           {tool.name}
         </h1>
         
-        <div className="bg-[var(--surface)] border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <div className="bg-[var(--surface)] border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] min-h-[400px]">
           <Suspense fallback={<div className="text-center">Loading tool...</div>}>
               {renderTool()}
           </Suspense>

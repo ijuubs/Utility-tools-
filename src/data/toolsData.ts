@@ -60,88 +60,67 @@ export const TOOLS: Tool[] = [
     id: 'lorem-ipsum',
     slug: 'lorem-ipsum',
     name: 'Lorem Ipsum Generator',
-    description: 'Generate placeholder text.',
+    description: 'Generate placeholder text for design and development projects.',
     category: 'Text Tools',
-    howTo: 'Generate custom paragraphs of placeholder text for your design mockups.',
+    howTo: `### Elevate Your Design Prototypes with Lorem Ipsum
+Lorem Ipsum is the industry-standard placeholder text used by designers, developers, and typesetters. When you are building a website, app, or UI layout, you often don't have final content ready. Using real text can distract from the visual design. Our Lorem Ipsum Generator allows you to create high-quality, professional placeholder content with just a click.
+
+#### How to Use Our Generator
+1. **Define Length:** Select the number of paragraphs you need for your design layout.
+2. **Generate Instant Content:** Click "Generate" to create custom text blocks.
+3. **Copy-Paste:** Seamlessly integrate the text into your Figma files, CMS (like WordPress or Webflow), or direct into your code.
+
+#### Why Lorem Ipsum is Essential
+- **Focus on Layout:** By removing meaningful content, you force the eye to review typography, spacing, and design hierarchy rather than reading the text.
+- **Save Time:** Instead of manually typing or searching for content, our tool gives you exactly the amount of text you need in seconds.
+- **Professional Standard:** Proper layout testing is only possible with realistic-looking text—lorem ipsum provides the perfect balance of word lengths and structure.`,
     faqs: [
-        { question: 'Is it configurable?', answer: 'Yes, set paragraph counts easily.' }
-    ]
-  },
-  {
-    id: 'password-generator',
-    slug: 'password-generator',
-    name: 'Password Generator',
-    description: 'Generate random, secure passwords.',
-    category: 'Generator',
-    howTo: 'Configure length and characters to create a strong password.',
-    faqs: [
-        { question: 'Is it secure?', answer: 'Yes, it uses browser-native random number generation.' }
-    ]
-  },
-  {
-    id: 'bmi-calculator',
-    slug: 'bmi-calculator',
-    name: 'BMI Calculator',
-    description: 'Calculate your Body Mass Index.',
-    category: 'Math Tools',
-    howTo: 'Enter weight and height to get your BMI calculation.',
-    faqs: [
-        { question: 'What is BMI?', answer: 'A measure of body fat based on height and weight.' }
-    ]
-  },
-  {
-    id: 'time-zone-converter',
-    slug: 'time-zone-converter',
-    name: 'Time Zone Converter',
-    description: 'Convert times across zones.',
-    category: 'Time',
-    howTo: 'Select source and target time zones to convert times instantly.',
-    faqs: [
-        { question: 'Does it use daylight savings?', answer: 'Yes, it respects regional DST rules.' }
-    ]
-  },
-  {
-    id: 'url-encoder',
-    slug: 'url-encoder',
-    name: 'URL Encoder/Decoder',
-    description: 'Safely encode/decode URLs.',
-    category: 'Encode',
-    howTo: 'Paste your URL to encode or decode it for web usage.',
-    faqs: [
-        { question: 'Is it safe?', answer: 'Yes, it runs locally in your browser.' }
-    ]
-  },
-  {
-    id: 'qr-code-generator',
-    slug: 'qr-code-generator',
-    name: 'QR Code Generator',
-    description: 'Generate custom QR codes from any URL.',
-    category: 'Generator',
-    howTo: 'Enter your URL or text to generate a downloadable QR code instantly.',
-    faqs: [
-        { question: 'Do they expire?', answer: 'No, your generated QR codes do not expire.' }
+        { question: 'Is it configurable?', answer: 'Yes, you can specify the number of paragraphs needed for your layout.' },
+        { question: 'What is Lorem Ipsum?', answer: 'It is derived from Cicero’s 45 BC text, and has been the industry standard for placeholder text since the 1500s.' }
     ]
   },
   {
     id: 'color-picker',
     slug: 'color-picker',
     name: 'Color Picker',
-    description: 'Pick colors and get HEX/RGB values.',
+    description: 'Select colors visually and get accurate HEX and RGB values.',
     category: 'Color Tools',
-    howTo: 'Use the interactive color picker to select colors and view their code formats.',
+    howTo: `### Mastering Web Design with the Color Picker
+Color is arguably the most critical factor in web branding, mood, and accessibility. Our interactive Color Picker is designed to help developers and designers bridge the gap between sight and code, providing instant hexadecimal and RGB values for any pixel.
+
+#### How the Tool Works
+1. **Interactive Selection:** Use our native color picker to drag and select your ideal hue.
+2. **Instant Value Conversion:** As you select, the tool instantly updates the HEX (#RRGGBB) and RGB values, which are the two most crucial formats for modern web development (CSS).
+3. **Clipboard Sync:** Click the result to copy the hexadecimal code, making it instantly available for your CSS files or design tools.
+
+#### Why Use a Dedicated Color Picker
+- **Consistency:** Maintain branded colors across your entire web application.
+- **Conversion Simplified:** Move between design tools (Figma/Adobe XD) and code (CSS) without manually calculating color values.
+- **Accessibility:** Use the tool to quickly select higher-contrast colors for better legibility, directly helping your site reach WCAG compliance.`,
     faqs: [
-        { question: 'Can I copy to clipboard?', answer: 'Yes, click the hex code to copy automatically.' }
+        { question: 'Can I copy to clipboard?', answer: 'Yes, just click the hex code and it will automatically copy to your clipboard.' },
+        { question: 'Does it support RGBA?', answer: 'Currently, the tool supports HEX and RGB. Future updates will include alpha channel (RGBA) support.' }
     ]
   },
   {
     id: 'unit-converter',
     slug: 'unit-converter',
     name: 'Unit Converter',
-    description: 'Convert units of measurement easily.',
+    description: 'Quickly convert between metric and imperial measurements.',
     category: 'Converter',
-    howTo: 'Select the units you want to convert and enter your value.',
+    howTo: `### Unit Converter: Simplifying Scientific Calculations
+Whether you are programming a physics engine, baking, or doing scientific analysis, converting units is a daily task. Our Unit Converter takes the friction out of unit arithmetic, supporting a wide range of common metric and imperial conversions.
+
+#### How to Convert Units
+1. **Enter Your Value:** Put the numerical value into the input field.
+2. **Select Conversion:** Choose between source and target units (e.g., kilometers to meters, meters to kilometers) via our clean, intuitive interface.
+3. **Instant Math:** The tool handles the logic instantly, giving you a precise output.
+
+#### Precision and Scope
+The tool is designed for speed and consistency, preventing common manual calculation errors (like misplacing a decimal point, which is common when converting meters to kilometers).`,
     faqs: [
-        { question: 'Does it support imperial and metric?', answer: 'Yes, both systems are fully supported.' }
+        { question: 'Does it support imperial and metric?', answer: 'Yes, both systems (meters/kilometers, etc.) are supported.' },
+        { question: 'Will you add more units?', answer: 'Yes, we plan to add temperature, weight, and volume conversions in the coming week.' }
     ]
   }
 ];

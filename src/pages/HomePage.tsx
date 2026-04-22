@@ -1,9 +1,14 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { TOOLS } from '../data/toolsData';
 
 export default function HomePage() {
   return (
     <div className="space-y-20">
+        <Helmet>
+          <title>ToolVerde | Fast, Secure Utility Tools</title>
+          <meta name="description" content="Access a collection of fast, secure, and ready-to-use utility tools for designers and developers." />
+        </Helmet>
         <div>
             <h2 className="text-5xl font-black tracking-tighter mb-8 uppercase">
               Utility Tools
