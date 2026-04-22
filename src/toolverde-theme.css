@@ -1,0 +1,20 @@
+/*
+  ToolVerde Design Tokens (CSS Variables)
+  Apply these to the ToolKitPro project to match the requested design.
+*/
+:root {
+  --g0: #f4faf4;
+  --g1: #e2f4e2;
+  --g2: #b6e0b6;
+  --g3: #6abf69;
+  --g4: #3a9e3a;
+  --g5: #1d6e1d;
+  --g6: #0d3d0d;
+  --ink: #0f1f0f;
+  --muted: #557055;
+  --surface: #ffffff;
+  --border: #d0e8d0;
+  --radius: 16px;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}

@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "./toolverde-theme.css";
+
+@theme {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+body {
+  background-color: var(--g0);
+  color: var(--ink);
+}
