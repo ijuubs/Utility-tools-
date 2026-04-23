@@ -1,12 +1,14 @@
+import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { TOOLS } from '../data/toolsData';
+import AdSlot from '../components/AdSlot';
 
 export default function HomePage() {
   return (
     <div className="space-y-20">
         <Helmet>
-          <title>ToolVerde | Fast, Secure Utility Tools</title>
+          <title>ToolKitPro | High-Performance Utility Ecosystem</title>
           <meta name="description" content="Access a collection of fast, secure, and ready-to-use utility tools for designers and developers." />
         </Helmet>
         <div>
@@ -16,20 +18,31 @@ export default function HomePage() {
             <p className="text-xl text-black bg-yellow-200 inline-block px-4 py-2 border-2 border-black mb-12 font-bold">
               Fast, secure, and ready-to-use tools.
             </p>
+
+            <AdSlot adSlot="9791142997" adFormat="horizontal" minHeight="90px" className="mb-12" />
             
             <div className="grid md:grid-cols-3 gap-8">
-                {TOOLS.map(tool => (
+                {TOOLS.map((tool, index) => (
+                  <Fragment key={tool.id}>
                     <Link 
-                      key={tool.id} 
                       to={`/tools/${tool.slug}`} 
                       className="p-8 bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
                     >
                         <h3 className="text-2xl font-black mb-4 uppercase">{tool.name}</h3>
                         <p className="text-black font-medium">{tool.description}</p>
                     </Link>
+                    {/* Insert an ad after every 6 tools for in-feed monetization */}
+                    {(index + 1) % 6 === 0 && (
+                      <div key={`ad-${index}`} className="md:col-span-1 min-h-[300px]">
+                        <AdSlot adSlot="9791142997" adFormat="rectangle" minHeight="300px" className="my-0 h-full" />
+                      </div>
+                    )}
+                  </Fragment>
                 ))}
             </div>
         </div>
+
+        <AdSlot adSlot="9791142997" minHeight="250px" />
 
         <section className="bg-black text-white p-10 border-4 border-black">
             <h2 className="text-4xl font-black mb-8 uppercase text-yellow-300">Popular Tools</h2>

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { TOOLS } from '../data/toolsData';
 import { Suspense, lazy } from 'react';
 import AdSlot from '../components/AdSlot';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 // Lazy load tools
 const WordCounter = lazy(() => import('../components/tools/WordCounter'));
@@ -54,27 +55,33 @@ export default function ToolTemplate() {
     <div className="flex flex-col lg:flex-row gap-8">
       {/* Sticky Sidebar */}
       <aside className="w-full lg:w-64 shrink-0">
-        <div className="sticky top-8 bg-white border-4 border-black p-4 space-y-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-          <h3 className="font-black uppercase text-lg">All Tools</h3>
-          <ul className="space-y-2">
-            {TOOLS.map((t) => (
-              <li key={t.id}>
-                <Link 
-                  to={`/tools/${t.slug}`} 
-                  className={`block p-2 text-sm font-bold border-2 border-transparent hover:border-black transition-all ${t.slug === slug ? 'bg-yellow-200 border-black' : ''}`}
-                >
-                  {t.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className="sticky top-8 space-y-4">
+          <div className="bg-white border-4 border-black p-4 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <h3 className="font-black uppercase text-lg">All Tools</h3>
+            <ul className="space-y-2">
+              {TOOLS.map((t) => (
+                <li key={t.id}>
+                  <Link 
+                    to={`/tools/${t.slug}`} 
+                    className={`block p-2 text-sm font-bold border-2 border-transparent hover:border-black transition-all ${t.slug === slug ? 'bg-yellow-200 border-black' : ''}`}
+                  >
+                    {t.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div className="hidden lg:block border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+              <AdSlot adSlot="9791142997" adFormat="vertical" minHeight="600px" />
+          </div>
         </div>
       </aside>
 
       {/* Main Content */}
       <div className="flex-1 space-y-8 min-w-0">
         <Helmet>
-          <title>{tool.name} | ToolVerde</title>
+          <title>{tool.name} | ToolKitPro</title>
           <meta name="description" content={tool.description} />
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
@@ -84,20 +91,29 @@ export default function ToolTemplate() {
         <h1 className="text-5xl font-black tracking-tighter uppercase mb-4 text-[var(--g6)]">
           {tool.name}
         </h1>
+
+        <AdSlot adSlot="9791142997" adFormat="horizontal" minHeight="90px" className="my-0" />
         
         <div className="bg-[var(--surface)] border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] min-h-[400px]">
-          <Suspense fallback={<div className="text-center">Loading tool...</div>}>
-              {renderTool()}
-          </Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<div className="text-center font-bold uppercase animate-pulse">Loading tool interface...</div>}>
+                {renderTool()}
+            </Suspense>
+          </ErrorBoundary>
         </div>
 
-        <AdSlot minHeight="250px" />
+        <AdSlot adSlot="9791142997" adFormat="rectangle" minHeight="280px" className="my-8" />
 
         <section className="prose max-w-none">
           <h2 className="text-3xl font-display text-[var(--g6)]">How to use {tool.name}</h2>
-          <div className="text-[var(--muted)] whitespace-pre-line">{tool.howTo}</div>
+          <div className="text-[var(--muted)] whitespace-pre-line leading-relaxed">{tool.howTo}</div>
           
-          <AdSlot minHeight="300px" className="my-12" />
+          <div className="my-12 p-6 bg-yellow-50 border-2 border-dashed border-black">
+            <p className="text-xs uppercase font-bold text-center mb-2">Advertisement</p>
+            <AdSlot adSlot="9791142997" adFormat="auto" minHeight="250px" className="my-0" />
+          </div>
+
+          <AdSlot adSlot="9791142997" adFormat="auto" minHeight="250px" className="my-0" />
 
           <h3 className="text-2xl font-display text-[var(--g6)] mt-8">Frequently Asked Questions</h3>
           {tool.faqs.map((faq, i) => (

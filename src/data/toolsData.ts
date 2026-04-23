@@ -40,9 +40,21 @@ export const TOOLS: Tool[] = [
     name: 'PDF Compressor',
     description: 'Shrink your heavy PDFs without compromising visual quality.',
     category: 'Converter',
-    howTo: 'PDFs can become frustratingly large due to high-resolution images. Our PDF Compressor allows you to reduce file size for easy email sharing.\n\nSimply upload your PDF file, choose a compression level (e.g., "High Quality" or "Maximum Compression"), and receive a optimized version of your file immediately.',
+    howTo: `### Master Your Document Management with Easy PDF Compression
+PDF files are the backbone of modern business communication, but high-resolution assets can cause them to swell to sizes that are impossible to email. Our tool leverages advanced optimization algorithms to reduce your file footprint without sacrificing critical legibility.
+
+#### How to Optimize Your PDFs
+1. **Selection:** Upload your desired PDF file directly from your local machine.
+2. **Configuration:** Choose between balance or maximum compression modes based on your needs.
+3. **Download:** Once processing is complete, your optimized document is ready for instant download.
+
+#### Why File Size Matters
+- **Email Compatibility:** Most email clients have a 20MB-25MB limit. Compression ensures your documents reach their destination every time.
+- **Improved Loading Speeds:** For web developers, hosting smaller PDFs means faster page loads and improved user experience for your visitors.
+- **Storage Savings:** Large amounts of internal documentation can clog cloud storage projects; compressing files saves both space and costs.`,
     faqs: [
-        { question: 'Is my data secure?', answer: 'Yes, your PDF is processed locally in your secure browser session.' }
+        { question: 'Is my data secure?', answer: 'Absolutely. Your PDF is processed locally in your secure browser session using WebAssembly technology, meaning no document data ever travels to our servers.' },
+        { question: 'Will my images look blurry?', answer: 'Our intelligent compression focuses on metadata and stream optimization first, maintaining high visual fidelity for text and diagrams.' }
     ]
   },
   {
@@ -51,9 +63,21 @@ export const TOOLS: Tool[] = [
     name: 'Image Resizer',
     description: 'Resize images to exact dimensions for social media or web.',
     category: 'Converter',
-    howTo: 'Our Image Resizer allows you to batch resize images while maintaining aspect ratio or force-fitting custom dimensions.\n\nUpload an image, enter your target width and height, and download the optimized result.',
+    howTo: `### Precision Image Resizing for Web and Social Media
+In the era of visual communication, having images at the exact dimensions required by platforms like Instagram, LinkedIn, or high-performance websites is non-negotiable. Our Image Resizer provides a surgical approach to file manipulation.
+
+#### The Resizing Workflow
+1. **Upload:** Select your JPEG, PNG, or WebP image.
+2. **Dimension Logic:** Enter your target width and height. You can choose to maintain the aspect ratio (recommended to prevent skewing) or force specific dimensions.
+3. **Optimization:** Our engine performs high-quality resampling to ensure the resized image remains sharp and professional.
+
+#### Critical Use Cases
+- **Blogging & SEO:** Large images slow down your site. Resizing to the exact container width improves your Core Web Vitals.
+- **Consistency:** Ensure every product photo in your e-commerce store has an identical aspect ratio for a polished, professional look.
+- **Social Media Compliance:** Adhere to strict profile picture and cover photo dimensions without manual cropping.`,
     faqs: [
-        { question: 'Which formats are supported?', answer: 'We support JPEG, PNG, and WebP for optimal performance.' }
+        { question: 'Which formats are supported?', answer: 'We support all major web formats, including JPEG, PNG, and WebP.' },
+        { question: 'Does it maintain quality?', answer: 'Yes, we use the Lanczos resampling algorithm to provide high-quality scaling that preserves edge sharpness.' }
     ]
   },
   {
@@ -121,6 +145,92 @@ The tool is designed for speed and consistency, preventing common manual calcula
     faqs: [
         { question: 'Does it support imperial and metric?', answer: 'Yes, both systems (meters/kilometers, etc.) are supported.' },
         { question: 'Will you add more units?', answer: 'Yes, we plan to add temperature, weight, and volume conversions in the coming week.' }
+    ]
+  },
+  {
+    id: 'qr-code-generator',
+    slug: 'qr-code-generator',
+    name: 'QR Code Generator',
+    description: 'Create customizable QR codes for URLs, text, or contact info.',
+    category: 'Web Tools',
+    howTo: `### Bridging Physical and Digital with Custom QR Codes
+QR codes have become an essential link between the physical world and digital experiences. Whether you are marketing a new product, sharing a contact card, or providing a direct link to a menu, our QR Code Generator provides a high-reliability solution.
+
+#### Creating Your First Code
+1. **Input Data:** Enter your URL, plain text, or configuration data into the generator.
+2. **Instant Render:** Our system uses high-precision encoding to generate a scannable matrix immediately.
+3. **Capture:** Download the resulting image to use on flyers, business cards, or website assets.
+
+#### Why Choose Our Generator?
+- **High Scannability:** We use optimized error correction levels to ensure codes are readable even when printed at small sizes or on textured paper.
+- **Privacy First:** Unlike many "free" generators that track scans via redirects, our tool generates direct codes that go straight to your destination, preserving user privacy.`,
+    faqs: [
+        { question: 'Are these codes permanent?', answer: 'Yes, as long as the destination URL or data remains active, the QR code will work forever. They do not expire.' },
+        { question: 'Can I use these for commercial projects?', answer: 'Yes, all codes generated are free for both personal and commercial use.' }
+    ]
+  },
+  {
+    id: 'password-generator',
+    slug: 'password-generator',
+    name: 'Password Generator',
+    description: 'Generate high-entropy, secure passwords to protect your digital accounts.',
+    category: 'Security',
+    howTo: `### Hardening Your Digital Security with Entropy
+In an era of sophisticated brute-force attacks, "password123" is no longer enough. Our Secure Password Generator uses cryptographically strong random number generation to create strings that are virtually impossible to guess.
+
+#### How to Generate a Strong Password
+1. **Length:** Select your desired length. We recommend at least 16 characters for critical accounts.
+2. **Character Set:** Toggle between Uppercase, Lowercase, Numbers, and Symbols. A mix of all four provides the highest entropy.
+3. **Generate:** Create a unique string and copy it to your secure password manager.
+
+#### The Science of Security
+Entropy is the measure of randomness. By using a diverse character set and sufficient length, you increase the "work factor" required for an attacker to crack your account. Our tool runs strictly in your browser, ensuring your new password is never transmitted across the network during generation.`,
+    faqs: [
+        { question: 'Is this random enough?', answer: 'Yes, we use the browser\'s native Web Crypto API for high-quality randomness.' },
+        { question: 'Do you store my passwords?', answer: 'Never. The generation happens entirely on your local machine and the results are not logged or stored by our system.' }
+    ]
+  },
+  {
+    id: 'bmi-calculator',
+    slug: 'bmi-calculator',
+    name: 'BMI Calculator',
+    description: 'Calculate your Body Mass Index (BMI) to understand your health status.',
+    category: 'Health',
+    howTo: `### Understanding Health Metrics with the BMI Calculator
+Body Mass Index (BMI) is a standard screening tool used by healthcare professionals to estimate a person's body fat based on their height and weight. While not a direct measure of body fat percentage, it provides a useful starting point for understanding health categories.
+
+#### How to Calculate Your BMI
+1. **Inputs:** Enter your current weight (in kilograms) and your height (in centimeters).
+2. **Algorithm:** The tool uses the standard formula (Weight / Height²) to determine your index.
+3. **Classification:** Your result will be categorized into standard health zones (Underweight, Healthy, Overweight, or Obese) based on WHO guidelines.
+
+#### Important Health Context
+BMI is a general indicator and does not account for muscle mass, bone density, or overall body composition. It is best used as a conversational starting point with your physician to discuss broader health goals and lifestyle optimizations.`,
+    faqs: [
+        { question: 'Is BMI accurate for athletes?', answer: 'Athletes with high muscle mass may receive a "high" BMI despite having low body fat, as muscle weighs more than fat.' },
+        { question: 'What is a healthy range?', answer: 'Generally, a BMI between 18.5 and 24.9 is considered the healthy weight range for adults.' }
+    ]
+  },
+  {
+    id: 'url-encoder',
+    slug: 'url-encoder',
+    name: 'URL Encoder / Decoder',
+    description: 'Safely encode or decode special characters for URLs and APIs.',
+    category: 'Web Tools',
+    howTo: `### Mastering URL Component Safety
+URLs can only be sent over the Internet using the ASCII character set. Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format. URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.
+
+#### Using the Encoder/Decoder
+1. **Input:** Paste your raw URL or encoded string into the text field.
+2. **Action:** Select "Encode" to make a string safe for URL transmission, or "Decode" to turn a percent-encoded string back into human-readable text.
+3. **Result:** Get the clean, processed output instantly.
+
+#### Why Encoding is Required
+- **Form Data:** When submitting browser forms, special characters like spaces or "&" must be encoded to prevent breaking the request structure.
+- **REST APIs:** Passing parameters with special symbols requires proper percent-encoding to ensure the server interprets the data correctly.`,
+    faqs: [
+        { question: 'Does this handle spaces?', answer: 'Yes, spaces are correctly converted to %20 during the encoding process.' },
+        { question: 'Is it safe for API keys?', answer: 'Yes, all processing is done locally in your browser, keeping your sensitive parameters secure.' }
     ]
   }
 ];
