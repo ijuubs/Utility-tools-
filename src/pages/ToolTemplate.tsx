@@ -4,6 +4,7 @@ import { TOOLS } from '../data/toolsData';
 import { Suspense, lazy } from 'react';
 import AdSlot from '../components/AdSlot';
 import ErrorBoundary from '../components/ErrorBoundary';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 // Lazy load tools
 const WordCounter = lazy(() => import('../components/tools/WordCounter'));
@@ -94,6 +95,8 @@ export default function ToolTemplate() {
 
         <AdSlot adSlot="9791142997" adFormat="horizontal" minHeight="90px" className="my-0" />
         
+        <Breadcrumbs items={[{ label: 'Tools', path: '/' }, { label: tool.name }]} />
+
         <div className="bg-[var(--surface)] border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] min-h-[400px]">
           <ErrorBoundary>
             <Suspense fallback={<div className="text-center font-bold uppercase animate-pulse">Loading tool interface...</div>}>
