@@ -9,91 +9,62 @@ interface AdSlotProps {
 
 export default function AdSlot({ minHeight = '250px', className = '', adSlot, adFormat = 'auto' }: AdSlotProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [shouldRenderIns, setShouldRenderIns] = useState(false);
-  const [isPushed, setIsPushed] = useState(false);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const checkSizing = () => {
-      if (containerRef.current) {
-        const width = containerRef.current.offsetWidth;
-        const style = window.getComputedStyle(containerRef.current);
-        if (width > 0 && style.display !== 'none') {
-          setShouldRenderIns(true);
-          return true;
-        }
-      }
-      return false;
-    };
-
-    let resizeObserver: ResizeObserver | null = null;
-    const intersectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!checkSizing()) {
-            // If not ready yet, observe for resize
-            resizeObserver = new ResizeObserver(() => {
-              if (checkSizing()) {
-                resizeObserver?.disconnect();
-                resizeObserver = null;
-              }
-            });
-            resizeObserver.observe(containerRef.current!);
-          }
-          // Once it's intersecting, we can stop the intersection observer if it's already "ready" or if we handed off to resize observer
-          // Actually, let's just keep it until sizing is confirmed
-        }
-      });
-    }, { threshold: 0.1 });
-
-    intersectionObserver.observe(containerRef.current);
-
-    return () => {
-      intersectionObserver.disconnect();
-      resizeObserver?.disconnect();
-    };
-  }, []);
-
   const [adError, setAdError] = useState(false);
 
   useEffect(() => {
-    if (shouldRenderIns && !isPushed) {
-      // Small delay to ensure the <ins> tag is actually in the DOM and rendered
-      const timer = setTimeout(() => {
-        const ins = containerRef.current?.querySelector('.adsbygoogle');
-        // Double check status AND existence of children to avoid double-pushes
-        if (ins && !ins.getAttribute('data-adsbygoogle-status') && ins.children.length === 0 && containerRef.current && containerRef.current.offsetWidth > 0) {
-          try {
-            (window as any).adsbygoogle = (window as any).adsbygoogle || [];
-            ((window as any).adsbygoogle).push({});
-            setIsPushed(true);
-          } catch (e) {
-            console.error('AdSense error:', e);
-            setAdError(true);
-          }
-        }
-      }, 200);
-      return () => clearTimeout(timer);
-    }
-  }, [shouldRenderIns, isPushed]);
+    let checkCount = 0;
+    const maxChecks = 10;
+    let timeoutId: number;
 
-  if (adError) {
-    return null; // Silently hide or could return a placeholder if desired
+    const tryPush = () => {
+      if (!containerRef.current) return;
+      
+      const ins = containerRef.current.querySelector('.adsbygoogle');
+      const width = containerRef.current.offsetWidth;
+
+      // Only push if width > 0 AND it's a valid AdSense tag that hasn't been processed
+      if (width > 0 && ins && !ins.hasAttribute('data-adsbygoogle-status')) {
+        try {
+          const adsbygoogle = (window as any).adsbygoogle || [];
+          adsbygoogle.push({});
+        } catch (e) {
+          console.error('AdSense push error:', e);
+          setAdError(true);
+        }
+      } else if (checkCount < maxChecks) {
+        // If width is 0, wait and try again
+        checkCount++;
+        timeoutId = window.setTimeout(tryPush, 500);
+      }
+    };
+
+    timeoutId = window.setTimeout(tryPush, 500);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [adSlot, adFormat]); // Re-run if slot or format changes
+
+  // Use a safe way to check for development environment in Vite
+  const isDev = (import.meta as any).env?.DEV;
+
+  if (adError || (isDev && !(window as any).adsbygoogle)) {
+    return (
+      <div className={`my-8 ${className} bg-yellow-50 border-4 border-dashed border-black flex flex-col items-center justify-center text-xs text-black font-black uppercase p-4`} style={{ minHeight }}>
+        <span className="bg-yellow-400 px-2 mb-1">Ad Slot</span>
+        <span>{adFormat} - {adSlot || 'Auto'}</span>
+      </div>
+    );
   }
 
   return (
     <div ref={containerRef} className={`my-8 ${className} z-0 relative overflow-hidden`} style={{ minHeight }}>
-      {shouldRenderIns && (
-        <ins
-          className="adsbygoogle"
-          style={{ display: 'block', width: '100%', minHeight: '100px' }}
-          data-ad-client="ca-pub-6659085318131236"
-          {...(adSlot ? { 'data-ad-slot': adSlot } : {})}
-          data-ad-format={adFormat}
-          data-full-width-responsive="true"
-        />
-      )}
+      <ins
+        className="adsbygoogle"
+        style={{ display: 'block', width: '100%', minHeight: '50px' }}
+        data-ad-client="ca-pub-6659085318131236"
+        data-ad-slot={adSlot || "9791142997"}
+        data-ad-format={adFormat}
+        data-full-width-responsive="true"
+      />
     </div>
   );
 }

@@ -28,13 +28,28 @@ export default function SitemapPage() {
           </ul>
         </section>
 
-        <section className="space-y-6">
-          <h2 className="text-3xl font-black uppercase italic text-yellow-600">Utility Tools</h2>
-          <ul className="space-y-3 font-bold uppercase underline">
+        <section className="space-y-6 md:col-span-2 lg:col-span-1">
+          <h2 className="text-3xl font-black uppercase italic text-yellow-600 border-b-4 border-yellow-600 pb-2">Utility Tools & Variations</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 pt-4">
             {TOOLS.map(tool => (
-              <li key={tool.id}><Link to={`/tools/${tool.slug}`}>{tool.name}</Link></li>
+              <div key={tool.id} className="space-y-3">
+                <Link to={`/tools/${tool.slug}`} className="block font-black text-xl uppercase underline hover:text-yellow-600 transition-colors">
+                  {tool.name}
+                </Link>
+                {tool.aliases && tool.aliases.length > 0 && (
+                  <ul className="pl-6 space-y-2 text-xs font-bold uppercase text-gray-500 underline decoration-gray-300">
+                    {tool.aliases.map(alias => (
+                      <li key={alias}>
+                        <Link to={`/tools/${alias}`} className="hover:text-black transition-colors">
+                          {alias.replace(/-/g, ' ')}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
-          </ul>
+          </div>
         </section>
 
         <section className="space-y-6">
