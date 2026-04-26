@@ -1,6 +1,7 @@
 import { Outlet, Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import Logo from './Logo';
+import CookieConsent from './CookieConsent';
 
 export default function Layout() {
   return (
@@ -80,6 +81,7 @@ export default function Layout() {
           </div>
         </div>
       </footer>
+      <CookieConsent />
     </div>
   );
 }

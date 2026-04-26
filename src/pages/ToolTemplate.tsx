@@ -147,7 +147,9 @@ export default function ToolTemplate() {
           </ErrorBoundary>
         </div>
 
-        <AdSlot adSlot="9791142997" adFormat="rectangle" minHeight="280px" className="my-8" />
+        <div className="py-12">
+          <AdSlot adSlot="9791142997" adFormat="rectangle" minHeight="280px" className="my-0" />
+        </div>
 
         <section className="prose max-w-none">
           <h2 className="text-3xl font-black uppercase tracking-tight text-[var(--g6)] border-b-4 border-black pb-2">How to use {displayTitle}</h2>

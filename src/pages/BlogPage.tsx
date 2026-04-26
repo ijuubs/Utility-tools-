@@ -1,8 +1,16 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import { BLOG_POSTS } from '../data/blogData';
 
 export default function BlogPage() {
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubscribed(true);
+  };
+
   return (
     <div className="max-w-6xl mx-auto py-12 px-4 space-y-12">
       <Helmet>
@@ -41,10 +49,16 @@ export default function BlogPage() {
       <div className="bg-yellow-100 border-4 border-black p-12 text-center space-y-6">
           <h3 className="text-3xl font-black uppercase">Want more insights?</h3>
           <p className="text-xl font-medium">Get the latest tools and articles delivered straight to your inbox once a month.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
-              <input type="email" placeholder="email@example.com" className="flex-1 border-4 border-black p-4 font-bold outline-none focus:bg-white" />
-              <button className="bg-black text-white font-black uppercase px-8 py-4 hover:bg-yellow-400 hover:text-black transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]">Subscribe</button>
-          </div>
+          {subscribed ? (
+            <div className="bg-green-100 border-4 border-green-500 p-4 max-w-lg mx-auto">
+              <p className="font-black text-green-700 uppercase">Thanks for subscribing!</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubscribe} className="flex flex-col md:flex-row gap-4 justify-center max-w-lg mx-auto">
+                <input required type="email" placeholder="email@example.com" className="flex-1 border-4 border-black p-4 font-bold outline-none focus:bg-white" />
+                <button type="submit" className="bg-black text-white font-black uppercase px-8 py-4 hover:bg-yellow-400 hover:text-black transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)]">Subscribe</button>
+            </form>
+          )}
       </div>
     </div>
   );
