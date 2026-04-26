@@ -4,3 +4,5 @@ Allow: /
 # Allow Google AdSense crawler
 User-agent: Mediapartners-Google
 Allow: /
+
+Sitemap: https://utilitytools.top/sitemap.xml
