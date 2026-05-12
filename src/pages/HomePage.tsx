@@ -18,8 +18,6 @@ export default function HomePage() {
             <p className="text-xl text-black bg-yellow-200 inline-block px-4 py-2 border-2 border-black mb-12 font-bold">
               Fast, secure, and ready-to-use tools.
             </p>
-
-            <AdSlot adSlot="9791142997" adFormat="horizontal" minHeight="90px" className="mb-12" />
             
             <div className="grid md:grid-cols-3 gap-8">
                 {TOOLS.map((tool, index) => (
@@ -41,8 +39,6 @@ export default function HomePage() {
                 ))}
             </div>
         </div>
-
-        <AdSlot adSlot="9791142997" minHeight="250px" />
 
         <section className="bg-black text-white p-10 border-4 border-black">
             <h2 className="text-4xl font-black mb-8 uppercase text-yellow-300">Popular Tools</h2>

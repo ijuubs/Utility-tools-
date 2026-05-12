@@ -135,8 +135,6 @@ export default function ToolTemplate() {
           {displayTitle}
         </h1>
 
-        <AdSlot adSlot="9791142997" adFormat="horizontal" minHeight="90px" className="my-0" />
-        
         <Breadcrumbs items={[{ label: 'Tools', path: '/' }, { label: tool.name }]} />
 
         <div className="bg-[var(--surface)] border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] min-h-[400px]">
@@ -147,11 +145,7 @@ export default function ToolTemplate() {
           </ErrorBoundary>
         </div>
 
-        <div className="py-12">
-          <AdSlot adSlot="9791142997" adFormat="rectangle" minHeight="280px" className="my-0" />
-        </div>
-
-        <section className="prose max-w-none">
+        <section className="prose max-w-none mt-12">
           <h2 className="text-3xl font-black uppercase tracking-tight text-[var(--g6)] border-b-4 border-black pb-2">How to use {displayTitle}</h2>
           <div className="text-[var(--muted)] whitespace-pre-line leading-relaxed mt-6">{tool.howTo}</div>
           
@@ -172,11 +166,6 @@ export default function ToolTemplate() {
             ))}
           </div>
         </section>
-
-        {/* Footer Ad Placement */}
-        <div className="pt-20">
-             <AdSlot adSlot="9791142997" adFormat="auto" minHeight="250px" />
-        </div>
       </div>
     </div>
   );
