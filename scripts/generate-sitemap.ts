@@ -6,7 +6,7 @@ import { TOOLS } from '../src/data/toolsData';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = 'https://utilitytools.top'; // Change this to the actual domain if known
+const BASE_URL = 'https://utility-tools-eta.vercel.app'; // Change this to the actual domain if known
 
 function generateSitemap() {
   const sitemapHeader = `<?xml version="1.0" encoding="UTF-8"?>
