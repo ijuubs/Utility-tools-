@@ -6,6 +6,7 @@ export interface Tool {
   category: string;
   howTo: string;
   faqs: { question: string; answer: string }[];
+  usp?: string;
   aliases?: string[]; // pSEO variations
   titleTag?: string;
   metaDescription?: string;
@@ -16,8 +17,10 @@ export const TOOLS: Tool[] = [
     id: 'word-counter',
     slug: 'word-counter',
     name: 'Word Counter',
+    titleTag: 'Free Online Word Counter - Fast, Private & Secure',
     description: 'An advanced word, character, and sentence counter to optimize your content.',
     category: 'Text Tools',
+    usp: '100% Client-Side Processing. Your text never leaves your browser.',
     aliases: ['word-count-checker', 'online-character-count', 'essay-length-checker'],
     metaDescription: 'Use our free online Word Counter to instantly check word counts, character limits, and sentence structures for essays and blogs. Fast and private.',
     howTo: 'The Word Counter is a versatile tool for professionals, students, and writers who need to adhere to specific content constraints. \n\nTo use it, simply type or paste your text into the primary text box. As you type, the tool immediately calculates: \n- **Word Count:** The total number of words based on whitespace separation.\n- **Character Count:** Including spaces and excluding spaces for technical precision.\n- **Sentence Count:** Calculated using standard punctuation markers (. ! ?).\n- **Paragraph Count:** Calculated based on newline breaks.\n\n### Why use an online word counter?\nWhether you are writing a blog post, an academic essay, or a technical document, meeting length requirements is crucial. Our real-time engine ensures you don\'t have to manually recount your text as you edit. It is also completely private, running directly in your browser without ever sending text to a server.',
@@ -31,8 +34,10 @@ export const TOOLS: Tool[] = [
     id: 'json-formatter',
     slug: 'json-formatter',
     name: 'JSON Formatter',
+    titleTag: 'Clean JSON Formatter & Validator - Offline Ready',
     description: 'A powerful tool to prettify, minify, and validate JSON code.',
     category: 'Web Tools',
+    usp: 'Secure, ad-free environment without server data leaks. Runs entirely offline.',
     aliases: ['prettify-json-online', 'minify-json-free', 'json-validator-tool'],
     metaDescription: 'Prettify, minify, and validate your JSON data instantly. Our free JSON Formatter runs in-browser for maximum security and performance.',
     howTo: 'The JSON Formatter and Validator is a critical tool for developers handling JSON payloads.\n\n### How to format your JSON:\n1. **Paste your JSON:** Insert your raw or minified JSON string into the input area.\n2. **Choose an Action:** \n   - **Prettify:** Instantly transforms dense, unreadable JSON into a beautifully indented, structured format. Ideal for debugging and reviewing configuration files.\n   - **Minify:** Strips all whitespace and unnecessary characters to make your JSON as compact as possible for API transmission.\n3. **Validation:** Our tool will highlight any syntax errors immediately, showing you precisely where the JSON fails to validate, which saves hours of debugging time.\n\n### Benefits for developers\n- **Faster Debugging:** Quickly spot missing commas or brackets.\n- **Compact Payloads:** Reduce bandwidth for web APIs by minifying production configuration.',
@@ -45,10 +50,12 @@ export const TOOLS: Tool[] = [
     id: 'pdf-compressor',
     slug: 'pdf-compressor',
     name: 'PDF Compressor',
+    titleTag: 'Secure PDF Compressor - 100% Client-Side & Private',
     description: 'Shrink your heavy PDFs without compromising visual quality.',
     category: 'Converter',
+    usp: 'Your sensitive documents never touch a remote server. 100% private locally.',
     aliases: ['compress-pdf-to-100kb', 'shrink-pdf-size-free', 'reduce-pdf-file-size-online'],
-    metaDescription: 'Reduce PDF file size without losing quality. Compress PDFs to 100KB or smaller for easy emailing and faster web uploads. 100% private.',
+    metaDescription: 'Compress PDF files locally in your browser. No files are uploaded to a server, ensuring 100% privacy for sensitive documents. Free & fast.',
     howTo: `### Master Your Document Management with Easy PDF Compression
 PDF files are the backbone of modern business communication, but high-resolution assets can cause them to swell to sizes that are impossible to email. Our tool leverages advanced optimization algorithms to reduce your file footprint without sacrificing critical legibility.
 
@@ -70,8 +77,10 @@ PDF files are the backbone of modern business communication, but high-resolution
     id: 'image-resizer',
     slug: 'image-resizer',
     name: 'Image Resizer',
+    titleTag: 'Professional Image Resizer - Custom Dimensions & SEO Ready',
     description: 'Resize images to exact dimensions for social media or web.',
     category: 'Converter',
+    usp: 'Preserve edge sharpness with Lanczos resampling. No server uploads.',
     aliases: ['resize-image-for-whatsapp', 'make-image-under-1mb', 'online-png-resizer'],
     metaDescription: 'Instantly resize images for WhatsApp, Instagram, or SEO. Make images under 1MB or set custom dimensions for perfect web performance.',
     howTo: `### Precision Image Resizing for Web and Social Media
@@ -95,8 +104,10 @@ In the era of visual communication, having images at the exact dimensions requir
     id: 'lorem-ipsum',
     slug: 'lorem-ipsum',
     name: 'Lorem Ipsum Generator',
+    titleTag: 'Lorem Ipsum Generator - Professional Placeholder Text',
     description: 'Generate placeholder text for design and development projects.',
     category: 'Text Tools',
+    usp: 'Instant generation for design prototypes. Customizable lengths.',
     aliases: ['placeholder-text-generator', 'dummy-text-generator', 'latin-text-filler'],
     metaDescription: 'Generate professional Lorem Ipsum placeholder text for your web design and development projects. Custom paragraph lengths and styling.',
     howTo: `### Elevate Your Design Prototypes with Lorem Ipsum
@@ -120,8 +131,10 @@ Lorem Ipsum is the industry-standard placeholder text used by designers, develop
     id: 'color-picker',
     slug: 'color-picker',
     name: 'Color Picker',
+    titleTag: 'Online Color Picker - HEX, RGB & CSS Ready',
     description: 'Select colors visually and get accurate HEX and RGB values.',
     category: 'Color Tools',
+    usp: 'Instant HEX & RGB conversion. Clipboard sync for developers.',
     aliases: ['hex-color-selector', 'rgb-color-tool', 'online-color-finder'],
     metaDescription: 'Professional online Color Picker for designers and developers. Get instant HEX and RGB values for your next brand project or CSS file.',
     howTo: `### Mastering Web Design with the Color Picker
@@ -145,8 +158,10 @@ Color is arguably the most critical factor in web branding, mood, and accessibil
     id: 'unit-converter',
     slug: 'unit-converter',
     name: 'Unit Converter',
+    titleTag: 'Metric to Imperial Converter - Precise & Instant',
     description: 'Quickly convert between metric and imperial measurements.',
     category: 'Converter',
+    usp: 'Error-free decimal logic. Professional measurement precision.',
     aliases: ['metric-to-imperial-converter', 'meters-to-kilometers-online', 'measurement-converter-free'],
     metaDescription: 'Fast and accurate Unit Converter for metric and imperial measurements. Convert length, distance, and mass instantly in your browser.',
     howTo: `### Unit Converter: Simplifying Scientific Calculations
@@ -168,8 +183,10 @@ The tool is designed for speed and consistency, preventing common manual calcula
     id: 'qr-code-generator',
     slug: 'qr-code-generator',
     name: 'QR Code Generator',
+    titleTag: 'Custom QR Code Generator - Free & Permanent',
     description: 'Create customizable QR codes for URLs, text, or contact info.',
     category: 'Web Tools',
+    usp: 'No scan limits. No tracking redirects. 100% direct links.',
     aliases: ['make-qr-code-free', 'bulk-qr-generator', 'url-to-qr-online'],
     metaDescription: 'Create custom QR codes for URLs, business cards, or WiFi access instantly. High-resolution downloads with no scan limits.',
     howTo: `### Bridging Physical and Digital with Custom QR Codes
@@ -192,10 +209,12 @@ QR codes have become an essential link between the physical world and digital ex
     id: 'password-generator',
     slug: 'password-generator',
     name: 'Password Generator',
+    titleTag: 'Secure Password Generator - Local Entropy',
     description: 'Generate high-entropy, secure passwords to protect your digital accounts.',
     category: 'Security',
+    usp: 'Entropy-driven local generation using Web Crypto API. Zero server tracking.',
     aliases: ['secure-password-maker', 'generate-strong-password-online', 'random-string-generator'],
-    metaDescription: 'Generate high-entropy, secure passwords to protect your digital accounts. 100% offline generation in your browser for maximum security.',
+    metaDescription: 'Generate strong, unhackable passwords locally. Zero server tracking ensures your keys are completely private and safe.',
     howTo: `### Hardening Your Digital Security with Entropy
 In an era of sophisticated brute-force attacks, "password123" is no longer enough. Our Secure Password Generator uses cryptographically strong random number generation to create strings that are virtually impossible to guess.
 
@@ -215,8 +234,10 @@ Entropy is the measure of randomness. By using a diverse character set and suffi
     id: 'bmi-calculator',
     slug: 'bmi-calculator',
     name: 'BMI Calculator',
+    titleTag: 'WHO-Standard BMI Calculator - Health Metrics',
     description: 'Calculate your Body Mass Index (BMI) to understand your health status.',
     category: 'Health',
+    usp: 'Professional health screening based on global WHO standards.',
     aliases: ['body-mass-index-checker', 'calculate-bmi-online-free', 'weight-health-status-tool'],
     metaDescription: 'Calculate your Body Mass Index (BMI) instantly. Understand your weight health status using our professional, WHO-standard BMI calculator.',
     howTo: `### The Ultimate Guide to Body Mass Index (BMI)
@@ -278,8 +299,10 @@ BMI remains a powerful, easy-to-use indicator for the general population. By tra
     id: 'url-encoder',
     slug: 'url-encoder',
     name: 'URL Encoder / Decoder',
+    titleTag: 'URL Encoder & Decoder - Safe API Formatting',
     description: 'Safely encode or decode special characters for URLs and APIs.',
     category: 'Web Tools',
+    usp: 'Percent-encoding for ASCII safety. Secure in-browser processing.',
     aliases: ['percent-encoding-online', 'url-formatter-free', 'encode-uri-tool'],
     metaDescription: 'Safely encode or decode special characters for URLs and APIs. Ensure your web requests are formatted correctly with our free URL Encoder.',
     howTo: `### Mastering URL Component Safety

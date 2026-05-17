@@ -12,6 +12,10 @@ export default function Layout() {
             <Logo size="md" />
             ToolKitPro
           </Link>
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1 bg-green-100 border-2 border-black rounded-full">
+            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            <span className="text-[10px] font-black uppercase tracking-wider">100% Client-Side / Secure</span>
+          </div>
           <div className="flex gap-4 md:gap-8 items-center">
             <Link to="/" className="hidden md:block text-sm font-black uppercase hover:text-yellow-600 transition-colors">Tools</Link>
             <Link to="/blog" className="hidden md:block text-sm font-black uppercase hover:text-yellow-600 transition-colors">Blog</Link>

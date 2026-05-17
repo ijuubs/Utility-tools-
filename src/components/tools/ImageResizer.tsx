@@ -1,39 +1,116 @@
-import { useState, useRef, ChangeEvent } from 'react';
+import { useState } from 'react';
+import imageCompression from 'browser-image-compression';
 
 export default function ImageResizer() {
-  const [imgSrc, setImgSrc] = useState<string | null>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [file, setFile] = useState<File | null>(null);
+  const [maxWidth, setMaxWidth] = useState(1200);
+  const [maxSizeMB, setMaxSizeMB] = useState(1);
+  const [isResizing, setIsResizing] = useState(false);
+  const [result, setResult] = useState<{ url: string; size: number; name: string } | null>(null);
 
-  const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => setImgSrc(event.target?.result as string);
-      reader.readAsDataURL(file);
+  const handleResize = async () => {
+    if (!file) return;
+    setIsResizing(true);
+    setResult(null);
+
+    const options = {
+      maxSizeMB: maxSizeMB,
+      maxWidthOrHeight: maxWidth,
+      useWebWorker: true,
+    };
+
+    try {
+      const compressedFile = await imageCompression(file, options);
+      const url = URL.createObjectURL(compressedFile);
+      setResult({
+        url: url,
+        size: compressedFile.size,
+        name: `resized_${file.name}`,
+      });
+    } catch (error) {
+      console.error(error);
+      alert('Failed to resize image.');
+    } finally {
+      setIsResizing(false);
     }
   };
 
-  const resizeImage = () => {
-    if (!imgSrc || !canvasRef.current) return;
-    const img = new Image();
-    img.src = imgSrc;
-    img.onload = () => {
-      const canvas = canvasRef.current!;
-      canvas.width = 200; // Fixed demo width
-      canvas.height = (img.height / img.width) * 200;
-      const ctx = canvas.getContext('2d');
-      ctx?.drawImage(img, 0, 0, canvas.width, canvas.height);
-    };
-  };
-
   return (
-    <div className="space-y-4">
-      <input type="file" accept="image/*" onChange={handleImageUpload} />
-      {imgSrc && (
-        <>
-            <button className="px-4 py-2 bg-black text-white font-bold" onClick={resizeImage}>Resize to 200px Width</button>
-            <canvas ref={canvasRef} className="mt-4 border-2 border-black" />
-        </>
+    <div className="max-w-xl mx-auto space-y-8">
+      <div className="border-4 border-dashed border-black p-8 text-center bg-white cursor-pointer hover:bg-gray-50 transition-colors">
+        <input 
+          type="file" 
+          id="image-upload"
+          accept="image/*"
+          className="hidden"
+          onChange={(e) => {
+            setFile(e.target.files?.[0] || null);
+            setResult(null);
+          }}
+        />
+        <label htmlFor="image-upload" className="cursor-pointer space-y-2 block">
+            <div className="text-4xl text-green-500">🖼️</div>
+            <p className="font-black uppercase">{file ? file.name : 'Select Image to Resize'}</p>
+        </label>
+      </div>
+
+      {file && (
+        <div className="bg-white border-4 border-black p-6 space-y-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+           <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                    <label className="block text-xs font-black uppercase">Max Width/Height (px)</label>
+                    <input 
+                        type="number" 
+                        value={maxWidth} 
+                        onChange={(e) => setMaxWidth(Number(e.target.value))}
+                        className="w-full border-2 border-black p-2 font-bold"
+                    />
+                </div>
+                <div className="space-y-2">
+                    <label className="block text-xs font-black uppercase">Max File Size (MB)</label>
+                    <input 
+                        type="number" 
+                        step="0.1"
+                        value={maxSizeMB} 
+                        onChange={(e) => setMaxSizeMB(Number(e.target.value))}
+                        className="w-full border-2 border-black p-2 font-bold"
+                    />
+                </div>
+           </div>
+
+           <button 
+             disabled={isResizing}
+             onClick={handleResize}
+             className="w-full bg-black text-white p-4 font-black uppercase text-xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(34,197,94,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 transition-all"
+           >
+             {isResizing ? 'Processing...' : 'Resize & Compress Image'}
+           </button>
+        </div>
+      )}
+
+      {result && (
+        <div className="bg-green-100 border-4 border-black p-6 space-y-6">
+            <div className="flex justify-between items-end border-b-2 border-black pb-4">
+                <div>
+                   <p className="text-xs font-black uppercase mb-1">Resulting File</p>
+                   <p className="font-bold">{result.name}</p>
+                </div>
+                <div className="text-right">
+                   <p className="text-xs font-bold line-through opacity-40">{(file!.size / 1024).toFixed(0)} KB</p>
+                   <p className="font-black text-2xl">{(result.size / 1024).toFixed(0)} KB</p>
+                </div>
+            </div>
+            
+            <img src={result.url} alt="Result" className="max-h-64 mx-auto border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" />
+
+            <a 
+              href={result.url} 
+              download={result.name}
+              className="block text-center bg-black text-white p-4 font-black uppercase border-b-4 border-r-4 border-black active:border-0 hover:bg-green-600 transition-colors"
+            >
+              Download Resized Image
+            </a>
+        </div>
       )}
     </div>
   );

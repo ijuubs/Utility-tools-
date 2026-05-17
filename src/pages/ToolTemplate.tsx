@@ -64,20 +64,34 @@ export default function ToolTemplate() {
     .filter(t => t.id !== tool.id && (t.category === tool.category))
     .slice(0, 4);
 
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": displayTitle,
-    "description": tool.metaDescription || tool.description,
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "All",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": displayTitle,
+      "description": tool.metaDescription || tool.description,
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": tool.description
     },
-    "featureList": tool.description
-  };
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": tool.faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    }
+  ];
 
   return (
     <div className="flex flex-col lg:flex-row gap-8">
@@ -124,7 +138,7 @@ export default function ToolTemplate() {
       {/* Main Content */}
       <div className="flex-1 space-y-8 min-w-0">
         <Helmet>
-          <title>{displayTitle} | ToolKitPro</title>
+          <title>{tool.titleTag || `${displayTitle} | ToolKitPro`}</title>
           <meta name="description" content={tool.metaDescription || tool.description} />
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
@@ -144,6 +158,13 @@ export default function ToolTemplate() {
             </Suspense>
           </ErrorBoundary>
         </div>
+
+        {tool.usp && (
+            <div className="bg-black text-white p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(251,191,36,1)] flex items-start gap-4">
+                <div className="bg-yellow-400 text-black p-2 rounded-sm font-black text-xs uppercase shrink-0">USP</div>
+                <p className="font-bold text-lg leading-tight uppercase italic">{tool.usp}</p>
+            </div>
+        )}
 
         <section className="prose max-w-none mt-12">
           <h2 className="text-3xl font-black uppercase tracking-tight text-[var(--g6)] border-b-4 border-black pb-2">How to use {displayTitle}</h2>
