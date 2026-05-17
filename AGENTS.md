@@ -14,8 +14,9 @@
 - **Structured Data:** Every `ToolTemplate` page MUST inject `WebApplication` Schema.org JSON-LD.
 - **Meta:** Use `react-helmet-async` for unique `<title>` and `<description>` per tool.
 
-## Monetization (AdSense)
-- **Stability:** ALL AdSense slots MUST use the `AdSlot` component to enforce `min-height` and prevent Cumulative Layout Shift (CLS).
+## Monetization (AdSense & Adsterra)
+- **AdSense:** ALL AdSense slots MUST use the `AdSlot` component to enforce `min-height` and prevent Cumulative Layout Shift (CLS).
+- **Adsterra:** Site-wide units (Popunder, Social Bar) are managed in `index.html`. For individual banner units, use the `AdsterraSlot` component to maintain design consistency and brand separation.
 - **Placement:** Ads must be outside the primary interaction flow. The Tool UI must always be the first thing visible. Integrate ads within/under SEO content.
 
 ## Performance

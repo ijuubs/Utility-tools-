@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { TOOLS } from '../data/toolsData';
 import { Suspense, lazy } from 'react';
 import AdSlot from '../components/AdSlot';
+import AdsterraSlot from '../components/AdsterraSlot';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Breadcrumbs from '../components/Breadcrumbs';
 
@@ -186,6 +187,8 @@ export default function ToolTemplate() {
                 </div>
             ))}
           </div>
+
+          <AdsterraSlot id="footer-banner" minHeight="150px" className="mt-16" />
         </section>
       </div>
     </div>
