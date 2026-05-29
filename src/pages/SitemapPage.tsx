@@ -7,11 +7,19 @@ export default function SitemapPage() {
   return (
     <div className="max-w-4xl mx-auto py-12 px-4 space-y-12">
       <Helmet>
-        <title>Sitemap | ToolKitPro</title>
+        <title>HTML Sitemap | ToolKitPro</title>
         <meta name="description" content="Sitemap for ToolKitPro. Find all our utility tools and blog posts in one place." />
       </Helmet>
       
-      <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">Sitemap</h1>
+      <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">HTML Sitemap</h1>
+
+      <div className="bg-yellow-100 border-4 border-black p-4 md:p-6 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+        <h3 className="font-black uppercase text-lg mb-2">Are you a search engine?</h3>
+        <p className="font-medium text-black">
+          This page is an HTML sitemap designed for human visitors. If you are trying to submit this site to Google Search Console or another indexing service, please use our XML Sitemap instead: <br/><br/>
+          <a href="/sitemap.xml" className="bg-black text-white px-4 py-2 font-black uppercase text-sm hover:bg-yellow-400 hover:text-black transition-all">View sitemap.xml</a>
+        </p>
+      </div>
       
       <div className="grid md:grid-cols-2 gap-12">
         <section className="space-y-6">

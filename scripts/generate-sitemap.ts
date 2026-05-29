@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { TOOLS } from '../src/data/toolsData';
+import { BLOG_POSTS } from '../src/data/blogData';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,11 +16,22 @@ function generateSitemap() {
 
   const urls = [
     { loc: `${BASE_URL}/`, priority: '1.0' },
+    { loc: `${BASE_URL}/blog`, priority: '0.9' },
+    { loc: `${BASE_URL}/about`, priority: '0.8' },
+    { loc: `${BASE_URL}/contact`, priority: '0.7' },
+    { loc: `${BASE_URL}/faq`, priority: '0.7' },
   ];
 
   TOOLS.forEach((tool) => {
     urls.push({
       loc: `${BASE_URL}/tools/${tool.slug}`,
+      priority: '0.9',
+    });
+  });
+
+  BLOG_POSTS.forEach((post) => {
+    urls.push({
+      loc: `${BASE_URL}/blog/${post.slug}`,
       priority: '0.8',
     });
   });

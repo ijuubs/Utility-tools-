@@ -62,7 +62,8 @@ export default function Layout() {
               <li><Link to="/about" className="hover:text-yellow-400 transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="hover:text-yellow-400 transition-colors">Contact</Link></li>
               <li><Link to="/faq" className="hover:text-yellow-400 transition-colors">FAQ</Link></li>
-              <li><Link to="/sitemap" className="hover:text-yellow-400 transition-colors">Sitemap</Link></li>
+              <li><Link to="/sitemap" className="hover:text-yellow-400 transition-colors">HTML Sitemap</Link></li>
+              <li><a href="/sitemap.xml" target="_blank" rel="noreferrer" className="hover:text-yellow-400 transition-colors">XML Sitemap</a></li>
             </ul>
           </div>
 
