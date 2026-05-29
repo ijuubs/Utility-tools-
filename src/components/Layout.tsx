@@ -7,32 +7,32 @@ export default function Layout() {
   return (
     <div className="min-h-screen bg-[var(--g0)] text-[var(--ink)] font-sans transition-colors duration-300 flex flex-col">
       <header className="sticky top-0 z-50 bg-[rgba(244,250,244,0.88)] dark:bg-[#1a1a1a]/80 backdrop-blur-lg border-b-4 border-black">
-        <nav className="max-w-[1200px] mx-auto px-6 h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 font-black text-3xl uppercase tracking-tighter">
-            <Logo size="md" />
-            ToolKitPro
+        <nav className="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 font-black text-xl sm:text-3xl uppercase tracking-tighter shrink-0">
+            <Logo size="sm" />
+            <span className="text-xl sm:text-3xl">ToolKitPro</span>
           </Link>
           <div className="hidden lg:flex items-center gap-2 px-3 py-1 bg-green-100 border-2 border-black rounded-full">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
             <span className="text-[10px] font-black uppercase tracking-wider">100% Client-Side / Secure</span>
           </div>
-          <div className="flex gap-4 md:gap-8 items-center">
+          <div className="flex gap-2 sm:gap-4 md:gap-8 items-center">
             <Link to="/" className="hidden md:block text-sm font-black uppercase hover:text-yellow-600 transition-colors">Tools</Link>
             <Link to="/blog" className="hidden md:block text-sm font-black uppercase hover:text-yellow-600 transition-colors">Blog</Link>
             <Link to="/about" className="hidden md:block text-sm font-black uppercase hover:text-yellow-600 transition-colors">About</Link>
             <ThemeToggle />
-            <Link to="/" className="bg-black text-white px-6 py-2 border-2 border-black font-black uppercase text-sm hover:bg-yellow-400 hover:text-black transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
+            <Link to="/" className="bg-black text-white px-3 py-1.5 sm:px-6 sm:py-2 border-2 border-black font-black uppercase text-xs sm:text-sm hover:bg-yellow-400 hover:text-black transition-all shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] sm:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]">
               Explore
             </Link>
           </div>
         </nav>
       </header>
       
-      <main className="max-w-[1200px] mx-auto px-6 py-12 flex-1 w-full">
+      <main className="max-w-[1200px] mx-auto px-4 sm:px-6 py-8 md:py-12 flex-1 w-full">
         <Outlet />
       </main>
 
-      <footer className="bg-black text-white py-20 px-6 border-t-8 border-yellow-400">
+      <footer className="bg-black text-white py-12 md:py-20 px-4 sm:px-6 border-t-8 border-yellow-400">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3 font-black text-3xl uppercase tracking-tighter text-white">

@@ -104,18 +104,29 @@ Using server-based formatters is a massive security risk. Our JSON Formatter run
     usp: 'Your sensitive documents never touch a remote server. 100% private locally.',
     aliases: ['compress-pdf-to-100kb', 'shrink-pdf-size-free', 'reduce-pdf-file-size-online'],
     metaDescription: 'Compress PDF files locally in your browser. No files are uploaded to a server, ensuring 100% privacy for sensitive documents. Free & fast.',
-    howTo: `### Master Your Document Management with Easy PDF Compression
-PDF files are the backbone of modern business communication, but high-resolution assets can cause them to swell to sizes that are impossible to email. Our tool leverages advanced optimization algorithms to reduce your file footprint without sacrificing critical legibility.
+    howTo: `### The Technical Architecture of PDF Compression: Balancing Size and Fidelity
+Portable Document Format (PDF) files are the digital standard for document exchange, yet they are often notoriously inefficient. A single high-resolution image or a collection of embedded fonts can turn a 500KB document into a massive 50MB file. 
 
-#### How to Optimize Your PDFs
-1. **Selection:** Upload your desired PDF file directly from your local machine.
-2. **Configuration:** Choose between balance or maximum compression modes based on your needs.
-3. **Download:** Once processing is complete, your optimized document is ready for instant download.
+Our **Secure PDF Compressor** provides a surgical, client-side approach to shrinking these documents. We don't just "zip" the file; we rearrange its internal binary object stream to optimize efficiency.
 
-#### Why File Size Matters
-- **Email Compatibility:** Most email clients have a 20MB-25MB limit. Compression ensures your documents reach their destination every time.
-- **Improved Loading Speeds:** For web developers, hosting smaller PDFs means faster page loads and improved user experience for your visitors.
-- **Storage Savings:** Large amounts of internal documentation can clog cloud storage projects; compressing files saves both space and costs.`,
+#### 1. How Client-Side PDF Compression Works
+Standard online compressors require you to upload your document to their server. This creates a privacy risk and forces you to wait for the upload and download cycles. ToolKitPro uses a decentralized approach:
+- **Object Overhauling:** We use library-based serialization to reconstruct the PDF's internal cross-reference (XREF) table. We identify redundant objects and "flatten" them.
+- **Stream Optimization:** PDF content is stored in streams. Our tool recompresses these streams using optimized object-stream logic, which can often reduce size by 10-15% without touching a single pixel of an image.
+- **Resource Pruning:** Many PDFs contain "orphan" objects—data that is included in the file but not used by any page. Our engine identifies and prunes these during the re-save process.
+
+#### 2. Why Choose Browser-Based Compression?
+- **Zero-Latency Workflow:** Since there is no upload, the compression happens at the speed of your local CPU. A file that takes 2 minutes to upload to a competitor can be compressed in 2 seconds on our platform.
+- **Corporate Compliance:** For banks, law firms, and medical practitioners, HIPAA and GDPR compliance prohibit uploading PII (Personally Identifiable Information) to random third-party servers. Since our tool runs entirely in your RAM, the data never leaves the "sandbox" of your browser, making it the safest choice for professionals.
+
+#### 3. Best Practices for Smaller PDFs
+To get the most out of our tool, consider these document creation tips:
+- **Subset Fonts:** When creating a PDF, only embed the characters you actually use.
+- **Vector Graphics:** Use vector formats (SVG, AI) instead of raster images (PNG, JPG) wherever possible.
+- **Remove Hidden Metadata:** Our compressor helps strip out hidden author info, thumbnails, and edit histories that add invisible bulk to your files.
+
+#### 4. Summary of Benefits
+By shifting the processing power from the cloud to your local machine, ToolKitPro offers a unique combination of **unbreakable privacy**, **unmatched speed**, and **zero cost**. No "pro" tiers, no daily limits—just pure performance.`,
     faqs: [
         { question: 'Is my data secure?', answer: 'Absolutely. Your PDF is processed locally in your secure browser session using WebAssembly technology, meaning no document data ever travels to our servers.' },
         { question: 'Will my images look blurry?', answer: 'Our intelligent compression focuses on metadata and stream optimization first, maintaining high visual fidelity for text and diagrams.' }
@@ -131,18 +142,33 @@ PDF files are the backbone of modern business communication, but high-resolution
     usp: 'Preserve edge sharpness with Lanczos resampling. No server uploads.',
     aliases: ['resize-image-for-whatsapp', 'make-image-under-1mb', 'online-png-resizer'],
     metaDescription: 'Instantly resize images for WhatsApp, Instagram, or SEO. Make images under 1MB or set custom dimensions for perfect web performance.',
-    howTo: `### Precision Image Resizing for Web and Social Media
-In the era of visual communication, having images at the exact dimensions required by platforms like Instagram, LinkedIn, or high-performance websites is non-negotiable. Our Image Resizer provides a surgical approach to file manipulation.
+    howTo: `### Professional Image Optimization: Resizing and Compression Guide
+Images consume more bandwidth than any other element on the modern web. A single unoptimized photograph can increase mobile load times by several seconds, leading to higher bounce rates and lower search engine rankings. 
 
-#### The Resizing Workflow
-1. **Upload:** Select your JPEG, PNG, or WebP image.
-2. **Dimension Logic:** Enter your target width and height. You can choose to maintain the aspect ratio (recommended to prevent skewing) or force specific dimensions.
-3. **Optimization:** Our engine performs high-quality resampling to ensure the resized image remains sharp and professional.
+The ToolKitPro **Image Resizer** is an industrial-grade tool designed to give you absolute control over your visual assets without ever uploading them to a remote server.
 
-#### Critical Use Cases
-- **Blogging & SEO:** Large images slow down your site. Resizing to the exact container width improves your Core Web Vitals.
-- **Consistency:** Ensure every product photo in your e-commerce store has an identical aspect ratio for a polished, professional look.
-- **Social Media Compliance:** Adhere to strict profile picture and cover photo dimensions without manual cropping.`,
+#### 1. Why Resizing is Critical for 2026 SEO
+Google’s Core Web Vitals prioritize Largest Contentful Paint (LCP). If your website displays an image at 800px wide, but the source file is 4000px wide, the browser has to download five times more data than necessary. 
+- **Physical Dimensions:** By resizing your image to the exact container width of your website, you minimize the "Payload Cost" of your page.
+- **Visual Integrity:** Our tool uses the **Lanczos Resampling Algorithm**. Unlike basic linear interpolation, Lanczos looks at a larger "neighborhood" of pixels, preventing the "staircase" effect and blurriness commonly seen in lower-end resizers.
+
+#### 2. Understanding File Formats and Compression
+- **JPEG:** Ideal for photographs. It uses lossy compression but offers the best file-size-to-quality ratio for complex images.
+- **PNG:** Best for graphics with flat colors and transparency. While usually larger, it preserves pixel-perfect detail.
+- **WebP:** The Google-backed format of the future. It offers superior compression to JPEG and PNG. Our tool helps you prepare assets for high-efficiency WebP implementations.
+
+#### 3. How to Use the Resizer for Maximum Impact
+1. **Aspect Ratio Preservation:** Always keep the aspect ratio locked unless you are specifically preparing a crop for a social media post (like an Instagram square).
+2. **Target File Size:** If you are preparing images for email, aim for under 500KB. For web heros, try to stay under 200KB.
+3. **Local Processing:** Our tool uses Web Workers to process your image in parallel. This keeps the UI responsive even when handling 100MB 4K RAW images.
+
+#### 4. Social Media Cheat Sheet
+- **Instagram Story:** 1080 x 1920 px
+- **LinkedIn Post:** 1200 x 627 px
+- **Twitter Header:** 1500 x 500 px
+- **YouTube Thumbnail:** 1280 x 720 px
+
+By using ToolKitPro, you ensure that every image is "Perfectly Weighted"—just enough quality to look sharp, but small enough to load instantly on any device.`,
     faqs: [
         { question: 'Which formats are supported?', answer: 'We support all major web formats, including JPEG, PNG, and WebP.' },
         { question: 'Does it maintain quality?', answer: 'Yes, we use the Lanczos resampling algorithm to provide high-quality scaling that preserves edge sharpness.' }
@@ -158,18 +184,21 @@ In the era of visual communication, having images at the exact dimensions requir
     usp: 'Instant generation for design prototypes. Customizable lengths.',
     aliases: ['placeholder-text-generator', 'dummy-text-generator', 'latin-text-filler'],
     metaDescription: 'Generate professional Lorem Ipsum placeholder text for your web design and development projects. Custom paragraph lengths and styling.',
-    howTo: `### Elevate Your Design Prototypes with Lorem Ipsum
-Lorem Ipsum is the industry-standard placeholder text used by designers, developers, and typesetters. When you are building a website, app, or UI layout, you often don't have final content ready. Using real text can distract from the visual design. Our Lorem Ipsum Generator allows you to create high-quality, professional placeholder content with just a click.
+    howTo: `### Creating Professional Placeholder Content with Lorem Ipsum
+Lorem Ipsum has been the design industry’s standard placeholder text since the 1500s. Originally adapted from Cicero’s philosophical treatise "De Finibus Bonorum et Malorum," it is prized by typographers because it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here," making it look like readable English.
 
-#### How to Use Our Generator
-1. **Define Length:** Select the number of paragraphs you need for your design layout.
-2. **Generate Instant Content:** Click "Generate" to create custom text blocks.
-3. **Copy-Paste:** Seamlessly integrate the text into your Figma files, CMS (like WordPress or Webflow), or direct into your code.
+Our **Lorem Ipsum Generator** provides high-quality, randomized Latin text to help you visualize your design’s typography and layout density.
 
-#### Why Lorem Ipsum is Essential
-- **Focus on Layout:** By removing meaningful content, you force the eye to review typography, spacing, and design hierarchy rather than reading the text.
-- **Save Time:** Instead of manually typing or searching for content, our tool gives you exactly the amount of text you need in seconds.
-- **Professional Standard:** Proper layout testing is only possible with realistic-looking text—lorem ipsum provides the perfect balance of word lengths and structure.`,
+#### 1. Why Use Placeholder Text?
+When you are presenting a design to a client or stakeholder, real content can be a distraction. People start critiquing the wording, the tone, or the factual accuracy of the text instead of focusing on the grid system, the font pairings, or the whitespace. Lorem Ipsum acts as a "neutral filler," allowing the viewer to focus entirely on the aesthetic and structural composition.
+
+#### 2. Features of Our Generator
+- **Randomized Paragraphs:** We don't just repeat the same paragraph over and over. Our tool uses a large dictionary of Latin words to weave unique text blocks every time you click generate.
+- **Custom Density:** You can specify the number of paragraphs you need. Whether you're filling a small sidebar or a 2000-word blog template, we provide the exact amount of "ink" your design needs.
+- **Instant Copying:** Our UI is optimized for speed. Click the result and it’s in your clipboard, ready for Figma, Sketch, or Adobe XD.
+
+#### 3. Modern Alternatives
+While Lorem Ipsum is the standard, modern designers sometimes use themed placeholders (like "Bacon Ipsum" or "Office Ipsum"). However, for professional corporate presentations, the classic Latin Lorem Ipsum remains the most sophisticated and least distracting choice.`,
     faqs: [
         { question: 'Is it configurable?', answer: 'Yes, you can specify the number of paragraphs needed for your layout.' },
         { question: 'What is Lorem Ipsum?', answer: 'It is derived from Cicero’s 45 BC text, and has been the industry standard for placeholder text since the 1500s.' }
@@ -185,18 +214,24 @@ Lorem Ipsum is the industry-standard placeholder text used by designers, develop
     usp: 'Instant HEX & RGB conversion. Clipboard sync for developers.',
     aliases: ['hex-color-selector', 'rgb-color-tool', 'online-color-finder'],
     metaDescription: 'Professional online Color Picker for designers and developers. Get instant HEX and RGB values for your next brand project or CSS file.',
-    howTo: `### Mastering Web Design with the Color Picker
-Color is arguably the most critical factor in web branding, mood, and accessibility. Our interactive Color Picker is designed to help developers and designers bridge the gap between sight and code, providing instant hexadecimal and RGB values for any pixel.
+    howTo: `### Mastering the Digital Palette: A Guide to HEX, RGB, and HSL
+Color is the soul of any digital interface. It conveys brand identity, creates emotional triggers, and ensures accessibility. But working with color in code requires moving between visual interfaces and specific alphanumeric systems. 
 
-#### How the Tool Works
-1. **Interactive Selection:** Use our native color picker to drag and select your ideal hue.
-2. **Instant Value Conversion:** As you select, the tool instantly updates the HEX (#RRGGBB) and RGB values, which are the two most crucial formats for modern web development (CSS).
-3. **Clipboard Sync:** Click the result to copy the hexadecimal code, making it instantly available for your CSS files or design tools.
+The ToolKitPro **Color Picker** is an essential bridge for web developers and UI designers.
 
-#### Why Use a Dedicated Color Picker
-- **Consistency:** Maintain branded colors across your entire web application.
-- **Conversion Simplified:** Move between design tools (Figma/Adobe XD) and code (CSS) without manually calculating color values.
-- **Accessibility:** Use the tool to quickly select higher-contrast colors for better legibility, directly helping your site reach WCAG compliance.`,
+#### 1. Understanding Color Formats
+- **HEX (Hexadecimal):** The standard for web CSS. It uses six characters (0-9, A-F) to represent Red, Green, and Blue intensity. For example, #000000 is black, and #FFFFFF is white.
+- **RGB (Red, Green, Blue):** An additive color model where colors are created by combining light intensities from 0 to 255. Essential for graphics programming and React Native styles.
+- **HSL (Hue, Saturation, Lightness):** A more human-friendly way to describe color. It’s easier to adjust "Lightness" in HSL to create primary and secondary color variants than it is in HEX.
+
+#### 2. Workflow Integration
+A common workflow for professional developers involves:
+1. **Visual Discovery:** Using our picker to find the "perfect" brand accent.
+2. **Contrast Checking:** Identifying whether the chosen color meets WCAG accessibility guidelines when paired with white or black text.
+3. **Immediate Implementation:** Copying the HEX code directly into the Tailwind config or CSS variable file.
+
+#### 3. Technical Precision
+Our Color Picker uses the native browser rendering engine to ensure that the color you see on the screen is the exact color represented by the code. We also provide instant conversion between HEX and RGB, saving you the math and potential human error of manual conversion.`,
     faqs: [
         { question: 'Can I copy to clipboard?', answer: 'Yes, just click the hex code and it will automatically copy to your clipboard.' },
         { question: 'Does it support RGBA?', answer: 'Currently, the tool supports HEX and RGB. Future updates will include alpha channel (RGBA) support.' }
@@ -212,16 +247,20 @@ Color is arguably the most critical factor in web branding, mood, and accessibil
     usp: 'Error-free decimal logic. Professional measurement precision.',
     aliases: ['metric-to-imperial-converter', 'meters-to-kilometers-online', 'measurement-converter-free'],
     metaDescription: 'Fast and accurate Unit Converter for metric and imperial measurements. Convert length, distance, and mass instantly in your browser.',
-    howTo: `### Unit Converter: Simplifying Scientific Calculations
-Whether you are programming a physics engine, baking, or doing scientific analysis, converting units is a daily task. Our Unit Converter takes the friction out of unit arithmetic, supporting a wide range of common metric and imperial conversions.
+    howTo: `### Precision Engineering: Converting Measurements for Global Scale
+In science, engineering, and daily life, we constantly move between measurement systems. Whether you are following a European recipe in an American kitchen or configuring the dimensions of a 3D model for an international manufacturer, the ability to convert with precision is vital.
 
-#### How to Convert Units
-1. **Enter Your Value:** Put the numerical value into the input field.
-2. **Select Conversion:** Choose between source and target units (e.g., kilometers to meters, meters to kilometers) via our clean, intuitive interface.
-3. **Instant Math:** The tool handles the logic instantly, giving you a precise output.
+#### 1. The Metric vs. Imperial Divide
+While most of the world uses the International System of Units (Metric), the United States and a few other regions still rely on the Imperial system. 
+- **Metric (SI):** Based on powers of ten (Meters, Kilometers). It is mathematically superior and the standard for all scientific research.
+- **Imperial:** Based on historical scales (Inches, Feet, Miles). While intuitive for human scale, it requires complex conversion factors (e.g., 5,280 feet in a mile).
 
-#### Precision and Scope
-The tool is designed for speed and consistency, preventing common manual calculation errors (like misplacing a decimal point, which is common when converting meters to kilometers).`,
+#### 2. Why Accuracy Matters
+Manual calculation of units is a common source of catastrophic failure. The most famous example is the NASA Mars Climate Orbiter, which crashed because one team used metric units and another used imperial. 
+Our tool eliminates this human error by using high-precision floats and validated conversion constants (e.g., 1 inch = exactly 2.54 cm).
+
+#### 3. How to Use the Converter
+Our interface is designed for speed. Simply enter your "Source" value and use the dropdown to select your units. The result appears in the "Target" field instantly. We handle the heavy lifting, ensuring your blueprints, recipes, and models are accurate to the millimeter.`,
     faqs: [
         { question: 'Does it support imperial and metric?', answer: 'Yes, both systems (meters/kilometers, etc.) are supported.' },
         { question: 'Will you add more units?', answer: 'Yes, we plan to add temperature, weight, and volume conversions in the coming week.' }
@@ -238,16 +277,20 @@ The tool is designed for speed and consistency, preventing common manual calcula
     aliases: ['make-qr-code-free', 'bulk-qr-generator', 'url-to-qr-online'],
     metaDescription: 'Create custom QR codes for URLs, business cards, or WiFi access instantly. High-resolution downloads with no scan limits.',
     howTo: `### Bridging Physical and Digital with Custom QR Codes
-QR codes have become an essential link between the physical world and digital experiences. Whether you are marketing a new product, sharing a contact card, or providing a direct link to a menu, our QR Code Generator provides a high-reliability solution.
+QR codes (Quick Response codes) have become an essential link between the physical world and digital experiences. Originally developed in 1994 for tracking parts in vehicle manufacturing, they have evolved into the universal bridge for marketing, payments, and authentication.
 
-#### Creating Your First Code
-1. **Input Data:** Enter your URL, plain text, or configuration data into the generator.
-2. **Instant Render:** Our system uses high-precision encoding to generate a scannable matrix immediately.
-3. **Capture:** Download the resulting image to use on flyers, business cards, or website assets.
+#### 1. The Technology Behind the Matrix
+A QR code is a two-dimensional barcode consisting of black squares arranged on a white grid. Unlike traditional barcodes that only store data horizontally, QR codes store data both vertically and horizontally, allowing them to contain significantly more information (up to 7,089 numeric characters).
+Our generator uses **Reed-Solomon Error Correction**. This means that even if the code is slightly damaged, smudged, or printed on a curved surface, it remains scannable.
 
-#### Why Choose Our Generator?
-- **High Scannability:** We use optimized error correction levels to ensure codes are readable even when printed at small sizes or on textured paper.
-- **Privacy First:** Unlike many "free" generators that track scans via redirects, our tool generates direct codes that go straight to your destination, preserving user privacy.`,
+#### 2. Why Choose Our Generator?
+- **Direct Links:** Many "free" generators wrap your URL in their own tracking redirect. This is a massive privacy risk and a common point of failure. ToolKitPro generates **Direct Static Codes**. The data is encoded directly into the pixels. Once you download the image, it is yours forever and requires no connection to our servers to function.
+- **No Expiration:** Because our codes are static, they never expire and have no "scan limits."
+
+#### 3. Creative Use Cases
+- **WiFi Access:** Generate a code for your guest network so friends can scan and connect without typing a long password.
+- **vCards:** Place a QR code on your business card that instantly adds your contact info to the recipient's phone.
+- **Digital Menus:** The modern standard for restaurant efficiency and hygiene.`,
     faqs: [
         { question: 'Are these codes permanent?', answer: 'Yes, as long as the destination URL or data remains active, the QR code will work forever. They do not expire.' },
         { question: 'Can I use these for commercial projects?', answer: 'Yes, all codes generated are free for both personal and commercial use.' }
@@ -264,15 +307,17 @@ QR codes have become an essential link between the physical world and digital ex
     aliases: ['secure-password-maker', 'generate-strong-password-online', 'random-string-generator'],
     metaDescription: 'Generate strong, unhackable passwords locally. Zero server tracking ensures your keys are completely private and safe.',
     howTo: `### Hardening Your Digital Security with Entropy
-In an era of sophisticated brute-force attacks, "password123" is no longer enough. Our Secure Password Generator uses cryptographically strong random number generation to create strings that are virtually impossible to guess.
+In an era of sophisticated brute-force attacks and daily data breaches, "password123" is no longer just poor practice—it’s a liability. Modern cybersecurity begins with high-entropy, unique passwords for every single service you use.
 
-#### How to Generate a Strong Password
-1. **Length:** Select your desired length. We recommend at least 16 characters for critical accounts.
-2. **Character Set:** Toggle between Uppercase, Lowercase, Numbers, and Symbols. A mix of all four provides the highest entropy.
-3. **Generate:** Create a unique string and copy it to your secure password manager.
+#### 1. What is Password Entropy?
+Entropy is a measure of the unpredictability of a string. It is calculated based on the length of the password and the size of the character pool it was drawn from. For example, a 10-character password using only lowercase letters has much less entropy than an 8-character password using uppercase, lowercase, numbers, and symbols.
 
-#### The Science of Security
-Entropy is the measure of randomness. By using a diverse character set and sufficient length, you increase the "work factor" required for an attacker to crack your account. Our tool runs strictly in your browser, ensuring your new password is never transmitted across the network during generation.`,
+#### 2. The Mechanics of Our Generator
+Our tool utilizes the **Web Crypto API**, which is a low-level browser interface for performing cryptographic operations. Unlike standard \`Math.random()\`, which is pseudo-random and potentially predictable by a clever attacker, the Web Crypto API pulls randomness from "hardware noise" (hardware interrupts, mouse movements, etc.), making it cryptographically secure.
+
+#### 3. Why Client-Side Generation is Mandatory
+You should **never** use a password generator that sends your new password over the internet to a server. Even if the connection is encrypted (HTTPS), you are still trusting that the server owner isn't logging the "random" results.
+The ToolKitPro Generator runs **strictly on your machine**. The password is born in your device's RAM and stays there until you copy it. It is never logged, never cached, and never transmitted.`,
     faqs: [
         { question: 'Is this random enough?', answer: 'Yes, we use the browser\'s native Web Crypto API for high-quality randomness.' },
         { question: 'Do you store my passwords?', answer: 'Never. The generation happens entirely on your local machine and the results are not logged or stored by our system.' }
@@ -353,17 +398,25 @@ BMI remains a powerful, easy-to-use indicator for the general population. By tra
     usp: 'Percent-encoding for ASCII safety. Secure in-browser processing.',
     aliases: ['percent-encoding-online', 'url-formatter-free', 'encode-uri-tool'],
     metaDescription: 'Safely encode or decode special characters for URLs and APIs. Ensure your web requests are formatted correctly with our free URL Encoder.',
-    howTo: `### Mastering URL Component Safety
-URLs can only be sent over the Internet using the ASCII character set. Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format. URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.
+    howTo: `### Mastering URL Component Safety: Encoding and Decoding
+The architecture of the World Wide Web is built on the Uniform Resource Locator (URL). However, URLs are restricted to a very specific subset of characters (ASCII). If you need to pass a space, a hashtag, or a non-English character (like "é") in a URL parameter, it must be "Percent-Encoded."
 
-#### Using the Encoder/Decoder
-1. **Input:** Paste your raw URL or encoded string into the text field.
-2. **Action:** Select "Encode" to make a string safe for URL transmission, or "Decode" to turn a percent-encoded string back into human-readable text.
-3. **Result:** Get the clean, processed output instantly.
+Our **URL Encoder / Decoder** is a vital tool for developers, SEO professionals, and API integrators.
 
-#### Why Encoding is Required
-- **Form Data:** When submitting browser forms, special characters like spaces or "&" must be encoded to prevent breaking the request structure.
-- **REST APIs:** Passing parameters with special symbols requires proper percent-encoding to ensure the server interprets the data correctly.`,
+#### 1. How Percent-Encoding Works
+When a character is not ASCII-safe, it is replaced by one or more character triplets that consist of the percent character "%" followed by two hexadecimal digits. For example:
+- **Space:** Becomes \`%20\`
+- **Ampersand (&):** Becomes \`%26\`
+- **Forward Slash (/):** Becomes \`%2F\`
+
+#### 2. Why Proper Encoding Matters
+Encoding prevents "Parameter Hijacking." If you are passing a search query like "Blue & Gold" in a URL without encoding, the server might interpret the "&" as the start of a new parameter rather than part of the search string. This leads to broken API requests and "400 Bad Request" errors.
+
+#### 3. Decoding for Debugging
+If you are analyzing a server log and see a string like \`https://api.example.com/v1/search?q=React%20%26%20TypeScript\`, our decoder instantly turns that back into a human-readable format so you can see exactly what data was being transmitted.
+
+#### 4. Absolute Privacy
+Because you might be encoding sensitive data (like API tokens or user IDs) into URLs for testing, privacy is paramount. Our tool performs all transformations **locally in your browser**. We never see your strings, and they never leave your device.`,
     faqs: [
         { question: 'Does this handle spaces?', answer: 'Yes, spaces are correctly converted to %20 during the encoding process.' },
         { question: 'Is it safe for API keys?', answer: 'Yes, all processing is done locally in your browser, keeping your sensitive parameters secure.' }

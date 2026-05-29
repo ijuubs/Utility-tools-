@@ -51,11 +51,11 @@ export default function BmiCalculator() {
       </button>
 
       {bmi && (
-        <div className="p-8 border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <div className="p-6 md:p-8 border-4 border-black bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] sm:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
           <p className="text-sm font-bold uppercase text-[var(--muted)] mb-2">Result</p>
-          <div className="flex items-baseline gap-4">
-            <span className="text-6xl font-black">{bmi.toFixed(1)}</span>
-            <span className="text-2xl font-bold uppercase px-4 py-1 bg-yellow-200 border-2 border-black">
+          <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
+            <span className="text-5xl sm:text-6xl font-black leading-none">{bmi.toFixed(1)}</span>
+            <span className="inline-block text-xl sm:text-2xl font-bold uppercase px-4 py-1.5 bg-yellow-200 border-2 border-black max-w-max">
                 {getCategory(bmi)}
             </span>
           </div>
