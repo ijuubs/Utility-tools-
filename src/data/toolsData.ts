@@ -23,7 +23,32 @@ export const TOOLS: Tool[] = [
     usp: '100% Client-Side Processing. Your text never leaves your browser.',
     aliases: ['word-count-checker', 'online-character-count', 'essay-length-checker'],
     metaDescription: 'Use our free online Word Counter to instantly check word counts, character limits, and sentence structures for essays and blogs. Fast and private.',
-    howTo: 'The Word Counter is a versatile tool for professionals, students, and writers who need to adhere to specific content constraints. \n\nTo use it, simply type or paste your text into the primary text box. As you type, the tool immediately calculates: \n- **Word Count:** The total number of words based on whitespace separation.\n- **Character Count:** Including spaces and excluding spaces for technical precision.\n- **Sentence Count:** Calculated using standard punctuation markers (. ! ?).\n- **Paragraph Count:** Calculated based on newline breaks.\n\n### Why use an online word counter?\nWhether you are writing a blog post, an academic essay, or a technical document, meeting length requirements is crucial. Our real-time engine ensures you don\'t have to manually recount your text as you edit. It is also completely private, running directly in your browser without ever sending text to a server.',
+    howTo: `### The Definitive Guide to Word Counting and Text Analysis
+Writing is governed by constraints. Whether you are a student drafting a 2,000-word university essay, an SEO specialist optimizing a meta description to fit within 160 characters, or a novelist tracking your daily NaNoWriMo goals, knowing exactly how much you have written is fundamental.
+
+Our **Online Word Counter** goes beyond simple arithmetic. It is a comprehensive text analysis engine designed to evaluate your content instantly, precisely, and privately.
+
+#### 1. How Our Word Counting Algorithm Works
+Most basic word counters simply split text by spaces. This leads to wildly inaccurate counts when dealing with em-dashes, hyphenated words, or special characters. Our tool uses sophisticated Regular Expressions (Regex) running locally in your browser to accurately parse boundaries.
+- **Hyphenated Words:** Treated as a single word (e.g., "state-of-the-art" is one word, not four).
+- **Punctuation Stripping:** Punctuation marks are intelligently ignored so they do not artificially inflate your word count.
+- **Real-Time Processing:** Every keystroke immediately triggers our text-parsing algorithm, providing sub-millisecond updates without the lag associated with server-side processing.
+
+#### 2. Deep Dive Into Character Limits
+While word count matters for essays, character count governs the digital layout of the web.
+- **Character Count (With Spaces):** This is the raw length of your string, crucial for database limits and text field validation.
+- **Character Count (Without Spaces):** Often used in translation services or technical typesetting where whitespace does not incur a cost or take up visual ink space.
+- **Social Media Limits:** Twitter (280 characters), LinkedIn posts (3,000 characters), and standard SMS messages (160 characters) strictly enforce these limits. Our tool helps you draft and edit your content before you hit "post," preventing frustrating truncation.
+
+#### 3. Sentence and Paragraph Structure Analysis
+Readability is directly tied to how you break up your text.
+- **Sentence Count:** Calculated by parsing terminal punctuation marks (periods, exclamation points, and question marks). Shorter sentences improve readability and lower the Flesch-Kincaid grade level of your text. If you have 500 words but only 5 sentences, your text is likely a "wall of text" that needs editing.
+- **Paragraph Count:** We calculate paragraphs based on hard newline breaks. In modern web writing, paragraphs should rarely exceed 3-4 sentences.
+
+#### 4. The Privacy Advantage
+If you are writing confidential legal documents, unreleased intellectual property, or personal diary entries, you should never paste them into a standard cloud tool. Many free services send your text to a server to be analyzed, and their terms of service allow them to retain that text. 
+
+The ToolKitPro Word Counter is **100% Client-Side**. When you paste your text into the box, the JavaScript runs directly inside your device's RAM. No network requests are made, no data is transmitted, and no text is ever stored on any remote server. Close the tab, and your data is gone forever.`,
     faqs: [
         { question: 'Is the Word Counter accurate?', answer: 'Yes, our algorithm is designed to handle common word boundary cases and provides precise counts.' },
         { question: 'Do you save my text?', answer: 'No, everything is processed locally in your browser. We never log or store your input.' },
@@ -40,7 +65,30 @@ export const TOOLS: Tool[] = [
     usp: 'Secure, ad-free environment without server data leaks. Runs entirely offline.',
     aliases: ['prettify-json-online', 'minify-json-free', 'json-validator-tool'],
     metaDescription: 'Prettify, minify, and validate your JSON data instantly. Our free JSON Formatter runs in-browser for maximum security and performance.',
-    howTo: 'The JSON Formatter and Validator is a critical tool for developers handling JSON payloads.\n\n### How to format your JSON:\n1. **Paste your JSON:** Insert your raw or minified JSON string into the input area.\n2. **Choose an Action:** \n   - **Prettify:** Instantly transforms dense, unreadable JSON into a beautifully indented, structured format. Ideal for debugging and reviewing configuration files.\n   - **Minify:** Strips all whitespace and unnecessary characters to make your JSON as compact as possible for API transmission.\n3. **Validation:** Our tool will highlight any syntax errors immediately, showing you precisely where the JSON fails to validate, which saves hours of debugging time.\n\n### Benefits for developers\n- **Faster Debugging:** Quickly spot missing commas or brackets.\n- **Compact Payloads:** Reduce bandwidth for web APIs by minifying production configuration.',
+    howTo: `### Demystifying JSON: The Backbone of the Modern Web
+JSON (JavaScript Object Notation) has become the de facto standard for data interchange on the web, completely usurping XML due to its lightweight nature and native compatibility with JavaScript. Whether you are querying a REST API, configuring a NoSQL database like MongoDB, or setting up your VS Code preferences, you are working with JSON.
+
+However, raw JSON is notoriously difficult for humans to read. Machine-generated JSON is often minified into a single, massive string of text to save bandwidth, making it impossible to debug. Our **JSON Formatter and Validator** solves this by providing a robust, instant environment to parse, transform, and validate your data structures.
+
+#### 1. Formatting and Prettifying Data
+When an API returns a massive JSON payload, your first step is to format it into a human-readable structure.
+- **Indentation Parsing:** Our tool parses the raw string and applies standardized indentation (typically 2 or 4 spaces) to properly nest objects and arrays. This creates clear visual hierarchies.
+- **Syntax Highlighting:** The formatter applies distinct coloring to keys, string values, booleans, and numbers. This structural coloring allows your brain to quickly scan massive datasets and locate the specific property you are trying to debug.
+- **Object visualization:** By structuring the data cleanly, you can easily trace the boundaries of complex arrays and nested objects.
+
+#### 2. Minification for Production Environments
+While developers need prettified JSON to read it, production servers need minified JSON to transmit it efficiently.
+- **Whitespace Stripping:** Every space, tab, and newline character in a JSON file consumes a byte of data. For a large payload, this can bloat the file size by 20-30%.
+- **Instant Minification:** Our tool instantly removes all unnecessary whitespace, condensing your beautifully formatted JSON back into the strict, compressed string required for high-performance API architectures and fast mobile network transmission.
+
+#### 3. Real-Time Strict Validation
+A single missing comma or unescaped quote can crash an entire server application. JSON syntax is unforgiving.
+- **Error Highlighting:** If you paste invalid JSON into our tool, it doesn't just fail; it acts as a linter. It will detect the exact character causing the parsing error.
+- **Strict Compliance:** The tool enforces the official RFC 8259 JSON standard. For example, it will flag missing quotes around keys (a common mistake made by developers used to writing standard JavaScript objects) and trailing commas (which are invalid in JSON despite being valid in JS arrays).
+
+#### 4. The Critical Importance of Client-Side Processing
+When you paste an API response into a web tool to format it, you might be unintentionally leaking highly sensitive data. API responses often contain API keys, personal identifiable information (PII, like user emails and phone numbers), or proprietary financial data.
+Using server-based formatters is a massive security risk. Our JSON Formatter runs **entirely in your browser**. The data parsing logic is executed by your local CPU using native browser APIs. Your sensitive JSON payloads are never serialized, never sent over a network connection, and never stored in a remote database log. This makes our tool safe for enterprise developers handling active production data.`,
     faqs: [
         { question: 'Does this tool validate JSON?', answer: 'Yes, if you enter invalid JSON, the tool will alert you to the specific syntax error and indicate the line number where the issue occurred.' },
         { question: 'Is it safe for configuration files?', answer: 'Yes, because the tool runs entirely in your browser, it is perfectly safe for handling sensitive local configuration files.' }
