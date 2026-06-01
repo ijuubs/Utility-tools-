@@ -7,18 +7,51 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6659085318131236" crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-6659085318131236">
     <meta name="google-site-verification" content="ukcL2WOFlDCYP8vdzq6xtKBqyJM0FHO5EFpPmJWP5vI" />
     <title>ToolKitPro | High-Performance Utility Ecosystem</title>
-    <!-- Adsterra Popunder - DEFERRED for performance -->
-    <script defer src="https://pl29473636.effectivecpmnetwork.com/b6/78/db/b678db30fb3a449dfd14434dad0acbce.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Adsterra Social Bar - DEFERRED for performance -->
-    <script defer src="https://pl29473637.effectivecpmnetwork.com/f7/5c/2e/f75c2e4316859a98f79eec1db54957dc.js"></script>
+    
+    <script>
+      // Delay heavy 3rd-party scripts to improve Core Web Vitals (LCP/TBT)
+      let adsLoaded = false;
+      const loadAds = () => {
+        if (adsLoaded) return;
+        adsLoaded = true;
+
+        // AdSense
+        const adsense = document.createElement("script");
+        adsense.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6659085318131236";
+        adsense.async = true;
+        adsense.crossOrigin = "anonymous";
+        document.body.appendChild(adsense);
+
+        // Adsterra Popunder
+        const popunder = document.createElement("script");
+        popunder.src = "https://pl29473636.effectivecpmnetwork.com/b6/78/db/b678db30fb3a449dfd14434dad0acbce.js";
+        popunder.defer = true;
+        document.body.appendChild(popunder);
+
+        // Adsterra Social Bar
+        const socialBar = document.createElement("script");
+        socialBar.src = "https://pl29473637.effectivecpmnetwork.com/f7/5c/2e/f75c2e4316859a98f79eec1db54957dc.js";
+        socialBar.defer = true;
+        document.body.appendChild(socialBar);
+      };
+
+      // Load on interaction or after 3 seconds
+      const events = ['scroll', 'mousemove', 'mousedown', 'keydown', 'touchstart'];
+      const triggerAds = () => {
+        loadAds();
+        events.forEach(e => window.removeEventListener(e, triggerAds, {passive: true}));
+      };
+      
+      events.forEach(e => window.addEventListener(e, triggerAds, {passive: true}));
+      setTimeout(loadAds, 3000);
+    </script>
   </body>
 </html>
 
