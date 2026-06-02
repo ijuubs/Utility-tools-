@@ -1,27 +1,72 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { TOOLS } from '../data/toolsData';
 import AdSlot from '../components/AdSlot';
 
 export default function HomePage() {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredTools = TOOLS.filter(tool => 
+    tool.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    tool.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    tool.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    tool.aliases?.some(alias => alias.replace(/-/g, ' ').includes(searchQuery.toLowerCase()))
+  );
+
   return (
     <div className="space-y-12 md:space-y-20">
         <Helmet>
-          <title>ToolKitPro | High-Performance, Privacy-First Utility Ecosystem</title>
-          <meta name="description" content="Access a collection of fast, secure, and ready-to-use utility tools for designers and developers. Process everything in your browser." />
+          <title>Free Online Utility Tools & Calculators | ToolKitPro</title>
+          <meta name="description" content="Access a massive collection of free online utility tools, developer utilities, calculators, and productivity apps. Process everything instantly and securely in your browser." />
+          
+          <link rel="canonical" href="https://toolkitpro.app/" />
+          <meta property="og:title" content="Free Online Utility Tools & Calculators | ToolKitPro" />
+          <meta property="og:description" content="Access a massive collection of free online utility tools, developer utilities, calculators, and productivity apps. Process everything instantly and securely in your browser." />
+          <meta property="og:url" content="https://toolkitpro.app/" />
+          <meta property="og:type" content="website" />
+          
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Free Online Utility Tools & Calculators | ToolKitPro" />
+          <meta name="twitter:description" content="Access a massive collection of free online utility tools, developer utilities, calculators, and productivity apps. Process everything instantly and securely in your browser." />
         </Helmet>
-        <div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter mb-4 md:mb-6 uppercase leading-none">
-              The Professional ToolKit
+        
+        {/* HERO SECTION */}
+        <div className="text-center md:text-left space-y-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tighter uppercase leading-none">
+              Free Online Utility Tools & Calculators
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-black bg-yellow-200 inline-block px-3 py-1.5 md:px-4 md:py-2 border-2 border-black mb-8 md:mb-12 font-bold max-w-full break-words">
-              Fast, secure, and ready-to-use tools. 100% Client-Side.
+            <p className="text-lg sm:text-xl md:text-2xl text-black bg-yellow-200 inline-block px-3 py-1.5 md:px-4 md:py-2 border-2 border-black font-bold max-w-full break-words">
+              Fast, secure, and ready-to-use tools. 100% Client-Side. No Sign-up Required.
             </p>
-            
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-                {TOOLS.map((tool, index) => (
-                  <Fragment key={tool.id}>
+        </div>
+
+        {/* SEARCH BAR */}
+        <div className="bg-white border-4 border-black p-4 flex gap-4 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+            <input 
+              type="text" 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search for a tool... (e.g. JSON Formatter, Unit Converter)" 
+              className="w-full text-lg md:text-xl font-bold px-4 py-2 border-2 border-transparent focus:border-black focus:outline-none placeholder-gray-500"
+            />
+            {/* Keeping button for visual consistency, search works automatically onChange */}
+            <button className="bg-black text-white px-6 py-2 font-black uppercase tracking-wider hover:bg-yellow-400 hover:text-black transition-colors">
+              Search
+            </button>
+        </div>
+
+        {/* ALL TOOLS SECTION */}
+        <div className="space-y-6">
+            <h2 className="text-3xl font-black uppercase tracking-tighter border-b-4 border-black pb-2">All Tools Directory</h2>
+            {filteredTools.length === 0 ? (
+                <div className="text-center py-12 border-4 border-black border-dashed">
+                    <p className="text-2xl font-black uppercase text-gray-500">No tools found matching "{searchQuery}"</p>
+                </div>
+            ) : (
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                    {filteredTools.map((tool, index) => (
+                      <Fragment key={tool.id}>
                     <Link 
                       to={`/tools/${tool.slug}`} 
                       className="p-6 md:p-8 bg-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all"
@@ -38,6 +83,7 @@ export default function HomePage() {
                   </Fragment>
                 ))}
             </div>
+            )}
         </div>
 
         <section className="bg-black text-white p-6 md:p-12 border-4 border-black shadow-[8px_8px_0px_0px_rgba(251,191,36,1)] md:shadow-[16px_16px_0px_0px_rgba(251,191,36,1)]">
@@ -56,21 +102,40 @@ export default function HomePage() {
             </div>
         </section>
 
-        <section className="space-y-8 md:space-y-12 bg-white p-6 sm:p-8 md:p-12 border-4 border-black border-dashed">
+        <section className="space-y-8 md:space-y-12 bg-white p-6 sm:p-8 md:p-12 border-4 border-black border-dashed" itemScope itemType="https://schema.org/Article">
             <div className="max-w-4xl space-y-6 md:space-y-8">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter border-b-4 md:border-b-8 border-black pb-3 md:pb-4 leading-tight">The Privacy Architecture</h2>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter border-b-4 md:border-b-8 border-black pb-3 md:pb-4 leading-tight">Your Ultimate Hub for Utility Tools</h2>
               <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none text-black leading-relaxed space-y-4 md:space-y-6">
                   <p className="font-bold text-lg md:text-xl">
-                    In today's internet ecosystem, your data is treated as currency. Most utility sites offer "free" tools precisely because they are uploading your documents, scripts, and images to their servers to harvest metadata. ToolKitPro flips this model on its head entirely.
+                    Welcome to ToolKitPro, your comprehensive destination for high-quality, professional-grade online utility tools. Whether you are a developer formatting JSON payloads, a student counting words for an essay, or a business owner calculating profit margins, our suite of tools is designed to accelerate your workflow.
                   </p>
+                  
+                  <h3 className="text-xl md:text-2xl font-black uppercase mt-6 md:mt-8 mb-2 md:mb-4">What Are Free Online Utility Tools?</h3>
                   <p className="text-sm md:text-base">
-                    Instead of relying on remote servers to process your files, we utilize **WebAssembly**, **Client-Side JavaScript**, and modern browser APIs to turn your browser into the server. When you drag and drop a PDF into our compressor, the bits are rearranged locally in your RAM. When you format JSON, the algorithm runs purely within your local CPU runtime.
+                    Online utility tools are specialized, single-purpose web applications designed to solve specific problems quickly. Instead of downloading heavy software suites or dealing with complex configurations, you simply open your browser and get the job done. From developers who need quick <strong>URL Encoding</strong> or <strong>JSON Formatting</strong>, to writers who need instantaneous <strong>Word Counters</strong>, online tools provide immediate value with zero friction.
                   </p>
-                  <h3 className="text-xl md:text-2xl font-black uppercase mt-6 md:mt-8 mb-2 md:mb-4">Why Client-Side is Superior</h3>
+
+                  <h3 className="text-xl md:text-2xl font-black uppercase mt-6 md:mt-8 mb-2 md:mb-4">Developer & Programmer Tools</h3>
+                  <p className="text-sm md:text-base">
+                    Software engineering requires precision. Our developer tools are built to help programmers debug, format, and convert data structures without relying on questionable third-party cloud processors. All our developer tools like the JSON Formatter and URL Encoder operate 100% locally in your browser to maintain the highest standard of data privacy. No data is sent to our servers.
+                  </p>
+
+                  <h3 className="text-xl md:text-2xl font-black uppercase mt-6 md:mt-8 mb-2 md:mb-4">Business & Financial Calculators</h3>
+                  <p className="text-sm md:text-base">
+                    Time is money in the business world. ToolKitPro offers a growing suite of financial calculators designed to help entrepreneurs and professionals make data-driven decisions. Whether you are forecasting with a <strong>Compound Interest Calculator</strong>, analyzing a new venture with an <strong>ROI Calculator</strong>, or determining your retail pricing with our upcoming <strong>Profit Margin Calculator</strong>, we provide accurate, instant calculations.
+                  </p>
+                  
+                  <h3 className="text-xl md:text-2xl font-black uppercase mt-6 md:mt-8 mb-2 md:mb-4">Everyday Productivity Tools</h3>
+                  <p className="text-sm md:text-base">
+                    You don't need to be a software engineer to benefit from utility tools. Our platform includes essential productivity instruments for daily tasks. Generate robust security credentials with our <strong>Password Generator</strong>, compress heavy documents with our <strong>PDF Compressor</strong>, or effortlessly convert metrics with our <strong>Unit Converter</strong>. Every tool is optimized for mobile and desktop, ensuring you can work efficiently from anywhere.
+                  </p>
+
+                  <h3 className="text-xl md:text-2xl font-black uppercase mt-6 md:mt-8 mb-2 md:mb-4">The Benefits of Using ToolKitPro</h3>
                   <ul className="list-disc pl-5 md:pl-6 space-y-2 md:space-y-3 font-medium text-sm md:text-base">
-                      <li><strong>Military-Grade Privacy:</strong> Since files never cross the network, there is exactly zero risk of an interception, server leak, or third-party database breach.</li>
-                      <li><strong>Instantaneous Speed:</strong> You are no longer gated by your upload speed. A 50MB PDF optimizes in seconds because it never has to travel to a cloud server.</li>
-                      <li><strong>Zero Downtime:</strong> Because we don't rely on massive backend processing clusters, ToolKitPro is immune to server crashes. If you can load the JavaScript, the tool will work.</li>
+                      <li><strong>100% Free to Use:</strong> No subscriptions, no hidden fees, and absolutely no paywalls.</li>
+                      <li><strong>Client-Side Processing:</strong> Your data security is our priority. Tools run directly in your browser's memory, guaranteeing zero server retention.</li>
+                      <li><strong>Instant Results:</strong> Because processing happens locally, you circumvent upload times and server latency. Get your results in milliseconds.</li>
+                      <li><strong>No Sign-Up Required:</strong> Skip the annoying registration flows. Open the tool, input your data, and get instant results.</li>
                   </ul>
               </div>
             </div>
@@ -90,7 +155,7 @@ export default function HomePage() {
               </div>
               <div className="space-y-2 md:space-y-4">
                 <h3 className="text-xl md:text-2xl font-black uppercase border-b-4 border-black pb-1 md:pb-2">Zero Friction</h3>
-                <p className="font-medium text-black text-sm md:text-base">No accounts. No sign-ups. No pop-up advertisements that block your workflow. We provide a clean, Neu-Brutalist utility experience for high-performance users.</p>
+                <p className="font-medium text-black text-sm md:text-base">No accounts. No sign-ups. We provide a clean, Neu-Brutalist utility experience supported by unobtrusive ads, keeping the tools free for high-performance users.</p>
               </div>
               <div className="space-y-2 md:space-y-4">
                 <h3 className="text-xl md:text-2xl font-black uppercase border-b-4 border-black pb-1 md:pb-2">Expert Insights</h3>

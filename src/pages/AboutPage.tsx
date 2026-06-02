@@ -17,14 +17,14 @@ export default function AboutPage() {
           </p>
           
           <p>
-            In an era where the internet is cluttered with slow, ad-heavy, and invasive "tool" sites, we decided to build something different. ToolKitPro follows a **Neu-Brutalist** design philosophy—sharp, fast, and honest. We don't hide our functions behind complex menus or unnecessary loading states.
+            In an era where the internet is cluttered with slow, bloated, and invasive "tool" sites, we decided to build something different. ToolKitPro follows a **Neu-Brutalist** design philosophy—sharp, fast, and honest. We don't hide our functions behind complex menus or unnecessary loading states.
           </p>
         </div>
 
         <section className="space-y-6">
           <h2 className="text-4xl font-black text-black uppercase tracking-tighter">Our Story</h2>
           <p>
-            Founded in early 2024 by a small team of senior software engineers and product designers, ToolKitPro was born out of frustration. As developers, we found ourselves constantly searching for simple tools—like a high-quality JSON formatter or a fast image resizer—only to be met with sites that required logins, tracking cookies, and intrusive pop-up advertisements.
+            Founded in early 2024 by a small team of senior software engineers and product designers, ToolKitPro was born out of frustration. As developers, we found ourselves constantly searching for simple tools—like a high-quality JSON formatter or a fast image resizer—only to be met with sites that required logins, tracking cookies, and overwhelming paywalls.
           </p>
           <p>
             We realized that the web needed a "neutral zone"—a place where utilities were built with industrial precision but designed for the modern user who values their time and privacy. With backgrounds in building scalable cloud architectures and accessible UI systems at top-tier tech firms, we combined our expertise to create a platform that is as robust as it is beautiful.

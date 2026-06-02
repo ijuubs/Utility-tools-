@@ -1,11 +1,41 @@
 import { Outlet, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import ThemeToggle from './ThemeToggle';
 import Logo from './Logo';
 import CookieConsent from './CookieConsent';
 
 export default function Layout() {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ToolKitPro",
+    "url": "https://toolkitpro.app/",
+    "logo": "https://toolkitpro.app/icon.png",
+    "description": "Premium browser-side utility ecosystem. Fast, private, and professional."
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ToolKitPro",
+    "url": "https://toolkitpro.app/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://toolkitpro.app/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <div className="min-h-screen bg-[var(--g0)] text-[var(--ink)] font-sans transition-colors duration-300 flex flex-col">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(orgSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(websiteSchema)}
+        </script>
+      </Helmet>
       <header className="sticky top-0 z-50 bg-[rgba(244,250,244,0.88)] dark:bg-[#1a1a1a]/80 backdrop-blur-lg border-b-4 border-black">
         <nav className="max-w-[1200px] mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 sm:gap-3 font-black text-xl sm:text-3xl uppercase tracking-tighter shrink-0">

@@ -19,6 +19,8 @@ const UrlEncoder = lazy(() => import('../components/tools/UrlEncoder'));
 const LoremIpsum = lazy(() => import('../components/tools/LoremIpsum'));
 const ColorPicker = lazy(() => import('../components/tools/ColorPicker'));
 const UnitConverter = lazy(() => import('../components/tools/UnitConverter'));
+const LoanCalculator = lazy(() => import('../components/tools/LoanCalculator'));
+const PercentageCalculator = lazy(() => import('../components/tools/PercentageCalculator'));
 
 export default function ToolTemplate() {
   const { slug } = useParams<{ slug: string }>();
@@ -57,6 +59,8 @@ export default function ToolTemplate() {
         case 'lorem-ipsum': return <LoremIpsum />;
         case 'color-picker': return <ColorPicker />;
         case 'unit-converter': return <UnitConverter />;
+        case 'loan-calculator': return <LoanCalculator />;
+        case 'percentage-calculator': return <PercentageCalculator />;
         default: return <p className="text-center text-[var(--muted)]">Tool interface for {tool.name} coming soon.</p>;
     }
   };
@@ -141,6 +145,17 @@ export default function ToolTemplate() {
         <Helmet>
           <title>{tool.titleTag || `${displayTitle} | ToolKitPro`}</title>
           <meta name="description" content={tool.metaDescription || tool.description} />
+          
+          <link rel="canonical" href={`https://toolkitpro.app/tools/${tool.slug}`} />
+          <meta property="og:title" content={tool.titleTag || `${displayTitle} | ToolKitPro`} />
+          <meta property="og:description" content={tool.metaDescription || tool.description} />
+          <meta property="og:url" content={`https://toolkitpro.app/tools/${tool.slug}`} />
+          <meta property="og:type" content="website" />
+          
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={tool.titleTag || `${displayTitle} | ToolKitPro`} />
+          <meta name="twitter:description" content={tool.metaDescription || tool.description} />
+
           <script type="application/ld+json">
             {JSON.stringify(structuredData)}
           </script>

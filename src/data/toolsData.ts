@@ -14,6 +14,64 @@ export interface Tool {
 
 export const TOOLS: Tool[] = [
   {
+    id: 'loan-calculator',
+    slug: 'loan-calculator',
+    name: 'Loan Calculator',
+    titleTag: 'Free Loan Calculator - Amortization & Interest Rates',
+    description: 'Calculate loan payments, analyze interest breakdown, and view amortization schedules.',
+    category: 'Finance Tools',
+    usp: 'Instant client-side calculation with zero data retention. Perfect for mortgages and personal loans.',
+    aliases: ['mortgage-calculator', 'car-loan-calculator', 'loan-amortization-calculator'],
+    metaDescription: 'Use our free online Loan Calculator to determine monthly payments, view interest, and see complete amortization schedules. Fast and secure.',
+    howTo: `### Master Your Finances with the Loan Calculator
+Whether you are buying a house, financing a new car, or taking out a personal loan, understanding your payment structure is critical. Our Loan Calculator helps you analyze your monthly obligations.
+
+#### 1. What does this tool do?
+Our calculator takes your principal (the initial loan amount), interest rate, and loan term, and generates your fixed monthly payment. Crucially, it breaks down how much of that payment goes toward paying down your principal versus how much is lost to interest each month.
+
+#### 2. How to use it
+- **Principal Amount:** Enter the total amount you are borrowing.
+- **Interest Rate:** Enter the annual interest rate (APR) provided by your lender.
+- **Loan Term:** Enter the duration of the loan in months or years.
+
+#### 3. Why Client-Side Matters
+Financial queries are highly sensitive. Unlike other calculators that send your queries to a server, generating a profile of your financial intentions, our tool runs 100% locally in your browser.`,
+    faqs: [
+        { question: 'Does this calculate compound interest?', answer: 'Yes, it calculates standard amortized loan payments where interest compounds based on the remaining balance.' },
+        { question: 'Can I use this for a mortgage?', answer: 'Yes, just enter the home price minus your down payment as the principal amount and use a 15 or 30-year term.' }
+    ]
+  },
+  {
+    id: 'percentage-calculator',
+    slug: 'percentage-calculator',
+    name: 'Percentage Calculator',
+    titleTag: 'Percentage Calculator - Fast Online Percent Math',
+    description: 'Instantly calculate percentages, percent changes, and differences.',
+    category: 'Math Tools',
+    usp: 'Instant math computations without reloading the page.',
+    aliases: ['what-is-percentage', 'percentage-increase-calculator', 'percent-difference-calculator'],
+    metaDescription: 'Calculate percentages instantly. Find percent increases, decreases, discounts, and fractions with our free online percentage calculator.',
+    howTo: `### The Ultimate Percentage Calculator
+Percentages are everywhere—from calculating retail discounts to analyzing monthly marketing growth, understanding percentages is vital.
+
+#### 1. Common Types of Percentage Calculations
+- **X% of Y:** Find a fraction of a number (e.g., What is 20% of $150? Answer: $30).
+- **Percentage Increase/Decrease:** Discover the relative change between two numbers (e.g., Traffic grew from 1,000 to 1,500. What is the increase? Answer: 50%).
+- **Number is what % of another:** E.g., 50 is what percent of 200? (Answer: 25%).
+
+#### 2. Benefits of Our Tool
+Stop struggling with complex formulas. Our tool provides instantaneous results as you type, updating automatically without requiring you to click a "Calculate" button.
+
+#### 3. Use Cases
+- Sales professionals calculating commission margins.
+- Shoppers applying sales discounts.
+- Analysts computing period-over-period growth metrics.`,
+    faqs: [
+        { question: 'How is percentage increase calculated?', answer: 'The formula is: ((New Value - Old Value) / |Old Value|) * 100.' },
+        { question: 'Is this calculator free?', answer: 'Yes, completely free and runs instantly in your browser.' }
+    ]
+  },
+  {
     id: 'word-counter',
     slug: 'word-counter',
     name: 'Word Counter',
