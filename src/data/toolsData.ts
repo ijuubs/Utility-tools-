@@ -479,6 +479,459 @@ Because you might be encoding sensitive data (like API tokens or user IDs) into 
         { question: 'Does this handle spaces?', answer: 'Yes, spaces are correctly converted to %20 during the encoding process.' },
         { question: 'Is it safe for API keys?', answer: 'Yes, all processing is done locally in your browser, keeping your sensitive parameters secure.' }
     ]
+  },
+  {
+    id: 'fiji-salary-calculator',
+    slug: 'fiji-salary-calculator',
+    name: 'Fiji Salary Calculator',
+    titleTag: 'Fiji Salary & PAYE Tax Calculator | 2026 Free Online Tool',
+    description: 'Calculate your net take-home salary in Fiji. Computes 2026 Fiji PAYE tax, FNPF contribution (8%), and chargeable income with weekly, fortnightly, monthly breakdown.',
+    category: 'Fiji Tools',
+    usp: 'Includes up-to-date 2026 Fiji National Budget PAYE brackets (30k tax-free threshold) & 8% FNPF structures.',
+    aliases: ['fiji-tax-calculator', 'fiji-paye-calculator', 'fiji-fnpf-calculator'],
+    metaDescription: 'Calculate your net take-home salary in Fiji. Computes 2026 Fiji PAYE tax, FNPF contribution (8%), and chargeable income with weekly, fortnightly, monthly breakdown.',
+    howTo: `### Complete Guide to Fiji Salary PAYE & FNPF Calculations
+
+Understanding your pay slip in Fiji is essential for smart personal budgeting. Whether you are starting a new job in Suva, negotiating a salary in Nadi, or managing a corporate register, this tool helps you calculate tax and pension deductions.
+
+#### 1. Introduction to Fiji PAYE
+Pay-As-You-Earn (PAYE) is the systematic withholding tax deducted by employers from employees' salaries. Following standard 2023-2024 tax reforms by the Fiji Revenue and Customs Service (FRCS), PAYE structures have been streamlined. This calculator reflects the current personal tax-exempt threshold of FJD $30,000 per annum.
+
+#### 2. Fiji National Provident Fund (FNPF)
+FNPF is Fiji's statutory pension fund. Starting January 1st, 2024, the mandatory employee contribution rate was restored to **8%** of gross salary, matched by another 8% form from employers. In this calculator, we subtract your 8% employee contribution from gross income, as this contribution is fully tax-exempt, resulting in your "Chargeable Income."
+
+#### 3. Current Fiji Resident Tax Brackets
+Fiji tax residency rates are calculated based on annual Chargeable Income (Gross minus FNPF):
+- **Up to FJD $30,000:** 0% PAYE (Totally tax-free!).
+- **FJD $30,001 to $50,000:** 18% of Chargeable Income exceeding $30,000.
+- **Above FJD $50,000:** FJD $3,600 + 20% of Chargeable Income exceeding $50,000.
+
+#### 4. Step-by-Step Example Calculation
+If you have a gross annual salary of **FJD $45,000**:
+1. **FNPF Contribution (8%):** $45,000 * 0.08 = FJD $3,600.
+2. **Chargeable Income:** $45,000 - $3,600 = FJD $41,400.
+3. **PAYE Tax calculation:**
+   - The chargeable income is between $30,001 and $50,000.
+   - Tax = ($41,400 - $30,000) * 18% = $11,400 * 0.18 = FJD $2,052.
+4. **Annual Net Pay (Take Home):**
+   - Net = Gross - FNPF - PAYE
+   - Net = $45,000 - $3,600 - $2,052 = FJD $39,348.
+5. **Fortnightly Distribution (26 pay periods):**
+   - Net fortnightly = $39,348 / 26 = FJD $1,513.38.
+
+#### 5. Why Localize Your Calculations?
+General international tax tables do not account for FNPF exemptions or Fiji-specific progressive leaps. Our calculator ensures that whether you are calculated weekly, fortnightly, monthly, or annually, you receive an accurate projection based on the laws of the Republic of Fiji.
+
+#### Related Calculators:
+- **Fiji Overtime Calculator**: Calculate additional hourly wages under ERA regulations.
+- **Fiji Loan Repayment Calculator**: Project repayment benchmarks on regional credit products.`,
+    faqs: [
+        { question: 'How much is the FNPF rate in Fiji?', answer: 'The employee mandatory contribution rate is 8% of gross wages. Employers match another 8%.' },
+        { question: 'What is the tax-free threshold in Fiji?', answer: 'Currently, personal resident income up to FJD $30,000 per year is 100% tax-free under PAYE.' }
+    ]
+  },
+  {
+    id: 'fiji-overtime-calculator',
+    slug: 'fiji-overtime-calculator',
+    name: 'Fiji Overtime Calculator',
+    titleTag: 'Fiji Overtime & Pay Calculator | Free Employment Wage Tool',
+    description: 'Calculate overtime earnings in Fiji easily. Supports standard time-and-a-half (1.5x) and double-time (2.0x) calculations conforming to Employment Relations Act.',
+    category: 'Fiji Tools',
+    usp: 'Conforms to Fiji Employment Relations Act (ERA) standards regarding public holiday and Sunday work.',
+    aliases: ['fiji-overtime-pay-calculator', 'fiji-wage-calculator'],
+    metaDescription: 'Calculate overtime earnings in Fiji easily. Supports standard time-and-a-half (1.5x) and double-time (2.0x) calculations conforming to Employment Relations Act.',
+    howTo: `### Guide to Overtime & Wages under Fiji Employment Relations Act
+
+Overtime is a vital component of compensation for many workers across industrial, agricultural, manufacturing, and tourism sectors in Fiji. Under the Fiji Employment Relations Act (ERA), workers are protected by statutory minimums regarding hours worked and appropriate multipliers.
+
+#### 1. Regular Hours vs Overtime Limits
+In Fiji, a normal workday is generally defined as 8 or 9 hours depending on collective bargaining agreements, totaling up to 40, 44, or 48 hours per week depending on the industry wage councils (e.g., manufacturing, security, hospitality).
+
+#### 2. Overtime Multipliers in Fiji
+There are two primary categories of overtime multipliers applied:
+- **Time-and-a-half (1.5x):** Applied to overtime hours worked during standard working days (Monday to Saturday) beyond the normal daily roster.
+- **Double-time (2.0x):** Legally mandatory under the ERP for hours worked on Sundays and specified National Public Holidays (e.g., Fiji Day, Christmas, Constitution Day).
+
+#### 3. Step-by-Step Example Calculation
+Suppose you hold a base hourly wage of **FJD $6.50** and work the following hours in a week:
+- **Regular Hours:** 45 hours
+- **Standard Weekday Overtime:** 5 hours (at 1.5x)
+- **Holiday/Sunday Double-Time:** 2 hours (at 2.0x)
+
+**Calculator Arithmetic:**
+1. **Regular Earnings:** 45 Hours * $6.50 = FJD $292.50.
+2. **Weekday Overtime Pay:** 5 Hours * $6.50 * 1.5 = 5 * $9.75 = FJD $48.75.
+3. **Double-Time Pay:** 2 Hours * $6.50 * 2.0 = 2 * $13.00 = FJD $26.00.
+4. **Total Weekly Gross Pay:** $292.50 + $48.75 + $26.00 = FJD $367.25.
+
+#### 4. Importance of Verifying Wage Regulations
+Fiji has sector-specific Wage Regulation Orders (WRO) that mandate varying base entry-level rates for security guards, hospitality staff, construction workers, and agricultural sector laborers. Be sure to check the LTA or Ministry of Employment guidelines corresponding to your specific career path to confirm your hourly base minimums.
+
+#### Related Calculators:
+- **Fiji Salary Calculator**: Determine your progressive income tax contribution.
+- **Fiji Annual Leave Calculator**: Record vacation allocations and compute return timelines.`,
+    faqs: [
+        { question: 'What is the standard overtime rate on Sundays in Fiji?', answer: 'Sunday and public holiday work is typically compensated at double time (2.0x) under standard Fiji Employment Relations legislation.' },
+        { question: 'What is the national minimum wage in Fiji?', answer: 'The national minimum wage has been periodically adjusted, moving towards FJD $4.50 to $5.00 per hour across major sectors in recent Ministry updates.' }
+    ]
+  },
+  {
+    id: 'fiji-annual-leave-calculator',
+    slug: 'fiji-annual-leave-calculator',
+    name: 'Fiji Annual Leave Calculator',
+    titleTag: 'Fiji Annual Leave & Return-to-Work Calculator',
+    description: "Plan your annual leave under Fiji's Employment Relations Act. Computes remaining leave days and returns exact return-to-work dates skipping weekends.",
+    category: 'Fiji Tools',
+    usp: 'Includes automatic skip logic for non-business days to ensure compliant workplace return mapping.',
+    aliases: ['fiji-holiday-leave-calculator', 'fiji-leave-tracker'],
+    metaDescription: "Plan your annual leave under Fiji's Employment Relations Act. Computes remaining leave days and returns exact return-to-work dates skipping weekends.",
+    howTo: `### Estimating Paid Vacation & Return Timelines in Fiji
+
+Under Fiji's legal framework for work agreements, paid statutory time-off is a core right. Our annual leave tracker is built to simplify leave calculations for both human resources teams and personnel, ensuring seamless scheduling.
+
+#### 1. What are your Annual Leave Rights in Fiji?
+According to **Section 59 of the Fiji Employment Relations Act (ERA)**, every employee is entitled to a minimum of **10 working days of paid annual leave** after completing 12 consecutive months of employment with an employer. In practice, many competitive employers offer 12, 15, or even 20 days.
+
+#### 2. Day Calculations & Excluded Weekends
+Under typical Fiji corporate conditions, annual leave deductions apply strictly to "working days." If you book leave from a Monday to the next Monday, the weekend (Saturday and Sunday) does not count as part of your statutory leave deduction. Our calculator has an "Exclude Weekends" toggle that prevents weekend days from depleting your accrued balance.
+
+#### 3. Step-by-Step Example Calculation
+If you possess an annual leave balance of **12 Days** and decide to request a **5-Day** vacation beginning on a **Friday**:
+- **Day 1 of Leave:** Friday (Balance decreases to 11 days).
+- **Weekend Days Filter:** Saturday and Sunday are skipped (no leave balance deducted).
+- **Day 2 of Leave:** Monday (Balance decreases to 10 days).
+- **Day 3 of Leave:** Tuesday (Balance decreases to 9 days).
+- **Day 4 of Leave:** Wednesday (Balance decreases to 8 days).
+- **Day 5 of Leave:** Thursday (Balance decreases to 7 days).
+- **Return to Office:** The next working day is **Friday**.
+
+Your remaining leave balance after this trip is exactly **7 Days**, and your Return-to-Work date is the following Friday.
+
+#### 4. Managing Sick and Bereavement Leave separately
+Note that statutory annual leave is distinct from other employee rights in Fiji:
+- **Sick Leave:** Entitled to a minimum of 10 working days of paid sick leave per year under ERA Section 60.
+- **Bereavement Leave:** Entitled to 3 working days of paid bereavement leave under ERA Section 61.
+Always keep these buckets separate and do not mix them with your annual vacation pool.
+
+#### Related Calculators:
+- **Fiji Salary Calculator**: Map out net paycheck values and gross earnings.
+- **Fiji Overtime Calculator**: Log weekend and holiday work hours.`,
+    faqs: [
+        { question: 'Are weekends counted as annual leave in Fiji?', answer: 'No, legally and by standard corporate practice, annual leave is applied to working days. Sat/Sun are excluded from leave tallies.' },
+        { question: 'Can annual leave be carried over to the next year?', answer: 'Carrying over leave depends on your contract, but standard practice requires agreement between worker and employer.' }
+    ]
+  },
+  {
+    id: 'fiji-loan-repayment-calculator',
+    slug: 'fiji-loan-repayment-calculator',
+    name: 'Fiji Loan Repayment Calculator',
+    titleTag: 'Fiji Loan Repayment Calculator | Compare Local Bank Rates',
+    description: 'Estimate amortized loan payments for Fiji personal and auto loans. Enter principal, rate, and terms to see total interest in FJD instantly.',
+    category: 'Fiji Tools',
+    usp: 'Compare rates against standard products from BSP, HFC, ANZ, and Westpac.',
+    aliases: ['fiji-personal-loan-calculator', 'fiji-car-loan-calculator'],
+    metaDescription: 'Estimate amortized loan payments for Fiji personal and auto loans. Enter principal, rate, and terms to see total interest in FJD instantly.',
+    howTo: `### Comprehensive Loan Amortization Analysis in Fiji
+
+A personal loan, car financing, or capital credit arrangement is a serious financial commitment. Finding local commercial terms with the lowest APR represents huge savings. Our Fiji Loan Repayment Calculator is fine-tuned to help you gauge your borrowing limits.
+
+#### 1. The Real Cost of Borrowing in Fiji
+Fiji's commercial banking environment is serviced by banks like BSP (Bank South Pacific), ANZ, Westpac, and HFC Bank. Average interest rates for personal loans range from **6.5% to 12.5%** depending on security (collateral) status. Car loans and secured lines of credit usually represent lower interest margins compared to unsecured personal credit.
+
+#### 2. The Math behind Monthly Compound Interest
+We use a standard amortization formula to estimate your periodically required repayment amounts. This calculates direct periodic interest obligations on active principal elements.
+
+#### 3. Step-by-Step Example Calculation
+Say you take an auto loan for **FJD $15,000** at a **7.5% per annum** rate for a **5-year term** on dynamic monthly repayments:
+- **Principal:** $15,000 FJD
+- **Monthly rate:** 7.5% / 12 months = 0.00625 monthly decimal rate
+- **Periods:** 5 years * 12 months = 60 periods
+
+**Calculations:**
+Applying the formula, your monthly installment comes to **FJD $300.57**.
+- **Total Absolute Payments:** $300.57 * 60 = FJD $18,034.20.
+- **Total Interest Charged:** $18,034.20 - $15,000 = FJD $3,034.20.
+
+#### 4. How to Negotiate Lower Terms
+Before signing any bank papers, check for:
+- **Upfront establishment fees:** Often range between FJD $150 to $300.
+- **Prepayment penalties:** Some institutions charge fees if you pay off your loan early. Always opt for contracts that let you pay principal faster without penalties.
+
+#### Related Calculators:
+- **Fiji Mortgage Calculator**: Evaluate larger property finance investments.
+- **Fiji Salary Calculator**: Keep repayments comfortably below 30-40% of net take-home pay.`,
+    faqs: [
+        { question: 'Can I pay off my personal loan early?', answer: 'Yes, most banks in Fiji permit early settlement, though some may charge a nominal processing fee. Check your loan contract closely.' },
+        { question: 'What are typical interest rates in Fiji?', answer: 'Secured loans range between 6% to 9%, while unsecured personal loans can hover between 9% and 13%.' }
+    ]
+  },
+  {
+    id: 'fiji-mortgage-calculator',
+    slug: 'fiji-mortgage-calculator',
+    name: 'Fiji Mortgage Calculator',
+    titleTag: 'Fiji Mortgage & Home Loan Calculator | Property Finance',
+    description: 'Calculate monthly home mortgage repayments in Fiji. Supports downpayment, bank interest parameters, and computes overall interest cost in FJD.',
+    category: 'Fiji Tools',
+    usp: 'Accounts for FNPF housing withdrawals to bolster property deposits.',
+    aliases: ['fiji-home-loan-calculator', 'fiji-property-calculator'],
+    metaDescription: 'Calculate monthly home mortgage repayments in Fiji. Supports downpayment, bank interest parameters, and computes overall interest cost in FJD.',
+    howTo: `### Navigating Home Loan & Property Mortgages in Fiji
+
+Buying or building a house in Fiji—whether a residential home in Suva, a scenic property in Pacific Harbour, or a house in Lautoka—is one of the largest financial achievements you will undertake. Estimating your monthly payment checks prevents long-term strain.
+
+#### 1. Deposit Requirements and FNPF Housing Schemes
+Fiji commercial lending institutions typically require a minimum **10% to 20% deposit** to approve a home mortgage. Fortunately, under specified criteria, the **Fiji National Provident Fund (FNPF)** allows eligible members to make a partial withdrawal from their preserved account to fund home purchases or construction. This can significantly reduce the cash deposit you need to find.
+
+#### 2. Mortgage Term & Rates
+Home loan amortization schedules are normally spread over **15, 20, 25, or 30 years**. Fiji residential home loan interest rates often float between **5% to 8%**. Fixed-rate home loans are common during the initial 1-3 years, subsequently converting into floating variables.
+
+#### 3. Step-by-Step Example Calculation
+If you buy an urban home in Fiji with a value of **FJD $250,000**, put down a **FJD $25,000** deposit (funded with FNPF + cash savings) at an annual interest rate of **6.5%** over a **25-year period**:
+1. **Net Loan Principal needed:** $250,000 - $25,000 = FJD $225,000.
+2. **Monthly Interest Rate:** 6.5% / 12 = 0.5416% per month.
+3. **Number of Pay Periods:** 25 Years * 12 Months = 300 months status.
+4. **Calculated Monthly Obligation:** $1,519.18 per month.
+5. **Total Ultimate Repay:** $1,519.18 * 300 = FJD $455,754.
+6. **Cumulative Interest Accrued:** $455,754 - $225,000 = FJD $230,754 of pure interest in decades.
+
+#### 4. Additional Costs to Budget For
+A property purchase represents costs beyond the monthly bank payment:
+- **Stamp Duties:** Exempt for first-home buyers under many recent government budgets.
+- **LTA / Title registration:** Nominal processing fees.
+- **Valuation & Engineering reports:** Required by banks, usually costing around $300 to $800.
+- **Property Insurance:** Mandatory building and fire protection policy cover.
+
+#### Related Calculators:
+- **Fiji Salary Calculator**: Ensure your monthly payment does not exceed 35% of your gross monthly earnings.
+- **Fiji Loan Repayment Calculator**: Compare smaller borrowing options.`,
+    faqs: [
+        { question: 'Can I use my FNPF to buy a home?', answer: 'Yes, under FNPF rules, eligible members can withdraw a portion of their FNPF funds to purchase, build, or pay off a home mortgage.' },
+        { question: 'What is the standard mortgage term in Fiji?', answer: 'Most home loans in Fiji are amortized over terms of 20 to 25 years.' }
+    ]
+  },
+  {
+    id: 'fiji-duty-import-calculator',
+    slug: 'fiji-duty-import-calculator',
+    name: 'Fiji Duty & Import Calculator',
+    titleTag: 'Fiji Duty & Import VAT Calculator | 15% VAT Online Tool',
+    description: 'Calculate landed import costs with the Fiji Revenue and Customs Service (FRCS) rules. Includes custom tariff brackets and standard 15% VAT.',
+    category: 'Fiji Tools',
+    usp: 'Enforces current 15% VAT rates on import landing valuations in Fiji.',
+    aliases: ['fiji-customs-calculator', 'fiji-import-duty-calculator'],
+    metaDescription: 'Calculate landed import costs with the Fiji Revenue and Customs Service (FRCS) rules. Includes custom tariff brackets and standard 15% VAT.',
+    howTo: `### Estimating Customs Duty & Landing Tariffs for Imports to Fiji
+
+Online shopping and commercial importing to Fiji have surged in popularity. However, many shoppers are surprised when their parcel arrives and they receive an unexpected bill from customs agents. Our Fiji Duty & Import Calculator uses FRCS rules to give clear landing totals.
+
+#### 1. Understanding CIF Value (Cost, Insurance, Freight)
+The **Fiji Revenue and Customs Service (FRCS)** assesses import payments using the **CIF** valuation method:
+CIF = Item Purchase Price + Insurance Value + Shipping Freight Costs.
+Even if an item is free or discounted, duties and taxes are calculated on the actual fair value of the package plus what it cost to ship it to Fiji.
+
+#### 2. Duty Brackets in Fiji
+The customs duty rate applied depends on the commodity classification code:
+- **0% Fiscal Duty:** Applies to essential computers, educational monographs, tablets, and medical apparatus.
+- **5% Fiscal Duty:** Applies to mobile phones, certain communications accessories, and micro-electronics.
+- **15% Fiscal Duty:** Applies to auto vehicle components, selective mechanics, clothing, and footwear.
+- **32% Fiscal Duty:** Applies to general household plastics, cosmetics, and non-essential finished items.
+
+#### 3. Step-by-Step Example Calculation
+If you buy a high-density winter jacket for **FJD $500** with a courier shipping charge of **FJD $80** to Suva:
+1. **CIF Value:** $500 (item) + $80 (shipping) = FJD $580.
+2. **Fiscal Duty (clothing is 15%):** $580 * 15% = FJD $87.
+3. **VAT base value:** CIF Value + Fiscal Duty = $580 + $87 = FJD $667.
+4. **Import Value Added Tax (15%):** $667 * 15% = FJD $100.05.
+5. **Total Government Import Charges:** $87 (duty) + $100.05 (VAT) = FJD $187.05.
+6. **Total Landed Cost:** $580 (CIF) + $187.05 = FJD $767.05.
+
+#### 4. Additional Clearing Fees to Watch Out For
+When your item lands, you might also incur:
+- **Handling / Document processing fees:** Charged by freight companies like DHL, FedEx, or CDP (generally FJD $20 to $50).
+- **Quarantine fees:** For wood, food, or biological materials.
+
+#### Related Calculators:
+- **Fiji Vehicle Cost Calculator**: Look up car operation expenses.
+- **Fiji Loan Repayment Calculator**: Plan finance for heavy commercial gear.`,
+    faqs: [
+        { question: 'Is VAT 15% on all imports in Fiji?', answer: 'Yes, a flat 15% VAT applies to almost all commercial and personal imported goods entering the country.' },
+        { question: 'Do personal shipments under FJD $400 pay customs duty?', answer: 'Certain passenger and private postal allowances can admit personal imports duty-free under FJD $400.' }
+    ]
+  },
+  {
+    id: 'fiji-vehicle-cost-calculator',
+    slug: 'fiji-vehicle-cost-calculator',
+    name: 'Fiji Vehicle Cost Calculator',
+    titleTag: 'Fiji Vehicle Cost Calculator | Car Ownership Expenses',
+    description: 'Estimate the monthly and annual cost of owning a vehicle in Fiji. Includes fuel, LTA road registration, and insurance expenses.',
+    category: 'Fiji Tools',
+    usp: 'Balances monthly fuel usage alongside annual road safety levies and registration.',
+    aliases: ['fiji-car-running-cost-calculator'],
+    metaDescription: 'Estimate the monthly and annual cost of owning a vehicle in Fiji. Includes fuel, LTA road registration, and insurance expenses.',
+    howTo: `### Budgeting Car Ownership & Operating Costs in Fiji
+
+Owning a car in Fiji offers immense freedom, allowing you to bypass public bus rosters or taxi calls. However, many car owners fail to budget beyond the initial purchase price, leading to financial stress when registration or insurance renewals roll around.
+
+#### 1. The Core Components of Running a Car in Fiji
+Car expenses span several categories that must be tabulated to reveal the true cost of continuous operation:
+- **Fuel Expense:** Petrol and diesel prices in Fiji are regulated monthly by the Fijian Competition and Consumer Commission (FCCC), which affects your commuter fuel budget.
+- **Mandatory Road Registration:** Handled through the Land Transport Authority (LTA). It includes standard vehicle testing and third-party accident levies.
+- **Comprehensive Insurance:** Standard premiums to protect your vehicle from collisions, storms, and thefts.
+- **Routine Maintenance:** Engine oil flushing, brake pad replacement, and tyre repairs suitable for Fiji's climate and tropical road conditions.
+
+#### 2. Step-by-Step Example Calculation
+Say you own a second-hand Toyota Fielder worth **FJD $24,000**:
+- **Monthly Fuel cost:** FJD $220.
+- **Annual LTA Registration/Road Tax:** FJD $180.
+- **Annual Comprehensive Insurance:** FJD $650.
+- **Monthly routine upkeep:** FJD $60 (brakes, tire wear, oil buffers).
+
+**Calculation Mechanics:**
+1. **Monthly Registration equivalent:** $180 / 12 = FJD $15.
+2. **Monthly Insurance equivalent:** $650 / 12 = FJD $54.17.
+3. **Total Monthly Vehicle Cost:** $220 (fuel) + $60 (upkeep) + $15 (LTA) + $54.17 (insurance) = FJD $349.17.
+4. **Total Annual Cost:** $349.17 * 12 = FJD $4,190.04.
+
+#### 3. How to Low-down Operating Budgets
+To keep your car from draining your monthly budget:
+- **Choose Hybrid Vehicles:** Hybrids (like a Toyota Prius or Aqua) are highly popular in Suva and Lautoka due to excellent fuel efficiency in city traffic.
+- **Keep Up on Preventive Care:** Fixing a small oil or fluid leak early prevents major block failures that cost thousands in repairs.
+
+#### Related Calculators:
+- **Fiji Salary Calculator**: Verify if your car running cost is below 15-20% of your take-home pay.
+- **Fiji Loan Repayment Calculator**: Calculate monthly finance terms on a car loan.`,
+    faqs: [
+        { question: 'Is third-party insurance mandatory in Fiji?', answer: 'Yes, a basic accident compensation levy is mandatory and integrated into your annual LTA vehicle registration.' },
+        { question: 'How often do I need to register my vehicle in Fiji?', answer: 'Fiji cars must undergo LTA inspection and road tax registration annually.' }
+    ]
+  },
+  {
+    id: 'fiji-electricity-bill-calculator',
+    slug: 'fiji-electricity-bill-calculator',
+    name: 'Fiji Electricity Bill Calculator',
+    titleTag: 'Fiji Electricity Bill Calculator | Energy Fiji Ltd EFL Rates',
+    description: 'Estimate your monthly EFL electricity bill in Fiji. Includes up-to-date domestic tariffs and the government 50% subsidy logic.',
+    category: 'Fiji Tools',
+    usp: 'Includes the 50% government subsidy threshold for consumption under 100 kWh.',
+    aliases: ['fiji-efl-bill-calculator', 'fiji-power-bill-calculator'],
+    metaDescription: 'Estimate your monthly EFL electricity bill in Fiji. Includes up-to-date domestic tariffs and the government 50% subsidy logic.',
+    howTo: `### Estimating Energy Costs under EFL Tariffs in Fiji
+
+Electricity is one of the most prominent monthly utilities for any household in Fiji. Understanding how your usage translates into a dollar figure can help you implement targeted habits to reduce your monthly EFL (Energy Fiji Limited) bill.
+
+#### 1. EFL Tariffs & The 100 kWh Government Subsidy
+Under Energy Fiji Limited guidelines, residential consumers are billed on standard domestic rates. The current base rate is approximately **$0.3401 FJD per kWh** (inclusive of 15% VAT).
+To support low-income and lower-use households, the Fijian Government pays a **50% subsidy** for domestic customers who use **100 kWh of electricity or less per month**. Use over 100 kWh forfeits this subsidy on the entire bill.
+
+#### 2. Step-by-Step Example Calculation
+**Case A: Modest usage of 80 kWh in a month:**
+- Since 80 kWh is under the 100 kWh threshold, the 50% subsidy applies.
+- **Base Cost:** 80 kWh * $0.3401 = FJD $27.21
+- **Government Subsidy (50%):** - $13.61
+- **Estimated Monthly Bill:** FJD $13.60.
+
+**Case B: Comfort usage of 150 kWh in a month:**
+- Since 150 kWh exceeds the 100 kWh threshold, no subsidy applies.
+- **Estimated Monthly Bill:** 150 * $0.3401 = FJD $51.02.
+- Notice how almost doubling your consumption (from 80 to 150 kWh) actually quadruples your bill (from $13.60 to $51.02) because you lost the subsidy!
+
+#### 3. Tips to Reduce Household Power Bills in Fiji
+- **Rethink Cooling:** Air conditioning accounts for up to 60% of an urban Fiji home’s power bill. Switch to ceiling or standing fans, or use AC timers.
+- **Unplug Idle Chargers:** Appliances in standby mode slowly consume power, contributing to "phantom" usage.
+- **Opt for Solar Water Heaters:** Natural tropical climate and sunshine can heat your home’s water with zero electric cost.
+
+#### Related Calculators:
+- **Fiji Grocery Budget Calculator**: Structure household allocations logically.
+- **Fiji Salary Calculator**: Budget your utilities comfortably within monthly bounds.`,
+    faqs: [
+        { question: 'Who qualifies for the electricity subsidy in Fiji?', answer: 'Domestic EFL customers consuming 100 kWh or less in a billing cycle automatically receive the 50% rate subsidy.' },
+        { question: 'How is the electric bill calculated in Fiji?', answer: 'Your bill multiplier is based on total kWh registered by your meter multiplied by the residential domestic billing rate (approx 34c).' }
+    ]
+  },
+  {
+    id: 'fiji-grocery-budget-calculator',
+    slug: 'fiji-grocery-budget-calculator',
+    name: 'Fiji Grocery Budget Calculator',
+    titleTag: 'Fiji Grocery Budget Calculator | Monthly Meal Planning',
+    description: 'Plan and optimize your grocery budget in Fiji with this free online tool. Suggested food group allotments for dalo, cassava, and fresh local produce.',
+    category: 'Fiji Tools',
+    usp: 'Provides a culturally relevant spending guide based on Fiji market staples.',
+    aliases: ['fiji-food-budget-calculator'],
+    metaDescription: 'Plan and optimize your grocery budget in Fiji with this free online tool. Suggested food group allotments for dalo, cassava, and fresh local produce.',
+    howTo: `### Local Food Budgeting & Staples Meal Planning in Fiji
+
+Managing food costs is a key factor in keeping household budgets on track. In Fiji, food options are a rich mix of local municipal market produce and supermarket shelf items, each holding different price variables.
+
+#### 1. Local Markets vs Supermarkets in Fiji
+One of the best financial habits for residents in Suva, Lautoka, Nadi, or Labasa is buying fresh ingredients at local municipal markets rather than relying on imported packaged items.
+- **Municipal Markets:** Excellent value for local root crops (Dalo, Cassava), rich greens (Rourou, bele), and seasonal tropical produce (Papaya, pineapples, bananas).
+- **Supermarkets:** Necessary for rice, flour, oil, salt, dairy, tinned goods, and household soaps.
+
+#### 2. Suggested Balanced Portioning Model
+Our calculator divides your weekly grocery budget into four balanced local spending categories:
+- **Roots and Greens (25%):** Spent at municipal open-air markets for optimal nutrition and fiber.
+- **Grains & Pantry Staples (25%):** Spent on rice, flour, sugar, oil, and dry noodles.
+- **Protein & Dairy (30%):** Spent on fresh fish, chicken, eggs, corned beef, and milk.
+- **Beverages and Upkeep Essentials (20%):** Spent on tea, coffee, breakfast biscuits, and home cleaners.
+
+#### 3. Step-by-Step Example Calculation
+If you have a block family of **4 persons** and allocate a weekly budget of **FJD $150**:
+1. **Weekly Produce allowance (25%):** FJD $37.50 (Plenty for heaps of fresh cassava, dalo, and veggies at local markets).
+2. **Weekly Grains allowance (25%):** FJD $37.50 (Rice, flour, and oil essentials).
+3. **Weekly Protein allowance (30%):** FJD $45.00 (Chicken, canned mackerel/tuna, eggs).
+4. **Weekly Household Essentials (20%):** FJD $30.00 (Tea, milk, bath soap).
+
+**Monthly total spent on food:** $150 * 4.333 = FJD $650.
+**Spend per person weekly:** $150 / 4 = FJD $37.50.
+
+#### Related Calculators:
+- **Fiji Salary Calculator**: Allocate no more than 15-25% of take-home pay to groceries.
+- **Fiji Electricity Bill Calculator**: Manage monthly house overheads.`,
+    faqs: [
+        { question: 'How can I save money on groceries in Fiji?', answer: 'Buy roots and vegetables at municipal markets rather than supermarkets, and focus on local fish/chicken.' },
+        { question: 'What are typical staples of a Fiji diet?', answer: 'Traditional staples include cassava, dalo, fresh fish, rourou (taro leaves), bele, and canned goods.' }
+    ]
+  },
+  {
+    id: 'fiji-taxi-fare-calculator',
+    slug: 'fiji-taxi-fare-calculator',
+    name: 'Fiji Taxi Fare Calculator',
+    titleTag: 'Fiji Taxi Fare Calculator | LTA Regulated Meter Estimation',
+    description: 'Estimate your local taxi fare in Fiji. Computes regulated daytime and nighttime base drop rates, km distance, and idling wait times.',
+    category: 'Fiji Tools',
+    usp: 'Conforms to official Land Transport Authority (LTA) regulated tariff meters.',
+    aliases: ['fiji-taxi-meter-calculator'],
+    metaDescription: 'Estimate your local taxi fare in Fiji. Computes regulated daytime and nighttime base drop rates, km distance, and idling wait times.',
+    howTo: `### Estimating Regulated Taxi Meters in Viti Levu and Vanua Levu
+
+Hailing a taxi in Fiji is a common and accessible way to travel, whether commuting to work in Suva, heading from Nadi International Airport to your hotel, or moving around Lautoka. Knowing the official rates prevents overpaying.
+
+#### 1. LTA Regulated Meter Fares
+The Land Transport Authority (LTA) of Fiji tightly regulates taxi meter rates to protect both travelers and taxi operators. There are three main elements of a taxi fare:
+- **Base Flag Fall Drop:**
+  - **Daytime (6:00 AM to 10:00 PM):** FJD $2.00
+  - **Nighttime (10:00 PM to 6:00 AM):** FJD $3.00
+- **Distance Rate:** FJD $1.20 per kilometer traveled.
+- **Waiting Time Rate:** FJD $0.20 per minute of stationary waiting.
+
+#### 2. Step-by-Step Example Calculation
+If you take an evening taxi from Suva Harbour to Laucala Bay (approx **8 kilometers**), encountering **5 minutes** of aggregate waiting time at traffic lights during daytime:
+1. **Base Flag Fall:** FJD $2.00 (daytime rate).
+2. **Distance Charge:** 8 km * $1.20 / km = FJD $9.60.
+3. **Waiting Time Charge:** 5 mins * $0.20 / min = FJD $1.00.
+4. **Total Metered Fare:** $2.00 + $9.60 + $1.00 = FJD $12.60.
+
+#### 3. Taxi Safety in Fiji
+- **Always Ask for the Meter:** If you hail a taxi in urban areas drivers are legally required to run the meter. Avoid fixed price agreements unless you are traveling long, inter-city distances.
+- **Keep Change Handy:** Taxi drivers usually carry limited spare cash. Paying in smaller FJD denominations matches driver expectations and gets you on your way faster.
+
+#### Related Calculators:
+- **Fiji Vehicle Cost Calculator**: Look up long-term car ownership costs compared to taxi usage.
+- **Fiji Duty & Import Calculator**: Plan shipping and landing duties for machinery imports.`,
+    faqs: [
+        { question: 'Do all taxis in Fiji use meters?', answer: 'Yes, in major urban districts, taxi drivers are legally mandated to run the meter. Always ensure it is turned on before setting off.' },
+        { question: 'What is the nighttime taxi base rate in Fiji?', answer: 'Official nighttime base drop is FJD $3.00, starting from 10:00 PM to 6:00 AM.' }
+    ]
   }
 ];
+
 

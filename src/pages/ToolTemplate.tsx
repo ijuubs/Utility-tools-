@@ -22,6 +22,18 @@ const UnitConverter = lazy(() => import('../components/tools/UnitConverter'));
 const LoanCalculator = lazy(() => import('../components/tools/LoanCalculator'));
 const PercentageCalculator = lazy(() => import('../components/tools/PercentageCalculator'));
 
+// Fiji Tools
+const FijiSalaryCalculator = lazy(() => import('../components/tools/FijiSalaryCalculator'));
+const FijiOvertimeCalculator = lazy(() => import('../components/tools/FijiOvertimeCalculator'));
+const FijiAnnualLeaveCalculator = lazy(() => import('../components/tools/FijiAnnualLeaveCalculator'));
+const FijiLoanRepaymentCalculator = lazy(() => import('../components/tools/FijiLoanRepaymentCalculator'));
+const FijiMortgageCalculator = lazy(() => import('../components/tools/FijiMortgageCalculator'));
+const FijiDutyImportCalculator = lazy(() => import('../components/tools/FijiDutyImportCalculator'));
+const FijiVehicleCostCalculator = lazy(() => import('../components/tools/FijiVehicleCostCalculator'));
+const FijiElectricityBillCalculator = lazy(() => import('../components/tools/FijiElectricityBillCalculator'));
+const FijiGroceryBudgetCalculator = lazy(() => import('../components/tools/FijiGroceryBudgetCalculator'));
+const FijiTaxiFareCalculator = lazy(() => import('../components/tools/FijiTaxiFareCalculator'));
+
 export default function ToolTemplate() {
   const { slug } = useParams<{ slug: string }>();
   
@@ -61,6 +73,19 @@ export default function ToolTemplate() {
         case 'unit-converter': return <UnitConverter />;
         case 'loan-calculator': return <LoanCalculator />;
         case 'percentage-calculator': return <PercentageCalculator />;
+        
+        // Fiji tools switch mapping
+        case 'fiji-salary-calculator': return <FijiSalaryCalculator />;
+        case 'fiji-overtime-calculator': return <FijiOvertimeCalculator />;
+        case 'fiji-annual-leave-calculator': return <FijiAnnualLeaveCalculator />;
+        case 'fiji-loan-repayment-calculator': return <FijiLoanRepaymentCalculator />;
+        case 'fiji-mortgage-calculator': return <FijiMortgageCalculator />;
+        case 'fiji-duty-import-calculator': return <FijiDutyImportCalculator />;
+        case 'fiji-vehicle-cost-calculator': return <FijiVehicleCostCalculator />;
+        case 'fiji-electricity-bill-calculator': return <FijiElectricityBillCalculator />;
+        case 'fiji-grocery-budget-calculator': return <FijiGroceryBudgetCalculator />;
+        case 'fiji-taxi-fare-calculator': return <FijiTaxiFareCalculator />;
+        
         default: return <p className="text-center text-[var(--muted)]">Tool interface for {tool.name} coming soon.</p>;
     }
   };

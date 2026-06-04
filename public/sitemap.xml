@@ -91,6 +91,56 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-salary-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-overtime-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-annual-leave-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-loan-repayment-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-mortgage-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-duty-import-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-vehicle-cost-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-electricity-bill-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-grocery-budget-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/fiji-taxi-fare-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://utility-tools-eta.vercel.app/blog/privacy-first-utility-suite-client-side</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
