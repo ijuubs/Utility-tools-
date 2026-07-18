@@ -28,14 +28,6 @@
         adsense.async = true;
         adsense.crossOrigin = "anonymous";
         document.body.appendChild(adsense);
-
-        // Adsterra Popunder
-        const popunder = document.createElement("script");
-        popunder.src = "https://pl29473636.effectivecpmnetwork.com/b6/78/db/b678db30fb3a449dfd14434dad0acbce.js";
-        popunder.defer = true;
-        document.body.appendChild(popunder);
-
-        // Adsterra Social Bar - Removed from delay, placed directly in body to ensure it fires properly
       };
 
       // Load on interaction or after 3 seconds
@@ -48,7 +40,6 @@
       events.forEach(e => window.addEventListener(e, triggerAds, {passive: true}));
       setTimeout(loadAds, 3000);
     </script>
-    <script src="https://watchingprefecture.com/f7/5c/2e/f75c2e4316859a98f79eec1db54957dc.js"></script>
   </body>
 </html>
 
