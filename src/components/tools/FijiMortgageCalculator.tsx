@@ -81,7 +81,7 @@ export default function FijiMortgageCalculator() {
               className="w-full p-3 border-4 border-black font-black text-lg focus:outline-none focus:bg-yellow-100"
               placeholder="6.5"
             />
-            <span className="text-xs font-bold text-gray-400 mt-1 block">Fiji commercial banking home rates vary between 5.5% - 8%.</span>
+            <span className="text-xs font-bold text-gray-600 mt-1 block">Fiji commercial banking home rates vary between 5.5% - 8%.</span>
           </div>
           <div>
             <label className="block text-sm font-black uppercase mb-1">Mortgage Term (Years)</label>
@@ -119,16 +119,16 @@ export default function FijiMortgageCalculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t-4 border-black pt-4">
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-[10px] font-black uppercase text-gray-500">Net Loan Amount</span>
+              <span className="block text-[10px] font-black uppercase text-gray-600">Net Loan Amount</span>
               <span className="text-base font-black">FJD ${results.loanAmount.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
-              <span className="block text-[10px] font-bold text-gray-400">({results.depositPercentage.toFixed(1)}% deposit)</span>
+              <span className="block text-[10px] font-bold text-gray-600">({results.depositPercentage.toFixed(1)}% deposit)</span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-[10px] font-black uppercase text-gray-500">Total Interest Payable</span>
+              <span className="block text-[10px] font-black uppercase text-gray-600">Total Interest Payable</span>
               <span className="text-base font-black text-rose-700">FJD ${results.totalInterest.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-[10px] font-black uppercase text-gray-500">Absolute Total Cost</span>
+              <span className="block text-[10px] font-black uppercase text-gray-600">Absolute Total Cost</span>
               <span className="text-base font-black text-black">FJD ${results.totalRepay.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
             </div>
           </div>

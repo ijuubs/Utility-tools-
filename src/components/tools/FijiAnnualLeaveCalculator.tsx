@@ -109,7 +109,7 @@ export default function FijiAnnualLeaveCalculator() {
           </div>
         </div>
 
-        <p className="text-xs font-bold text-gray-500 mb-2">
+        <p className="text-xs font-bold text-gray-600 mb-2">
           Under Fiji ERP Section 59, standard annual leave is continuous and usually accrues at a rate of at least 10 working days off per calendar year.
         </p>
       </div>

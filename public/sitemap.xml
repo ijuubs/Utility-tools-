@@ -26,6 +26,16 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/loan-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/percentage-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://utility-tools-eta.vercel.app/tools/word-counter</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
@@ -81,16 +91,6 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://utility-tools-eta.vercel.app/tools/loan-calculator</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://utility-tools-eta.vercel.app/tools/percentage-calculator</loc>
-    <priority>0.9</priority>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
     <loc>https://utility-tools-eta.vercel.app/tools/fiji-salary-calculator</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
@@ -141,6 +141,31 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/roi-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/sip-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/age-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/tdee-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/tools/compound-interest-calculator</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://utility-tools-eta.vercel.app/blog/privacy-first-utility-suite-client-side</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
@@ -182,6 +207,31 @@
   </url>
   <url>
     <loc>https://utility-tools-eta.vercel.app/blog/mastering-json-debugging</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/blog/ultimate-guide-calculating-roi</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/blog/why-start-a-sip-today</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/blog/age-calculation-how-it-works</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/blog/tdee-explained-calories-needed</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://utility-tools-eta.vercel.app/blog/compound-interest-wealth-multiplier</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>

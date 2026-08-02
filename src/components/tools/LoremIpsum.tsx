@@ -21,7 +21,7 @@ export default function LoremIpsumGenerator() {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row items-stretch sm:items-end gap-4">
         <div className="flex-1">
-          <label className="block text-xs font-black uppercase mb-1.5 text-gray-500">Number of Paragraphs</label>
+          <label className="block text-xs font-black uppercase mb-1.5 text-gray-600">Number of Paragraphs</label>
           <input 
             type="number" 
             min="1" 
@@ -54,7 +54,7 @@ export default function LoremIpsumGenerator() {
 
       {text && (
         <div className="p-4 sm:p-6 border-4 border-black bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-          <p className="text-xs font-black text-gray-400 uppercase mb-2">Generated Output</p>
+          <p className="text-xs font-black text-gray-600 uppercase mb-2">Generated Output</p>
           <div className="font-medium text-black whitespace-pre-line leading-relaxed text-sm sm:text-base selection:bg-yellow-200">
             {text}
           </div>

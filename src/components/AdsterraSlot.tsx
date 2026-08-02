@@ -47,7 +47,7 @@ export default function AdsterraSlot({ id, minHeight = '150px', className = '' }
       </div>
 
       <div className="mt-4 flex items-center justify-between">
-        <span className="text-xs font-mono font-bold text-gray-400 uppercase">Featured Utility</span>
+        <span className="text-xs font-mono font-bold text-gray-600 uppercase">Featured Utility</span>
         <Link 
           to={`/tools/${promo.slug}`}
           className="bg-black text-white px-4 py-2 text-xs font-black uppercase tracking-wider hover:bg-yellow-400 hover:text-black border-2 border-black transition-colors"

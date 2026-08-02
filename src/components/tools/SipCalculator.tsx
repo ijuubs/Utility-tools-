@@ -61,13 +61,13 @@ export default function SipCalculator() {
           <h2 className="text-2xl font-black uppercase mb-4">Results</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white border-4 border-black p-4 text-center">
-              <div className="text-sm font-bold uppercase text-gray-500 mb-1">Total Invested</div>
+              <div className="text-sm font-bold uppercase text-gray-600 mb-1">Total Invested</div>
               <div className="text-xl font-black">
                 ${results.totalInvested.toLocaleString(undefined, { maximumFractionDigits: 0 })}
               </div>
             </div>
             <div className="bg-white border-4 border-black p-4 text-center">
-              <div className="text-sm font-bold uppercase text-gray-500 mb-1">Estimated Returns</div>
+              <div className="text-sm font-bold uppercase text-gray-600 mb-1">Estimated Returns</div>
               <div className="text-xl font-black text-green-600">
                 ${results.estimatedReturns.toLocaleString(undefined, { maximumFractionDigits: 0 })}
               </div>

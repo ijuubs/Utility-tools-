@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { TOOLS } from '../data/toolsData';
+import { BLOG_POSTS } from '../data/blogData';
 import AdSlot from '../components/AdSlot';
 
 export default function HomePage() {
@@ -48,7 +49,7 @@ export default function HomePage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search for a tool... (e.g. JSON Formatter, Unit Converter)" 
-              className="w-full text-lg md:text-xl font-bold px-4 py-2 border-2 border-transparent focus:border-black focus:outline-none placeholder-gray-500"
+              className="w-full text-lg md:text-xl font-bold px-4 py-2 border-2 border-transparent focus:border-black focus:outline-none placeholder-gray-600"
             />
             {/* Keeping button for visual consistency, search works automatically onChange */}
             <button className="bg-black text-white px-6 py-2 font-black uppercase tracking-wider hover:bg-yellow-400 hover:text-black transition-colors">
@@ -61,7 +62,7 @@ export default function HomePage() {
             <h2 className="text-3xl font-black uppercase tracking-tighter border-b-4 border-black pb-2">All Tools Directory</h2>
             {filteredTools.length === 0 ? (
                 <div className="text-center py-12 border-4 border-black border-dashed">
-                    <p className="text-2xl font-black uppercase text-gray-500">No tools found matching "{searchQuery}"</p>
+                    <p className="text-2xl font-black uppercase text-gray-600">No tools found matching "{searchQuery}"</p>
                 </div>
             ) : (
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
@@ -161,6 +162,33 @@ export default function HomePage() {
                 <h3 className="text-xl md:text-2xl font-black uppercase border-b-4 border-black pb-1 md:pb-2">Expert Insights</h3>
                 <p className="font-medium text-black text-sm md:text-base">Every tool is accompanied by deep technical guides and FAQs, ensuring you not only get the result you need but also understand the math and logic behind it.</p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="space-y-8 md:space-y-12 bg-white p-6 sm:p-8 md:p-12 border-4 border-black border-dashed">
+          <div className="max-w-6xl mx-auto space-y-6 md:space-y-8">
+            <div className="flex justify-between items-end border-b-8 border-black pb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-tighter leading-tight">Latest Articles</h2>
+              <Link to="/blog" className="hidden sm:block text-lg font-black uppercase hover:text-yellow-600 transition-colors">View All &rarr;</Link>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              {BLOG_POSTS.slice(0, 3).map(post => (
+                <Link key={post.id} to={`/blog/${post.slug}`} className="block border-4 border-black bg-white hover:-translate-y-2 hover:shadow-[8px_8px_0px_0px_rgba(251,191,36,1)] transition-all flex flex-col h-full">
+                  <div className="p-4 sm:p-6 flex flex-col flex-grow">
+                    <div className="text-xs font-black uppercase text-gray-600 mb-2">{post.category}</div>
+                    <h3 className="text-xl sm:text-2xl font-black uppercase mb-3 leading-tight">{post.title}</h3>
+                    <p className="font-medium text-sm sm:text-base text-gray-700 flex-grow">{post.excerpt}</p>
+                    <div className="mt-4 pt-4 border-t-2 border-black flex justify-between items-center text-xs font-bold uppercase">
+                      <span>{post.date}</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="sm:hidden mt-6 text-center">
+              <Link to="/blog" className="inline-block px-8 py-3 bg-black text-white text-lg font-black uppercase tracking-widest hover:bg-yellow-400 hover:text-black transition-all">View All Articles</Link>
             </div>
           </div>
           

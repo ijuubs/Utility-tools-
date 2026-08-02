@@ -84,7 +84,7 @@ export default function AdSlot({ minHeight = '250px', className = '', adSlot, ad
 
   return (
     <div ref={containerRef} className={`block w-full min-w-[250px] max-w-full overflow-hidden my-8 ${className} z-0 relative`} style={{ minHeight }}>
-      <div className="absolute top-0 left-0 text-[10px] uppercase font-black tracking-widest text-gray-400 bg-white/80 px-1 select-none pointer-events-none z-10">
+      <div className="absolute top-0 left-0 text-[10px] uppercase font-black tracking-widest text-gray-600 bg-white/80 px-1 select-none pointer-events-none z-10">
         Advertisement
       </div>
       {canRenderAd && (

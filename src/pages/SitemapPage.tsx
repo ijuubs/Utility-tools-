@@ -45,7 +45,7 @@ export default function SitemapPage() {
                   {tool.name}
                 </Link>
                 {tool.aliases && tool.aliases.length > 0 && (
-                  <ul className="pl-6 space-y-2 text-xs font-bold uppercase text-gray-500 underline decoration-gray-300">
+                  <ul className="pl-6 space-y-2 text-xs font-bold uppercase text-gray-600 underline decoration-gray-300">
                     {tool.aliases.map(alias => (
                       <li key={alias}>
                         <Link to={`/tools/${alias}`} className="hover:text-black transition-colors">

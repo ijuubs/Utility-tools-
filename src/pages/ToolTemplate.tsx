@@ -6,6 +6,7 @@ import AdSlot from '../components/AdSlot';
 import AdsterraSlot from '../components/AdsterraSlot';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Breadcrumbs from '../components/Breadcrumbs';
+import ReactMarkdown from 'react-markdown';
 
 // Lazy load tools
 const WordCounter = lazy(() => import('../components/tools/WordCounter'));
@@ -219,7 +220,9 @@ export default function ToolTemplate() {
 
         <section className="prose max-w-none mt-10 md:mt-12">
           <h2 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-[var(--g6)] border-b-4 border-black pb-2 leading-tight">How to use {displayTitle}</h2>
-          <div className="text-[var(--muted)] whitespace-pre-line leading-relaxed mt-4 sm:mt-6 text-sm sm:text-base">{tool.howTo}</div>
+          <div className="text-[var(--muted)] leading-relaxed mt-4 sm:mt-6 text-sm sm:text-base markdown-body">
+            <ReactMarkdown>{tool.howTo}</ReactMarkdown>
+          </div>
           
           <div className="my-8 sm:my-12 p-6 sm:p-10 bg-yellow-400 border-4 sm:border-8 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] sm:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)]">
             <h3 className="text-xl sm:text-2xl font-black uppercase mb-3 sm:mb-4 leading-tight">Pro Tip</h3>

@@ -60,7 +60,7 @@ export default function FijiElectricityBillCalculator() {
             className="w-full p-4 border-4 border-black font-black text-2xl focus:outline-none focus:bg-yellow-105 bg-white text-black"
             placeholder="120"
           />
-          <span className="text-xs font-bold text-gray-500 mt-2 block">
+          <span className="text-xs font-bold text-gray-600 mt-2 block">
             Tip: Check your recent Energy Fiji Limited (EFL) paper or digital invoice to locate your previous month’s kWh usage.
           </span>
         </div>
@@ -95,15 +95,15 @@ export default function FijiElectricityBillCalculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t-4 border-black pt-4">
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-xs font-bold uppercase text-gray-400">Standard Cost</span>
+              <span className="block text-xs font-bold uppercase text-gray-600">Standard Cost</span>
               <span className="text-base font-black">FJD ${results.baseBill.toFixed(2)}</span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-xs font-bold uppercase text-gray-400">Gov Subsidy Paid</span>
+              <span className="block text-xs font-bold uppercase text-gray-600">Gov Subsidy Paid</span>
               <span className="text-base font-black text-emerald-700">FJD ${results.subsidyAmount.toFixed(2)}</span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-xs font-bold uppercase text-gray-400">Tax Component (15% VAT)</span>
+              <span className="block text-xs font-bold uppercase text-gray-600">Tax Component (15% VAT)</span>
               <span className="text-base font-black font-black">FJD ${results.estimatedVat.toFixed(2)}</span>
             </div>
           </div>

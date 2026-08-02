@@ -116,7 +116,7 @@ export default function FijiDutyImportCalculator() {
           )}
         </div>
 
-        <p className="text-xs font-bold text-gray-500">
+        <p className="text-xs font-bold text-gray-600">
           Note: Fiji Revenue & Customs Service (FRCS) assesses imports on CIF value. Import VAT rate is 15%. Minor packages under FJD $400 may occasionally qualify for concessions depending on standard passenger allowances.
         </p>
       </div>
@@ -132,15 +132,15 @@ export default function FijiDutyImportCalculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t-4 border-black pt-4">
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-[10px] font-black uppercase text-gray-500">Applied Fiscal Duty ({results.appliedDutyRate}%)</span>
+              <span className="block text-[10px] font-black uppercase text-gray-600">Applied Fiscal Duty ({results.appliedDutyRate}%)</span>
               <span className="text-sm font-black">FJD ${results.fiscalDuty.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-[10px] font-black uppercase text-gray-500">Import VAT (15%)</span>
+              <span className="block text-[10px] font-black uppercase text-gray-600">Import VAT (15%)</span>
               <span className="text-sm font-black text-black">FJD ${results.importVat.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-[10px] font-black uppercase text-gray-500 font-black">Total Landed Cost</span>
+              <span className="block text-[10px] font-black uppercase text-gray-600 font-black">Total Landed Cost</span>
               <span className="text-sm font-black text-emerald-800">FJD ${results.totalLandedCost.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
           </div>

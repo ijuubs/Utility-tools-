@@ -118,7 +118,7 @@ export default function FijiSalaryCalculator() {
             min="0"
             max="100"
           />
-          <span className="text-xs font-bold text-gray-500 mt-1 block">Current statutory Fiji National Provident Fund rate remains 8%.</span>
+          <span className="text-xs font-bold text-gray-600 mt-1 block">Current statutory Fiji National Provident Fund rate remains 8%.</span>
         </div>
 
         {error && (
@@ -147,19 +147,19 @@ export default function FijiSalaryCalculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t-4 border-black pt-4">
             <div>
-              <span className="block text-xs font-black uppercase text-gray-500">Gross Contribution</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Gross Contribution</span>
               <span className="text-xl font-bold">FJD ${results.gross.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
             <div>
-              <span className="block text-xs font-black uppercase text-gray-500">Employee FNPF ({fnpfRate}%)</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Employee FNPF ({fnpfRate}%)</span>
               <span className="text-xl font-bold">FJD ${results.fnpf.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
             <div>
-              <span className="block text-xs font-black uppercase text-gray-500">PAYE Tax Estimated</span>
+              <span className="block text-xs font-black uppercase text-gray-600">PAYE Tax Estimated</span>
               <span className="text-xl font-bold">FJD ${results.paye.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
             <div>
-              <span className="block text-xs font-black uppercase text-gray-500">Chargeable Income</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Chargeable Income</span>
               <span className="text-xl font-bold">FJD ${results.chargeableIncome.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
           </div>
@@ -168,19 +168,19 @@ export default function FijiSalaryCalculator() {
             <h4 className="font-black uppercase mb-2 text-sm">Annual Summary Equivalents</h4>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div>
-                <span className="block text-[10px] font-black uppercase text-gray-500">Annual Gross</span>
+                <span className="block text-[10px] font-black uppercase text-gray-600">Annual Gross</span>
                 <span className="text-sm font-black">FJD ${results.annualGross.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
               </div>
               <div>
-                <span className="block text-[10px] font-black uppercase text-gray-500">Annual FNPF</span>
+                <span className="block text-[10px] font-black uppercase text-gray-600">Annual FNPF</span>
                 <span className="text-sm font-black text-rose-700">FJD ${results.annualFnpf.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
               </div>
               <div>
-                <span className="block text-[10px] font-black uppercase text-gray-500">Annual PAYE</span>
+                <span className="block text-[10px] font-black uppercase text-gray-600">Annual PAYE</span>
                 <span className="text-sm font-black text-rose-700">FJD ${results.annualPaye.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
               </div>
               <div>
-                <span className="block text-[10px] font-black uppercase text-gray-500">Annual Net</span>
+                <span className="block text-[10px] font-black uppercase text-gray-600">Annual Net</span>
                 <span className="text-sm font-black text-emerald-700">FJD ${results.annualNet.toLocaleString('en-US', { maximumFractionDigits: 0 })}</span>
               </div>
             </div>

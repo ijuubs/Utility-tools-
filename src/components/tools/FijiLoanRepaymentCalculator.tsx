@@ -115,11 +115,11 @@ export default function FijiLoanRepaymentCalculator() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t-4 border-black pt-4">
             <div className="bg-white border-2 border-black p-4">
-              <span className="block text-xs font-black uppercase text-gray-500">Total Interest to Pay</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Total Interest to Pay</span>
               <span className="text-xl font-black text-rose-700">FJD ${results.totalInterest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
             <div className="bg-white border-2 border-black p-4">
-              <span className="block text-xs font-black uppercase text-gray-500">Total Loan Cost</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Total Loan Cost</span>
               <span className="text-xl font-black text-black">FJD ${results.totalRepay.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
           </div>

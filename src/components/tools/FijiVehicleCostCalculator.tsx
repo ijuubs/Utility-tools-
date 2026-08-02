@@ -93,7 +93,7 @@ export default function FijiVehicleCostCalculator() {
           </div>
         </div>
 
-        <p className="text-xs font-bold text-gray-400">
+        <p className="text-xs font-bold text-gray-600">
           Under Fiji law, third-party insurance is legally mandatory through the Land Transport Authority (LTA) and integrated accident levies. Fully comprehensive insurance is recommended for privately imported or modern vehicles.
         </p>
       </div>
@@ -119,19 +119,19 @@ export default function FijiVehicleCostCalculator() {
             <h4 className="font-black uppercase mb-2 text-xs">Expressed Monthly Breakdown</h4>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="bg-white border-2 border-black p-2 text-center">
-                <span className="block text-[8px] font-bold uppercase text-gray-400">Fuel</span>
+                <span className="block text-[8px] font-bold uppercase text-gray-600">Fuel</span>
                 <span className="text-xs font-black">FJD ${results.monthlyFuel.toFixed(0)}</span>
               </div>
               <div className="bg-white border-2 border-black p-2 text-center">
-                <span className="block text-[8px] font-bold uppercase text-gray-400">Maintenance</span>
+                <span className="block text-[8px] font-bold uppercase text-gray-600">Maintenance</span>
                 <span className="text-xs font-black">FJD ${results.monthlyMaintenance.toFixed(0)}</span>
               </div>
               <div className="bg-white border-2 border-black p-2 text-center">
-                <span className="block text-[8px] font-bold uppercase text-gray-400">LTA Road Tax</span>
+                <span className="block text-[8px] font-bold uppercase text-gray-600">LTA Road Tax</span>
                 <span className="text-xs font-black">FJD ${results.monthlyRegEquivalent.toFixed(0)}</span>
               </div>
               <div className="bg-white border-2 border-black p-2 text-center">
-                <span className="block text-[8px] font-bold uppercase text-gray-400">Insurance Equivalent</span>
+                <span className="block text-[8px] font-bold uppercase text-gray-600">Insurance Equivalent</span>
                 <span className="text-xs font-black font-black">FJD ${results.monthlyInsEquivalent.toFixed(0)}</span>
               </div>
             </div>

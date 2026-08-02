@@ -91,7 +91,7 @@ export default function AgeCalculator() {
           
           <div className="bg-white border-4 border-black p-6 text-center mb-6">
              <div className="text-3xl sm:text-4xl font-black">
-               {results.years} <span className="text-xl text-gray-500">years</span> {results.months} <span className="text-xl text-gray-500">months</span> {results.days} <span className="text-xl text-gray-500">days</span>
+               {results.years} <span className="text-xl text-gray-600">years</span> {results.months} <span className="text-xl text-gray-600">months</span> {results.days} <span className="text-xl text-gray-600">days</span>
              </div>
           </div>
 

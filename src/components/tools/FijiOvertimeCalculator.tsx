@@ -71,7 +71,7 @@ export default function FijiOvertimeCalculator() {
               className="w-full p-3 border-4 border-black font-black text-lg focus:outline-none focus:bg-yellow-100"
               placeholder="5"
             />
-            <span className="text-xs font-bold text-gray-400 mt-1 block">Standard Fiji weekday OT multiplier.</span>
+            <span className="text-xs font-bold text-gray-600 mt-1 block">Standard Fiji weekday OT multiplier.</span>
           </div>
           <div>
             <label className="block text-sm font-black uppercase mb-1">Double Time Hours (Sunday / Holidays 2x)</label>
@@ -83,7 +83,7 @@ export default function FijiOvertimeCalculator() {
               className="w-full p-3 border-4 border-black font-black text-lg focus:outline-none focus:bg-yellow-100"
               placeholder="2"
             />
-            <span className="text-xs font-bold text-gray-400 mt-1 block">Work on Sundays/Public holidays under ERP.</span>
+            <span className="text-xs font-bold text-gray-600 mt-1 block">Work on Sundays/Public holidays under ERP.</span>
           </div>
         </div>
 
@@ -105,24 +105,24 @@ export default function FijiOvertimeCalculator() {
             <span className="text-4xl sm:text-5xl font-black text-black">
               FJD ${results.totalPay.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
-            <span className="block text-xs font-bold text-gray-500 mt-1">For a total of {results.totalHours} clocked hours.</span>
+            <span className="block text-xs font-bold text-gray-600 mt-1">For a total of {results.totalHours} clocked hours.</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t-4 border-black pt-4">
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-xs font-black uppercase text-gray-500">Normal (1.0x)</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Normal (1.0x)</span>
               <span className="text-lg font-black text-black">
                 FJD ${results.regularPay.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-xs font-black uppercase text-gray-500">Overtime (1.5x)</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Overtime (1.5x)</span>
               <span className="text-lg font-black text-rose-700">
                 FJD ${results.ot15Pay.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             </div>
             <div className="bg-white border-2 border-black p-3">
-              <span className="block text-xs font-black uppercase text-gray-500">Double Time (2.0x)</span>
+              <span className="block text-xs font-black uppercase text-gray-600">Double Time (2.0x)</span>
               <span className="text-lg font-black text-rose-800">
                 FJD ${results.ot20Pay.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>

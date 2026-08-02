@@ -1,0 +1,13 @@
+# ToolKitPro
+> Fast, secure, and ready-to-use tools. 100% Client-Side. No Sign-up Required.
+
+ToolKitPro provides free online utility tools, developer utilities, calculators, and productivity apps.
+
+## Features
+- **Client-Side Processing**: 100% privacy, your data never leaves your machine.
+- **Fast and Secure**: No sign-ups or server latency.
+- **Rich Documentation**: Comprehensive guides and FAQs for each tool.
+
+## Useful Links
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms)

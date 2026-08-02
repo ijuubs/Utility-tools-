@@ -79,7 +79,7 @@ export default function FijiTaxiFareCalculator() {
             />
             <div>
               <span className="font-black uppercase text-sm block">Night Rate tariff (10:00 PM - 6:00 AM)</span>
-              <span className="text-xs text-gray-400 font-bold block">Applies a base drop of FJD $3.00 instead of FJD $2.00</span>
+              <span className="text-xs text-gray-600 font-bold block">Applies a base drop of FJD $3.00 instead of FJD $2.00</span>
             </div>
           </label>
         </div>
@@ -102,20 +102,20 @@ export default function FijiTaxiFareCalculator() {
             <span className="text-4xl sm:text-5xl font-black text-black">
               FJD ${results.totalFare.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </span>
-            <span className="block text-[10px] font-bold text-gray-400 mt-2">Adjusted based on regulated standards set by the Land Transport Authority (LTA) of Fiji.</span>
+            <span className="block text-[10px] font-bold text-gray-600 mt-2">Adjusted based on regulated standards set by the Land Transport Authority (LTA) of Fiji.</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t-4 border-black pt-4">
             <div className="bg-white border-2 border-black p-3 text-center">
-              <span className="block text-[8px] font-bold uppercase text-gray-500">Base Drop</span>
+              <span className="block text-[8px] font-bold uppercase text-gray-600">Base Drop</span>
               <span className="text-sm font-black">FJD ${results.baseFare.toFixed(2)}</span>
             </div>
             <div className="bg-white border-2 border-black p-3 text-center">
-              <span className="block text-[8px] font-bold uppercase text-gray-500">Distance Fare</span>
+              <span className="block text-[8px] font-bold uppercase text-gray-600">Distance Fare</span>
               <span className="text-sm font-black">FJD ${results.distanceFare.toFixed(2)}</span>
             </div>
             <div className="bg-white border-2 border-black p-3 text-center">
-              <span className="block text-[8px] font-bold uppercase text-gray-500">Waiting/Idling Fee</span>
+              <span className="block text-[8px] font-bold uppercase text-gray-600">Waiting/Idling Fee</span>
               <span className="text-sm font-black text-rose-700">FJD ${results.waitingFare.toFixed(2)}</span>
             </div>
           </div>

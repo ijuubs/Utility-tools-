@@ -98,25 +98,25 @@ export default function FijiGroceryBudgetCalculator() {
                 <span>🥬 Roots & Fresh Greens (25%)</span>
                 <span>FJD ${results.produce.toFixed(2)}</span>
               </div>
-              <p className="text-[10px] text-gray-400 font-bold pl-2">Dalo, Cassava, Bele, Rourou, Tomatoes, Eggplants & Bananas bought from Suva or Lautoka municipal markets.</p>
+              <p className="text-[10px] text-gray-600 font-bold pl-2">Dalo, Cassava, Bele, Rourou, Tomatoes, Eggplants & Bananas bought from Suva or Lautoka municipal markets.</p>
 
               <div className="flex justify-between font-bold text-sm bg-white p-2 border-2 border-black">
                 <span>🍚 Staple Grains & Cooking Oils (25%)</span>
                 <span>FJD ${results.grains.toFixed(2)}</span>
               </div>
-              <p className="text-[10px] text-gray-400 font-bold pl-2">Rice, Punjas flour, Punjas oil, sugar, dry noodles, yeast, and salt.</p>
+              <p className="text-[10px] text-gray-600 font-bold pl-2">Rice, Punjas flour, Punjas oil, sugar, dry noodles, yeast, and salt.</p>
 
               <div className="flex justify-between font-bold text-sm bg-white p-2 border-2 border-black">
                 <span>🍖 Proteins, Seafood & Canned Goods (30%)</span>
                 <span>FJD ${results.proteins.toFixed(2)}</span>
               </div>
-              <p className="text-[10px] text-gray-400 font-bold pl-2">Fresh reef fish, chicken, canned corned beef, canned mackerel, eggs, and milk.</p>
+              <p className="text-[10px] text-gray-600 font-bold pl-2">Fresh reef fish, chicken, canned corned beef, canned mackerel, eggs, and milk.</p>
 
               <div className="flex justify-between font-bold text-sm bg-white p-2 border-2 border-black">
                 <span>☕ Beverages & Household Essentials (20%)</span>
                 <span>FJD ${results.pantryEssentials.toFixed(2)}</span>
               </div>
-              <p className="text-[10px] text-gray-400 font-bold pl-2">Fiji tea, coffee, morning glory biscuits, spices, washing soap, toothpaste.</p>
+              <p className="text-[10px] text-gray-600 font-bold pl-2">Fiji tea, coffee, morning glory biscuits, spices, washing soap, toothpaste.</p>
             </div>
           </div>
 

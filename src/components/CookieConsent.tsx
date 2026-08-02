@@ -24,7 +24,7 @@ export default function CookieConsent() {
       <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex-1">
           <h3 className="text-xl font-black uppercase text-yellow-400 mb-1">Cookie & Privacy Notice</h3>
-          <p className="text-sm text-gray-300">
+          <p className="text-sm text-gray-100">
             We use cookies to personalize content and ads, to provide social media features, and to analyze our traffic. We also share information about your use of our site with our advertising and analytics partners who may combine it with other information that you've provided to them or that they've collected from your use of their services. By using our site, you agree to our <Link to="/privacy" className="underline font-bold text-white hover:text-yellow-400">Privacy Policy</Link> and <Link to="/terms" className="underline font-bold text-white hover:text-yellow-400">Terms of Service</Link>.
           </p>
         </div>

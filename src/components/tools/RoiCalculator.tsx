@@ -63,20 +63,20 @@ export default function RoiCalculator() {
           <h2 className="text-2xl font-black uppercase mb-4">Results</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-white border-4 border-black p-4 text-center">
-              <div className="text-sm font-bold uppercase text-gray-500 mb-1">Net Profit</div>
+              <div className="text-sm font-bold uppercase text-gray-600 mb-1">Net Profit</div>
               <div className={`text-3xl font-black ${results.netProfit >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 ${results.netProfit.toFixed(2)}
               </div>
             </div>
             <div className="bg-white border-4 border-black p-4 text-center">
-              <div className="text-sm font-bold uppercase text-gray-500 mb-1">Total ROI</div>
+              <div className="text-sm font-bold uppercase text-gray-600 mb-1">Total ROI</div>
               <div className={`text-3xl font-black ${results.roiPercentage >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {results.roiPercentage.toFixed(2)}%
               </div>
             </div>
             {results.annualizedRoi !== null && (
               <div className="bg-white border-4 border-black p-4 text-center sm:col-span-2">
-                <div className="text-sm font-bold uppercase text-gray-500 mb-1">Annualized ROI</div>
+                <div className="text-sm font-bold uppercase text-gray-600 mb-1">Annualized ROI</div>
                 <div className={`text-3xl font-black ${results.annualizedRoi >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                   {results.annualizedRoi.toFixed(2)}%
                 </div>

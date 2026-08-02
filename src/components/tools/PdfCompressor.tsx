@@ -51,7 +51,7 @@ export default function PdfCompressor() {
         <label htmlFor="pdf-upload" className="cursor-pointer space-y-2 block">
             <div className="text-4xl">📄</div>
             <p className="font-black uppercase">{file ? file.name : 'Select PDF to Compress'}</p>
-            {!file && <p className="text-xs font-bold text-gray-500 italic">No files are uploaded to our servers</p>}
+            {!file && <p className="text-xs font-bold text-gray-600 italic">No files are uploaded to our servers</p>}
         </label>
       </div>
 

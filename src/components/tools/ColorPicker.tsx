@@ -30,7 +30,7 @@ export default function ColorPicker() {
         </div>
         <div className="space-y-4">
           <div className="border-4 border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <p className="text-xs font-black text-gray-500 uppercase mb-1">HEX Format</p>
+            <p className="text-xs font-black text-gray-600 uppercase mb-1">HEX Format</p>
             <div className="flex justify-between items-center gap-2">
               <span className="font-mono font-black text-xl">{hex}</span>
               <button 
@@ -44,7 +44,7 @@ export default function ColorPicker() {
           </div>
 
           <div className="border-4 border-black p-4 bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <p className="text-xs font-black text-gray-500 uppercase mb-1">RGB Format</p>
+            <p className="text-xs font-black text-gray-600 uppercase mb-1">RGB Format</p>
             <div className="flex justify-between items-center gap-2">
               <span className="font-mono font-black text-sm sm:text-base">{rgbString}</span>
               <button 

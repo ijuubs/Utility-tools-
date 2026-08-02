@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { BLOG_POSTS } from '../data/blogData';
 import Breadcrumbs from '../components/Breadcrumbs';
+import ReactMarkdown from 'react-markdown';
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -54,9 +55,8 @@ export default function BlogPost() {
             {post.excerpt}
         </p>
         
-        {/* Render content - in a real app would use react-markdown */}
-        <div className="space-y-6 whitespace-pre-wrap leading-relaxed">
-            {post.content}
+        <div className="markdown-body">
+            <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </div>
 
