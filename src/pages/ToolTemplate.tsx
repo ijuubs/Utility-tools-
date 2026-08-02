@@ -21,6 +21,11 @@ const ColorPicker = lazy(() => import('../components/tools/ColorPicker'));
 const UnitConverter = lazy(() => import('../components/tools/UnitConverter'));
 const LoanCalculator = lazy(() => import('../components/tools/LoanCalculator'));
 const PercentageCalculator = lazy(() => import('../components/tools/PercentageCalculator'));
+const RoiCalculator = lazy(() => import('../components/tools/RoiCalculator'));
+const SipCalculator = lazy(() => import('../components/tools/SipCalculator'));
+const AgeCalculator = lazy(() => import('../components/tools/AgeCalculator'));
+const TdeeCalculator = lazy(() => import('../components/tools/TdeeCalculator'));
+const CompoundInterestCalculator = lazy(() => import('../components/tools/CompoundInterestCalculator'));
 
 // Fiji Tools
 const FijiSalaryCalculator = lazy(() => import('../components/tools/FijiSalaryCalculator'));
@@ -73,6 +78,11 @@ export default function ToolTemplate() {
         case 'unit-converter': return <UnitConverter />;
         case 'loan-calculator': return <LoanCalculator />;
         case 'percentage-calculator': return <PercentageCalculator />;
+        case 'roi-calculator': return <RoiCalculator />;
+        case 'sip-calculator': return <SipCalculator />;
+        case 'age-calculator': return <AgeCalculator />;
+        case 'tdee-calculator': return <TdeeCalculator />;
+        case 'compound-interest-calculator': return <CompoundInterestCalculator />;
         
         // Fiji tools switch mapping
         case 'fiji-salary-calculator': return <FijiSalaryCalculator />;

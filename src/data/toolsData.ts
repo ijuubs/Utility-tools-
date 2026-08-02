@@ -931,6 +931,157 @@ If you take an evening taxi from Suva Harbour to Laucala Bay (approx **8 kilomet
         { question: 'Do all taxis in Fiji use meters?', answer: 'Yes, in major urban districts, taxi drivers are legally mandated to run the meter. Always ensure it is turned on before setting off.' },
         { question: 'What is the nighttime taxi base rate in Fiji?', answer: 'Official nighttime base drop is FJD $3.00, starting from 10:00 PM to 6:00 AM.' }
     ]
+  },
+  {
+    id: 'roi-calculator',
+    slug: 'roi-calculator',
+    name: 'ROI Calculator',
+    titleTag: 'ROI Calculator | Calculate Return on Investment',
+    description: 'Instantly calculate your Return on Investment (ROI) for marketing campaigns, real estate, and more.',
+    category: 'Finance Tools',
+    usp: 'Instant, private, client-side ROI calculation.',
+    aliases: ['return-on-investment-calculator', 'investment-return-calculator'],
+    metaDescription: 'Use our free ROI Calculator to instantly determine the profitability of your investments, marketing campaigns, and real estate purchases.',
+    howTo: `### Mastering the ROI Calculator
+
+Return on Investment (ROI) is a fundamental financial metric used to evaluate the efficiency of an investment. 
+
+#### 1. What is ROI?
+ROI compares the net profit of an investment to its initial cost. A high ROI indicates that the investment's gains compare favorably to its cost.
+
+#### 2. How to Use the Calculator
+- **Amount Invested:** Enter the total amount of money you put into the investment.
+- **Amount Returned:** Enter the total amount of money you received back from the investment.
+
+#### 3. Understanding the Results
+- **Net Profit:** The total return minus the initial investment.
+- **ROI Percentage:** The net profit divided by the initial investment, expressed as a percentage.
+- **Annualized ROI:** If you hold an investment for multiple years, the total ROI might look artificially high. The annualized ROI tells you what your equivalent annual return is. (Note: standard ROI doesn't consider time).`,
+    faqs: [
+        { question: 'What is a good ROI?', answer: 'A "good" ROI depends on your industry and risk tolerance, but generally, stock market investors aim for 7-10% annualized ROI.' },
+        { question: 'Does ROI account for time?', answer: 'Basic ROI does not account for time. An investment that returns 50% over 10 years is very different from one that returns 50% in 1 year.' }
+    ]
+  },
+  {
+    id: 'sip-calculator',
+    slug: 'sip-calculator',
+    name: 'SIP Calculator',
+    titleTag: 'SIP Calculator | Mutual Fund Return Estimator',
+    description: 'Calculate the future value of your Systematic Investment Plan (SIP) based on monthly contributions and expected returns.',
+    category: 'Finance Tools',
+    usp: 'Visualize the power of compound interest through regular monthly investments.',
+    aliases: ['systematic-investment-plan-calculator', 'mutual-fund-calculator'],
+    metaDescription: 'Calculate the wealth you can generate through a Systematic Investment Plan (SIP). Enter your monthly investment and time horizon to see compound interest at work.',
+    howTo: `### The Power of Systematic Investment Plans (SIP)
+
+A SIP allows you to invest a fixed amount of money at regular intervals. This strategy harnesses the power of compound interest and reduces market timing risk.
+
+#### 1. Why Use a SIP?
+By investing consistently, you buy more units when prices are low and fewer when prices are high (dollar/rupee cost averaging). Over time, this smooths out market volatility.
+
+#### 2. Using the SIP Calculator
+- **Monthly Investment:** The amount you plan to invest every month.
+- **Expected Return Rate:** The average annual return you expect to earn (e.g., 10-12% for equity mutual funds).
+- **Time Period:** How many years you plan to keep investing.
+
+#### 3. Analyzing the Output
+The calculator will show your **Total Amount Invested**, your **Estimated Returns** (the magic of compounding), and your **Total Wealth** at the end of the term.`,
+    faqs: [
+        { question: 'What is the benefit of a SIP?', answer: 'It instills financial discipline and leverages compound interest without requiring a large lump sum upfront.' },
+        { question: 'Are SIP returns guaranteed?', answer: 'No. Since SIPs are typically invested in market-linked instruments like mutual funds, returns fluctuate based on market performance.' }
+    ]
+  },
+  {
+    id: 'age-calculator',
+    slug: 'age-calculator',
+    name: 'Age Calculator',
+    titleTag: 'Age Calculator | Find Your Exact Age in Days, Months, Years',
+    description: 'Calculate your exact age in years, months, and days based on your date of birth.',
+    category: 'Math Tools',
+    usp: 'Precise chronological calculations accounting for leap years.',
+    aliases: ['date-of-birth-calculator', 'chronological-age-calculator'],
+    metaDescription: 'Use our free online Age Calculator to find your exact chronological age in years, months, and days. Fast, accurate, and accounts for leap years.',
+    howTo: `### The Precision Age Calculator
+
+While calculating age seems simple, doing it precisely down to the exact day involves complex date math that accounts for leap years and varying month lengths.
+
+#### 1. How It Works
+Enter your Date of Birth. The calculator instantly compares it against today's date using standard ISO-8601 calendar logic.
+
+#### 2. Beyond Years
+The tool breaks down your age into multiple formats:
+- **Years, Months, Days:** The standard legal age format.
+- **Total Months:** How many full months you have lived.
+- **Total Days:** Exactly how many days you have been alive.
+
+#### 3. Common Use Cases
+- **Medical/Pediatric:** Doctors often need exact age in months and weeks for children.
+- **Legal Applications:** Verifying exact dates of maturity for contracts or privileges.
+- **Event Planning:** Calculating exact time elapsed since a historical event.`,
+    faqs: [
+        { question: 'Does this calculator account for leap years?', answer: 'Yes, it perfectly accounts for leap years and the varying number of days in each month.' },
+        { question: 'Is my birth date stored?', answer: 'No, all calculations happen locally in your browser. No data is sent to a server.' }
+    ]
+  },
+  {
+    id: 'tdee-calculator',
+    slug: 'tdee-calculator',
+    name: 'TDEE Calculator',
+    titleTag: 'TDEE Calculator | Total Daily Energy Expenditure',
+    description: 'Calculate your Total Daily Energy Expenditure (TDEE) to find your maintenance calories for weight loss or muscle gain.',
+    category: 'Health Tools',
+    usp: 'Highly accurate caloric modeling using the Mifflin-St Jeor equation.',
+    aliases: ['maintenance-calorie-calculator', 'calorie-needs-calculator'],
+    metaDescription: 'Calculate your TDEE (Total Daily Energy Expenditure) to find out exactly how many calories you burn in a day. Essential for weight loss and muscle building.',
+    howTo: `### Mastering Your TDEE (Total Daily Energy Expenditure)
+
+To lose, maintain, or gain weight, you must know your body's energy requirements. TDEE is the total number of calories you burn in a given day.
+
+#### 1. The Math Behind TDEE
+Our calculator uses the scientifically validated **Mifflin-St Jeor Equation** to determine your Basal Metabolic Rate (BMR)—the calories you burn just staying alive. It then applies an activity multiplier based on your lifestyle to calculate your TDEE.
+
+#### 2. How to Use Your TDEE
+- **Weight Loss:** To lose weight safely, consume 300-500 calories *less* than your TDEE (a caloric deficit).
+- **Weight Maintenance:** Consume exactly your TDEE.
+- **Muscle Gain:** Consume 200-500 calories *more* than your TDEE (a caloric surplus) combined with resistance training.
+
+#### 3. Inputting Your Data
+Be honest about your activity level! Most people overestimate their daily activity. If you work a desk job but work out 3 times a week, you are likely only "Lightly Active."`,
+    faqs: [
+        { question: 'Which formula is used?', answer: 'We use the Mifflin-St Jeor equation, which is widely considered the most accurate standard formula by health professionals.' },
+        { question: 'How often should I recalculate my TDEE?', answer: 'You should recalculate your TDEE every time you lose or gain 5-10 pounds, as your energy needs will change with your body mass.' }
+    ]
+  },
+  {
+    id: 'compound-interest-calculator',
+    slug: 'compound-interest-calculator',
+    name: 'Compound Interest Calculator',
+    titleTag: 'Compound Interest Calculator | Visualize Wealth Growth',
+    description: 'Calculate the exponential growth of your investments over time with compound interest.',
+    category: 'Finance Tools',
+    usp: 'Interactive, real-time calculation of exponential interest growth.',
+    aliases: ['investment-growth-calculator', 'interest-calculator'],
+    metaDescription: 'Visualize how compound interest grows your wealth over time. Free online Compound Interest Calculator with regular contributions and flexible compounding frequencies.',
+    howTo: `### The Power of Compound Interest
+
+Albert Einstein reportedly called compound interest the "8th wonder of the world." It is the process of earning interest on your initial principal, as well as on the accumulated interest from previous periods.
+
+#### 1. The Inputs
+- **Initial Principal:** The amount of money you are starting with.
+- **Regular Contribution:** Additional money you add at regular intervals (monthly or annually).
+- **Interest Rate:** Your expected annual return.
+- **Time Horizon:** How many years you will let the money grow.
+- **Compounding Frequency:** How often the interest is applied (Annually, Monthly, Daily).
+
+#### 2. Why Compounding Matters
+In the early years, growth seems slow. But over decades, the interest earned begins to dwarf the original principal. This exponential curve is the secret to building long-term wealth and funding retirement.
+
+#### 3. Client-Side Privacy
+Financial planning is personal. Like all ToolKitPro tools, this calculator runs entirely in your browser. Your numbers are never sent to a server.`,
+    faqs: [
+        { question: 'What is the difference between simple and compound interest?', answer: 'Simple interest is only calculated on the principal amount. Compound interest is calculated on the principal plus all previously accumulated interest.' },
+        { question: 'How does compounding frequency affect returns?', answer: 'The more frequently interest compounds (e.g., daily vs. annually), the faster your wealth grows because interest is added to the balance sooner.' }
+    ]
   }
 ];
 
