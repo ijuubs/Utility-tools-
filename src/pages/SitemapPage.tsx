@@ -27,7 +27,7 @@ export default function SitemapPage() {
         <h3 className="font-black uppercase text-lg mb-2">Are you a search engine?</h3>
         <p className="font-medium text-black">
           This page is an HTML sitemap designed for human visitors. If you are trying to submit this site to Google Search Console or another indexing service, please use our XML Sitemap instead: <br/><br/>
-          <a href="/sitemap.xml" className="bg-black text-white px-4 py-2 font-black uppercase text-sm hover:bg-yellow-400 hover:text-black transition-all">View sitemap.xml</a>
+          <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="bg-black text-white px-4 py-2 font-black uppercase text-sm hover:bg-yellow-400 hover:text-black transition-all">View sitemap.xml</a>
         </p>
       </div>
       
