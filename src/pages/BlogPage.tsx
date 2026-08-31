@@ -16,6 +16,16 @@ export default function BlogPage() {
       <Helmet>
         <title>Blog | ToolKitPro Insights</title>
         <meta name="description" content="Stay updated with the latest in health metrics, web development utilities, and data security from the ToolKitPro editorial team." />
+        <link rel="canonical" href="https://toolkitpro.app/blog" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "ToolKitPro Blog",
+            "url": "https://toolkitpro.app/blog",
+            "description": "Deep dives into the science, math, and technology behind our utility suite."
+          })}
+        </script>
       </Helmet>
       
       <div className="text-center space-y-4">

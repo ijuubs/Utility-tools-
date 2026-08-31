@@ -22,6 +22,30 @@ export default function BlogPost() {
       <Helmet>
         <title>{post.title} | ToolKitPro Blog</title>
         <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://toolkitpro.app/blog/${post.slug}`} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "description": post.excerpt,
+            "datePublished": post.date,
+            "author": {
+              "@type": "Person",
+              "name": post.author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "ToolKitPro",
+              "url": "https://toolkitpro.app/",
+              "logo": "https://toolkitpro.app/toolkitpro-logo.jpg"
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://toolkitpro.app/blog/${post.slug}`
+            }
+          })}
+        </script>
       </Helmet>
 
       <Link to="/blog" className="inline-block font-black uppercase text-sm border-2 border-black px-4 py-2 hover:bg-black hover:text-white transition-all">

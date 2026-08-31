@@ -5,4 +5,19 @@ Allow: /
 User-agent: Mediapartners-Google
 Allow: /
 
+# Allow AI Search Crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://toolkitpro.app/sitemap.xml
 Sitemap: https://utility-tools-eta.vercel.app/sitemap.xml
+

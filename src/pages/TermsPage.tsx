@@ -6,6 +6,16 @@ export default function TermsPage() {
       <Helmet>
         <title>Terms & Conditions | ToolKitPro</title>
         <meta name="description" content="View the Terms and Conditions for using the ToolKitPro utility platform." />
+        <link rel="canonical" href="https://toolkitpro.app/terms" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Terms & Conditions - ToolKitPro",
+            "url": "https://toolkitpro.app/terms",
+            "description": "View the Terms and Conditions for using the ToolKitPro utility platform."
+          })}
+        </script>
       </Helmet>
       
       <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">Terms & Conditions</h1>

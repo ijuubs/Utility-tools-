@@ -33,6 +33,23 @@ export default function FAQPage() {
       <Helmet>
         <title>FAQ | ToolKitPro</title>
         <meta name="description" content="Frequently Asked Questions about ToolKitPro's privacy, tools, and mission." />
+        <link rel="canonical" href="https://toolkitpro.app/faq" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "name": "FAQ - ToolKitPro",
+            "url": "https://toolkitpro.app/faq",
+            "mainEntity": FAQS.map(faq => ({
+              "@type": "Question",
+              "name": faq.q,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.a
+              }
+            }))
+          })}
+        </script>
       </Helmet>
       
       <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">Frequently Asked Questions</h1>

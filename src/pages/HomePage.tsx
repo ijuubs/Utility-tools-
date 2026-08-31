@@ -30,6 +30,25 @@ export default function HomePage() {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Free Online Utility Tools & Calculators | ToolKitPro" />
           <meta name="twitter:description" content="Access a massive collection of free online utility tools, developer utilities, calculators, and productivity apps. Process everything instantly and securely in your browser." />
+
+          <script type="application/ld+json">
+            {JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "ToolKitPro",
+                "url": "https://toolkitpro.app/",
+                "description": "Free online utility tools, developer utilities, calculators, and productivity apps."
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "ToolKitPro",
+                "url": "https://toolkitpro.app/",
+                "logo": "https://toolkitpro.app/toolkitpro-logo.jpg"
+              }
+            ])}
+          </script>
         </Helmet>
         
         {/* HERO SECTION */}

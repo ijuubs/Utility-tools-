@@ -6,6 +6,16 @@ export default function DisclaimerPage() {
       <Helmet>
         <title>Disclaimer | ToolKitPro</title>
         <meta name="description" content="Important disclaimer regarding the use of utility tools and calculators on ToolKitPro." />
+        <link rel="canonical" href="https://toolkitpro.app/disclaimer" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Disclaimer - ToolKitPro",
+            "url": "https://toolkitpro.app/disclaimer",
+            "description": "Important disclaimer regarding the use of utility tools and calculators on ToolKitPro."
+          })}
+        </script>
       </Helmet>
       
       <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">Disclaimer</h1>

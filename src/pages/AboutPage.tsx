@@ -6,6 +6,22 @@ export default function AboutPage() {
       <Helmet>
         <title>About Us | ToolKitPro</title>
         <meta name="description" content="Learn more about ToolKitPro, your premier destination for high-performance, private, and secure online utility tools." />
+        <link rel="canonical" href="https://toolkitpro.app/about" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "name": "About Us - ToolKitPro",
+            "url": "https://toolkitpro.app/about",
+            "description": "Learn more about ToolKitPro, your premier destination for high-performance, private, and secure online utility tools.",
+            "publisher": {
+              "@type": "Organization",
+              "name": "ToolKitPro",
+              "url": "https://toolkitpro.app/",
+              "logo": "https://toolkitpro.app/toolkitpro-logo.jpg"
+            }
+          })}
+        </script>
       </Helmet>
       
       <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4 text-black">About ToolKitPro</h1>
@@ -65,11 +81,49 @@ export default function AboutPage() {
             <strong className="block text-xl uppercase mb-2">Zero Friction</strong>
             No logins, no credit cards, no distraction. Just utilities that work instantly.
           </li>
+          
           <li className="border-4 border-black p-6 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
             <strong className="block text-xl uppercase mb-2">Educational Value</strong>
             We don't just give you the answer; we explain the formula and the "why" behind it.
           </li>
         </ul>
+
+        <section className="space-y-6">
+          <h2 className="text-3xl font-black text-black uppercase tracking-tighter">Brand Assets</h2>
+          <p>
+            Writing an article about ToolKitPro? Need our logo for a partnership? Download our official high-resolution branding assets below.
+          </p>
+          <div className="border-4 border-black bg-white p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+            <div className="w-48 h-48 border-4 border-black bg-gray-50 flex items-center justify-center p-4 shrink-0">
+              <img src="/toolkitpro-logo.jpg" alt="ToolKitPro Logo" className="max-w-full max-h-full" />
+            </div>
+            <div className="space-y-4 flex-1 text-center md:text-left">
+              <h3 className="text-2xl font-black uppercase">Official Logo</h3>
+              <p className="font-medium text-black">High-resolution Neu-Brutalist logo in JPEG format.</p>
+                            <button
+                onClick={async () => {
+                  try {
+                    const response = await fetch('/toolkitpro-logo.jpg');
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = 'ToolKitPro_Logo.jpg';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(url);
+                  } catch (error) {
+                    console.error('Download failed:', error);
+                  }
+                }}
+                className="inline-block px-8 py-3 bg-yellow-400 text-black border-4 border-black font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]"
+              >
+                Download Logo
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
       <div className="bg-black text-white p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(251,191,36,1)]">
         <h3 className="text-2xl font-black uppercase mb-4 text-yellow-400">Join our journey</h3>

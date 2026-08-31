@@ -6,6 +6,16 @@ export default function PrivacyPage() {
       <Helmet>
         <title>Privacy Policy | ToolKitPro</title>
         <meta name="description" content="Read our Privacy Policy to understand how ToolKitPro handles your data with transparency and security." />
+        <link rel="canonical" href="https://toolkitpro.app/privacy" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Privacy Policy - ToolKitPro",
+            "url": "https://toolkitpro.app/privacy",
+            "description": "Read our Privacy Policy to understand how ToolKitPro handles your data with transparency and security."
+          })}
+        </script>
       </Helmet>
       
       <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">Privacy Policy</h1>

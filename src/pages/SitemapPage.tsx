@@ -9,6 +9,16 @@ export default function SitemapPage() {
       <Helmet>
         <title>HTML Sitemap | ToolKitPro</title>
         <meta name="description" content="Sitemap for ToolKitPro. Find all our utility tools and blog posts in one place." />
+        <link rel="canonical" href="https://toolkitpro.app/sitemap" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "HTML Sitemap - ToolKitPro",
+            "url": "https://toolkitpro.app/sitemap",
+            "description": "Sitemap for ToolKitPro. Find all our utility tools and blog posts in one place."
+          })}
+        </script>
       </Helmet>
       
       <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">HTML Sitemap</h1>

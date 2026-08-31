@@ -17,6 +17,16 @@ export default function ContactPage() {
       <Helmet>
         <title>Contact Us | ToolKitPro</title>
         <meta name="description" content="Reach out to the ToolKitPro team for support, feature requests, or business inquiries." />
+        <link rel="canonical" href="https://toolkitpro.app/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact Us - ToolKitPro",
+            "url": "https://toolkitpro.app/contact",
+            "description": "Reach out to the ToolKitPro team for support, feature requests, or business inquiries."
+          })}
+        </script>
       </Helmet>
       
       <h1 className="text-5xl font-black uppercase tracking-tighter border-b-8 border-black pb-4">Contact Us</h1>
